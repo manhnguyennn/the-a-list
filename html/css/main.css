@@ -99,5 +99,56 @@ a {
 
   .bt05 {
     border-top: 0.5px solid #E7E7E7; } }
+.tal-home__cover video {
+  width: 100%;
+  display: block;
+  height: auto; }
+
+.tal-wrapper {
+  background: #000000;
+  padding-top: 60px; }
+
+.tal-wrapper__content {
+  box-sizing: border-box;
+  border-left: 10px solid #000000;
+  border-right: 10px solid #000000;
+  position: relative; }
+
+.top-border-radius {
+  top: 60px;
+  position: fixed;
+  width: calc(100% - 17px);
+  height: 6px;
+  z-index: 10;
+  background-color: #000000; }
+  .top-border-radius:before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -20px 0 0 #000000; }
+
+.bottom-border-radius {
+  bottom: 0;
+  position: fixed;
+  width: calc(100% - 17px);
+  height: 10px;
+  z-index: 10;
+  background-color: #000000;
+  transform: rotate(180deg); }
+  .bottom-border-radius:before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -20px 0 0 #000000; }
 
 /*# sourceMappingURL=main.css.map */
