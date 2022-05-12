@@ -13,6 +13,8 @@
 .tal-wrapper {
   background: #000000;
   padding-top: 60px;
+  font-family: SuisseIntl-Regular;
+  font-size: 16px;
 }
 
 .tal-wrapper__content {
@@ -24,10 +26,10 @@
 }
 
 .top-border-radius {
-  top: 60px;
+  top: 40px;
   position: fixed;
-  width: calc(100% - 17px);
-  height: 6px;
+  height: 20px;
+  left: 10px;
   z-index: 10;
   background-color: #000000;
   &:before {
@@ -43,14 +45,26 @@
   }
 }
 
-.bottom-border-radius {
-  bottom: 0;
+.bottom-round {
   position: fixed;
-  width: calc(100% - 17px);
+  left: 10px;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
   height: 10px;
-  z-index: 10;
-  background-color: #000000;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bottom-border-radius {
+  position: absolute;
+  left: 0;
+  top: auto;
+  right: 0;
   transform: rotate(180deg);
+  height: 10px;
+  background-color: #000000;
+  border-radius: 0px 0px 0px 0;
   &:before {
     content: "";
     position: absolute;
@@ -62,4 +76,8 @@
     border-top-right-radius: 20px;
     box-shadow: 0 -20px 0 0 #000000;
   }
+}
+
+.tal-container {
+  overflow: hidden;
 }
