@@ -396,8 +396,7 @@
   &__ecosys {
     background: #F0F0E9;
     display: flex;
-    border-radius: 20px;
-    height: calc(100vh - 60px);
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
     .heading {
       width: 66.78vh;
@@ -410,9 +409,10 @@
     .eco-wrapper {
       display: flex;
       box-sizing: border-box;
-      padding: 6.77vh;
+      padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
       gap: 8.47vh;
-      height: 100%;
+      height: 100vh;
+
     }
     .heading {
       font-size: 15vh;
@@ -490,6 +490,107 @@
       margin-top: auto;
       color: #F0F0E9;
       white-space: normal;
+    }
+  }
+  &__career {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    .career-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
+    .thumbBox {
+      flex-grow: 1;
+      height: auto;
+      position: relative;
+      .images {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      .heading {
+        position: absolute;
+        top: 3.44vw;
+        left: 4.68vw;
+        z-index: 2;
+        font-size: 8vw;
+        line-height: 7vw;
+        letter-spacing: -0.01em;
+        font-family: RoslindaleDC-Light;
+        color: #E1E1DA;
+        width: 28.25vw;
+
+      }
+    }
+    .careerBox {
+      width: 673px;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 46px 40px;
+      background: #CDD3D8;
+    }
+    .des {
+      font-size: 18px;
+      line-height: 145%;
+      letter-spacing: -0.03em;
+      color: #091A54;
+      margin-bottom: 33px;
+    }
+    p + p {
+      margin-top: 26px;
+    }
+    .list-job {
+      margin-bottom: 37px;
+      width: 550px;
+      max-width: 100%;
+      li {
+        & + li {
+          margin-top: 23px;
+        }
+        padding-bottom: 12px;
+        box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
+        width: 100%;
+      }
+    }
+    .job-total {
+
+    }
+    .job-link {
+      font-size: 50px;
+      line-height: 60px;
+      font-family: RoslindaleDC-Light;
+      margin-bottom: 13px;
+      display: block;
+      color: #091A54;
+    }
+    .type {
+      display: flex;
+      font-size: 14px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Medium;
+      color: #091A54;
+      gap: 38px;
+    }
+    .view-all {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 135%;
+      font-family: SuisseIntl-Medium;
+      text-align: center;
+      padding: 10px 20px;
+      background: #091A54;
+      border-radius: 38px;
+      color: #F0F0E9;
+
     }
   }
 }

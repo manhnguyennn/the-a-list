@@ -19,8 +19,6 @@
 
 .tal-wrapper__content {
   box-sizing: border-box;
-  border-left: 10px solid #000000;
-  border-right: 10px solid #000000;
   position: relative;
 
 }
@@ -79,5 +77,8 @@
 }
 
 .tal-container {
-  overflow: hidden;
+  border-left: 10px solid #000000;
+  border-right: 10px solid #000000;
+  box-sizing: border-box;
 }
+

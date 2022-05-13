@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
-body {
-  font-family: "Signika Negative", sans-serif;
+body { 
+  font-family: "Signika Negative", sans-serif; 
   font-weight: 300;
   font-size: 24px;
   margin: 0;
@@ -37,10 +37,10 @@ section.horizontal {
 
 section.horizontal .pin-wrap,
 section.horizontal .animation-wrap {
-  display: flex;
-  position: relative;
-  z-index: 1;
-  height: 100vh;
+    display: flex;
+    position: relative;
+    z-index: 1;  
+    height: 100vh;
 }
 
 section.blank {
