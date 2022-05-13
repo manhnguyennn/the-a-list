@@ -8,10 +8,10 @@ body {
   padding: 0;
   background-color: #f0f0f0;
 }
-body.smooth-scroll {
+.smooth-scroll {
   overflow-y: hidden !important;
 }
-body.smooth-scroll #scroll-container {
+.smooth-scroll #scroll-container {
   width: auto;
   height: 100vh;
   overflow: auto;
@@ -31,19 +31,19 @@ section {
 
 
 
-section.horizontal {
+.horizontal {
   overflow-x: hidden;
 }
 
-section.horizontal .pin-wrap,
-section.horizontal .animation-wrap {
+.horizontal .pin-wrap,
+.horizontal .animation-wrap {
     display: flex;
     position: relative;
     z-index: 1;  
     height: 100vh;
 }
 
-section.blank {
+.blank {
   padding: 100px 28%;
 }
 

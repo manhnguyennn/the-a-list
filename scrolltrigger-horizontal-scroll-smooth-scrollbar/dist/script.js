@@ -54,7 +54,7 @@ if ($("body").hasClass("smooth-scroll")) {
 
 // ScrollTrigger horizontal scroll
 // ================================
-const horizontalSections = gsap.utils.toArray('section.horizontal');
+const horizontalSections = gsap.utils.toArray('div.horizontal');
 
 horizontalSections.forEach(function (sec, i) {	
   
@@ -71,7 +71,7 @@ horizontalSections.forEach(function (sec, i) {
     ease: "none", // <-- IMPORTANT!
     scrollTrigger: {
       trigger: sec,		
-      scroller: document.body, // neccessary setting for smooth-scrollbar on body
+      //scroller: document.querySelector("#scroll-container"),  //document.body, // neccessary setting for smooth-scrollbar on body
       pinType: 'transform', // neccessary setting for smooth-scrollbar on body
       start: "top top",
       end: "+=5000",

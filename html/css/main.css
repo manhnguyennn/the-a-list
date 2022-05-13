@@ -1,125 +1,245 @@
 /* CSS Document */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none; }
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
 
 textarea {
-  resize: none; }
+    resize: none;
+}
 
 input {
-  outline: none;
-  box-shadow: none;
-  text-shadow: none; }
+    outline: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
 
 /* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0; }
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 
 /* Firefox */
+
 input[type=number] {
-  -moz-appearance: textfield; }
+    -moz-appearance: textfield;
+}
 
 input[type=text],
 input[type=number],
 input[type=email],
 input[type=password],
-textarea, select {
-  /* Remove First */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -moz-appearance: textfield;
-  outline: none; }
+textarea,
+select {
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
+    outline: none;
+}
+
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
 
 body {
-  line-height: 1;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased; }
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
 
-ol, ul {
-  list-style: none; }
+ol,
+ul {
+    list-style: none;
+}
 
-blockquote, q {
-  quotes: none; }
+blockquote,
+q {
+    quotes: none;
+}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0; }
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
 
 a {
-  text-decoration: none;
-  cursor: pointer; }
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .bb05 {
-  border-bottom: 1px solid #E7E7E7; }
+    border-bottom: 1px solid #E7E7E7;
+}
 
 .bt05 {
-  border-top: 1px solid #E7E7E7; }
+    border-top: 1px solid #E7E7E7;
+}
 
 @media screen and (max-width: 800px) {
-  .bb05 {
-    border-bottom: 0.5px solid #E7E7E7; }
+    .bb05 {
+        border-bottom: 0.5px solid #E7E7E7;
+    }
+    .bt05 {
+        border-top: 0.5px solid #E7E7E7;
+    }
+}
 
-  .bt05 {
-    border-top: 0.5px solid #E7E7E7; } }
 @font-face {
-  font-family: RoslindaleDC-Light;
-  src: url("../fonts/RoslindaleDC-Light.otf"); }
+    font-family: RoslindaleDC-Light;
+    src: url("../fonts/RoslindaleDC-Light.otf");
+}
+
 @font-face {
-  font-family: RoslindaleText-Regular;
-  src: url("../fonts/RoslindaleText-Regular.ttf"); }
+    font-family: RoslindaleText-Regular;
+    src: url("../fonts/RoslindaleText-Regular.ttf");
+}
+
 @font-face {
-  font-family: SuisseIntl-Regular;
-  src: url("../fonts/SuisseIntl-Regular.otf"); }
+    font-family: SuisseIntl-Regular;
+    src: url("../fonts/SuisseIntl-Regular.otf");
+}
+
 @font-face {
-  font-family: SuisseIntl-Medium;
-  src: url("../fonts/SuisseIntl-Medium.otf"); }
+    font-family: SuisseIntl-Medium;
+    src: url("../fonts/SuisseIntl-Medium.otf");
+}
+
 .tal-home__cover {
-  position: relative; }
-  .tal-home__cover video {
+    position: relative;
+}
+
+.tal-home__cover video {
     width: 100%;
     height: calc(100vh - 60px);
     object-fit: cover;
     display: block;
-    z-index: 1; }
-  .tal-home__cover .info-cover {
+    z-index: 1;
+}
+
+.tal-home__cover .info-cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,32 +253,46 @@ a {
     padding-left: 31.18vh;
     padding-top: 7.45vh;
     padding-right: 26.27vh;
-    padding-bottom: 8.47vh; }
-  .tal-home__cover .titleBox {
+    padding-bottom: 8.47vh;
+}
+
+.tal-home__cover .titleBox {
     font-family: RoslindaleDC-Light;
     font-size: 16vh;
     line-height: 111.5%;
-    color: #F0F0E9; }
-    .tal-home__cover .titleBox .txt:nth-child(2) {
-      padding-left: 15.56vh; }
-  .tal-home__cover .bottom-cover {
+    color: #F0F0E9;
+}
+
+.tal-home__cover .titleBox .txt:nth-child(2) {
+    padding-left: 15.56vh;
+}
+
+.tal-home__cover .bottom-cover {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
-  .tal-home__cover .list-navLinks {
+    justify-content: space-between;
+}
+
+.tal-home__cover .list-navLinks {
     width: 633px;
     display: flex;
     flex-wrap: wrap;
-    gap: 7px; }
-    .tal-home__cover .list-navLinks li {
-      width: calc((100% - 7px) / 2); }
-    .tal-home__cover .list-navLinks .nav-link-cover {
-      font-size: 14px;
-      line-height: 135%;
-      font-family: SuisseIntl-Regular;
-      color: #E1E1DA;
-      display: block; }
-  .tal-home__cover .icn-des {
+    gap: 7px;
+}
+
+.tal-home__cover .list-navLinks li {
+    width: calc((100% - 7px) / 2);
+}
+
+.tal-home__cover .list-navLinks .nav-link-cover {
+    font-size: 14px;
+    line-height: 135%;
+    font-family: SuisseIntl-Regular;
+    color: #E1E1DA;
+    display: block;
+}
+
+.tal-home__cover .icn-des {
     display: flex;
     border: 1px solid #F0F0E9;
     border-radius: 50%;
@@ -168,285 +302,400 @@ a {
     align-items: center;
     flex-direction: column;
     width: 105px;
-    height: 105px; }
-    .tal-home__cover .icn-des .txt {
-      font-size: 14px;
-      line-height: 95%;
-      text-align: center;
-      display: block;
-      font-family: SuisseIntl-Regular;
-      color: #F0F0E9;
-      margin-bottom: 12px; }
-    .tal-home__cover .icn-des .icn {
-      display: block;
-      width: 9px; }
+    height: 105px;
+}
+
+.tal-home__cover .icn-des .txt {
+    font-size: 14px;
+    line-height: 95%;
+    text-align: center;
+    display: block;
+    font-family: SuisseIntl-Regular;
+    color: #F0F0E9;
+    margin-bottom: 12px;
+}
+
+.tal-home__cover .icn-des .icn {
+    display: block;
+    width: 9px;
+}
+
 .tal-home__abus .textContent {
-  background: #091A54;
-  padding-top: 90px;
-  padding-bottom: 36.61vh; }
+    background: #091A54;
+    padding-top: 90px;
+    padding-bottom: 36.61vh;
+}
+
 .tal-home__abus .textContent-wrapper {
-  width: 678px;
-  max-width: 100%;
-  margin: 0 auto; }
+    width: 678px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .tal-home__abus .heading {
-  font-size: 90px;
-  line-height: 111.5%;
-  font-family: RoslindaleDC-Light;
-  text-align: center;
-  margin-bottom: 25px;
-  /* #D8E4B4 */
-  color: #BD9445; }
+    font-size: 90px;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    text-align: center;
+    margin-bottom: 25px;
+    /* #D8E4B4 */
+    color: #BD9445;
+}
+
 .tal-home__abus .des {
-  margin-bottom: 25px;
-  font-size: 20px;
-  line-height: 135%;
-  font-family: SuisseIntl-Regular;
-  text-align: center;
-  color: #F0F0E9; }
-.tal-home__abus p + p {
-  margin-top: 30px; }
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 135%;
+    font-family: SuisseIntl-Regular;
+    text-align: center;
+    color: #F0F0E9;
+}
+
+.tal-home__abus p+p {
+    margin-top: 30px;
+}
+
 .tal-home__abus .view-more {
-  font-size: 14px;
-  line-height: 135%;
-  font-family: SuisseIntl-Regular;
-  color: #F0F0E9;
-  width: 123px;
-  height: 39px;
-  background: #BD9445;
-  border-radius: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto; }
+    font-size: 14px;
+    line-height: 135%;
+    font-family: SuisseIntl-Regular;
+    color: #F0F0E9;
+    width: 123px;
+    height: 39px;
+    background: #BD9445;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .tal-home__abus .videoContent {
-  background: #F0F0E9; }
+    background: #F0F0E9;
+}
+
 .tal-home__abus .videoBox {
-  transform: translate3d(0, -24.06vh, 0);
-  width: 78.70vw;
-  margin: 0 auto; }
-  .tal-home__abus .videoBox video {
+    transform: translate3d(0, -24.06vh, 0);
+    width: 78.70vw;
+    margin: 0 auto;
+}
+
+.tal-home__abus .videoBox video {
     width: 100%;
     height: 42.45vw;
     object-fit: cover;
     display: block;
-    border-radius: 23px; }
+    border-radius: 23px;
+}
+
 .tal-home__our {
-  background: #F0F0E9; }
-  .tal-home__our .our-expts {
-    padding-bottom: 6.56vw; }
-    .tal-home__our .our-expts .heading {
-      font-size: 18.5vw;
-      line-height: 111.5%;
-      font-family: RoslindaleDC-Light;
-      text-align: center;
-      margin-bottom: 6vw;
-      color: #222222; }
-      .tal-home__our .our-expts .heading span {
-        color: #BD9445; }
-    .tal-home__our .our-expts .list-expts {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 1.46vw; }
-      .tal-home__our .our-expts .list-expts li {
-        width: 50%;
-        border-top: 1px solid rgba(34, 34, 34, 0.12);
-        box-sizing: border-box;
-        padding-top: 4.31vw;
-        padding-bottom: 4.31vw; }
-        .tal-home__our .our-expts .list-expts li:nth-child(2n) {
-          padding-left: 1.46vw; }
-        .tal-home__our .our-expts .list-expts li:nth-child(2n+1) {
-          padding-right: 1.46vw; }
-    .tal-home__our .our-expts .expts-card {
-      display: flex; }
-      .tal-home__our .our-expts .expts-card .thumb {
-        width: 14.49vw;
-        margin-right: 1.9vw;
-        flex-shrink: 0; }
-        .tal-home__our .our-expts .expts-card .thumb img, .tal-home__our .our-expts .expts-card .thumb video {
-          width: 100%;
-          display: block;
-          height: auto; }
-      .tal-home__our .our-expts .expts-card .total {
-        flex-grow: 1; }
-      .tal-home__our .our-expts .expts-card .type {
-        display: flex;
-        align-items: center;
-        margin-bottom: 34px; }
-        .tal-home__our .our-expts .expts-card .type .numb {
-          width: 4vw;
-          height: 4vw;
-          font-size: 2.5vw;
-          border: 1px solid #222222;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 84.5%;
-          text-align: center;
-          letter-spacing: -0.01em;
-          color: #222222;
-          margin-right: 22px;
-          flex-shrink: 0; }
-        .tal-home__our .our-expts .expts-card .type .txt {
-          flex-grow: 1;
-          font-size: 1.7vw;
-          line-height: 117%;
-          font-family: SuisseIntl-Medium;
-          display: block;
-          letter-spacing: -0.03em;
-          text-transform: uppercase;
-          color: #222222; }
-      .tal-home__our .our-expts .expts-card .sapo {
-        font-size: 1vw;
-        line-height: 155%;
-        color: #222222; }
-  .tal-home__our .our-clients {
+    background: #F0F0E9;
+}
+
+.tal-home__our .our-expts {
+    padding-bottom: 6.56vw;
+}
+
+.tal-home__our .our-expts .heading {
+    font-size: 18.5vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    text-align: center;
+    margin-bottom: 6vw;
+    color: #222222;
+}
+
+.tal-home__our .our-expts .heading span {
+    color: #BD9445;
+}
+
+.tal-home__our .our-expts .list-expts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1.46vw;
+}
+
+.tal-home__our .our-expts .list-expts li {
+    width: 50%;
+    border-top: 1px solid rgba(34, 34, 34, 0.12);
+    box-sizing: border-box;
+    padding-top: 4.31vw;
+    padding-bottom: 4.31vw;
+}
+
+.tal-home__our .our-expts .list-expts li:nth-child(2n) {
+    padding-left: 1.46vw;
+}
+
+.tal-home__our .our-expts .list-expts li:nth-child(2n+1) {
+    padding-right: 1.46vw;
+}
+
+.tal-home__our .our-expts .expts-card {
+    display: flex;
+}
+
+.tal-home__our .our-expts .expts-card .thumb {
+    width: 14.49vw;
+    margin-right: 1.9vw;
+    flex-shrink: 0;
+}
+
+.tal-home__our .our-expts .expts-card .thumb img,
+.tal-home__our .our-expts .expts-card .thumb video {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.tal-home__our .our-expts .expts-card .total {
+    flex-grow: 1;
+}
+
+.tal-home__our .our-expts .expts-card .type {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.tal-home__our .our-expts .expts-card .type .numb {
+    width: 4vw;
+    height: 4vw;
+    font-size: 2.5vw;
+    border: 1px solid #222222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 84.5%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #222222;
+    margin-right: 22px;
+    flex-shrink: 0;
+}
+
+.tal-home__our .our-expts .expts-card .type .txt {
+    flex-grow: 1;
+    font-size: 1.7vw;
+    line-height: 117%;
+    font-family: SuisseIntl-Medium;
+    display: block;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.tal-home__our .our-expts .expts-card .sapo {
+    font-size: 1vw;
+    line-height: 155%;
+    color: #222222;
+}
+
+.tal-home__our .our-clients {
     z-index: 3;
-    position: relative; }
-    .tal-home__our .our-clients .videoBG {
-      width: 100%;
-      position: relative; }
-      .tal-home__our .our-clients .videoBG video {
-        width: 100%;
-        height: 44.51vw;
-        object-fit: cover;
-        display: block;
-        z-index: 1;
-        border-radius: 20px 20px 0px 0px; }
-      .tal-home__our .our-clients .videoBG .heading {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        line-height: 90%;
-        font-family: RoslindaleDC-Light;
-        text-align: center;
-        font-size: 6vw;
-        color: #F0F0E9;
-        z-index: 2; }
-    .tal-home__our .our-clients .client-list {
-      background: #091A54;
-      padding: 5.12vw 5.49vw;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5.27vw;
-      border-radius: 0 0 20px 20px; }
-      .tal-home__our .our-clients .client-list li {
-        width: calc(100% / 7); }
-      .tal-home__our .our-clients .client-list .client {
-        display: block; }
-        .tal-home__our .our-clients .client-list .client img {
-          width: 100%;
-          display: block; }
-  .tal-home__our .our-works {
+    position: relative;
+}
+
+.tal-home__our .our-clients .videoBG {
+    width: 100%;
+    position: relative;
+}
+
+.tal-home__our .our-clients .videoBG video {
+    width: 100%;
+    height: 44.51vw;
+    object-fit: cover;
+    display: block;
+    z-index: 1;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.tal-home__our .our-clients .videoBG .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    line-height: 90%;
+    font-family: RoslindaleDC-Light;
+    text-align: center;
+    font-size: 6vw;
+    color: #F0F0E9;
+    z-index: 2;
+}
+
+.tal-home__our .our-clients .client-list {
+    background: #091A54;
+    padding: 5.12vw 5.49vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5.27vw;
+    border-radius: 0 0 20px 20px;
+}
+
+.tal-home__our .our-clients .client-list li {
+    width: calc(100% / 7);
+}
+
+.tal-home__our .our-clients .client-list .client {
+    display: block;
+}
+
+.tal-home__our .our-clients .client-list .client img {
+    width: 100%;
+    display: block;
+}
+
+.tal-home__our .our-works {
     background: #000000;
     padding-top: 124px;
     padding-bottom: 95px;
-    z-index: 2; }
-    .tal-home__our .our-works .works-content {
-      width: 74.96vw;
-      margin: 0 auto 128px; }
-    .tal-home__our .our-works .heading {
-      font-size: 113.15px;
-      line-height: 90%;
-      font-family: RoslindaleDC-Light;
-      margin-bottom: 36px;
-      text-align: center;
-      color: #F0F0E9; }
-      .tal-home__our .our-works .heading span {
-        color: #BD9445; }
-    .tal-home__our .our-works .des {
-      font-size: 18px;
-      line-height: 117%;
-      width: 478px;
-      margin: 0 auto 36px;
-      max-width: 100%;
-      text-align: center;
-      letter-spacing: -0.03em;
-      color: #F0F0E9; }
-    .tal-home__our .our-works .view-more {
-      font-size: 14px;
-      line-height: 135%;
-      font-family: SuisseIntl-Regular;
-      color: #F0F0E9;
-      width: 162px;
-      height: 39px;
-      background: #BD9445;
-      border-radius: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto; }
-    .tal-home__our .our-works .work-project {
-      width: 74.96vw;
-      margin: 0 auto; }
-    .tal-home__our .our-works .list-porject li {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end; }
-      .tal-home__our .our-works .list-porject li + li {
-        margin-top: 3vw; }
-      .tal-home__our .our-works .list-porject li:nth-child(2n + 1) {
-        justify-content: flex-start; }
-    .tal-home__our .our-works .project-card {
-      width: 45.02vw; }
-      .tal-home__our .our-works .project-card .thumb {
-        display: block;
-        margin-bottom: 10px;
-        width: 100%;
-        padding-top: 66.66%;
-        position: relative; }
-        .tal-home__our .our-works .project-card .thumb img {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          object-fit: cover;
-          border-radius: 12px; }
-      .tal-home__our .our-works .project-card .type-client {
-        display: flex;
-        align-items: center;
-        font-size: 0.9vw;
-        line-height: 135%;
-        color: #F0F0E9;
-        opacity: 0.6;
-        margin-bottom: 5px; }
-      .tal-home__our .our-works .project-card .client-name {
-        flex-grow: 1;
-        display: block;
-        color: #F0F0E9; }
-      .tal-home__our .our-works .project-card .date {
-        display: block;
-        flex-shrink: 0;
-        margin-left: 15px;
-        color: #F0F0E9; }
-      .tal-home__our .our-works .project-card .name-project {
-        font-size: 1.4vw;
-        line-height: 135%;
-        font-family: SuisseIntl-Medium;
-        color: #F0F0E9;
-        display: block; }
+    z-index: 2;
+}
+
+.tal-home__our .our-works .works-content {
+    width: 74.96vw;
+    margin: 0 auto 128px;
+}
+
+.tal-home__our .our-works .heading {
+    font-size: 113.15px;
+    line-height: 90%;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: 36px;
+    text-align: center;
+    color: #F0F0E9;
+}
+
+.tal-home__our .our-works .heading span {
+    color: #BD9445;
+}
+
+.tal-home__our .our-works .des {
+    font-size: 18px;
+    line-height: 117%;
+    width: 478px;
+    margin: 0 auto 36px;
+    max-width: 100%;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #F0F0E9;
+}
+
+.tal-home__our .our-works .view-more {
+    font-size: 14px;
+    line-height: 135%;
+    font-family: SuisseIntl-Regular;
+    color: #F0F0E9;
+    width: 162px;
+    height: 39px;
+    background: #BD9445;
+    border-radius: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.tal-home__our .our-works .work-project {
+    width: 74.96vw;
+    margin: 0 auto;
+}
+
+.tal-home__our .our-works .list-porject li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tal-home__our .our-works .list-porject li+li {
+    margin-top: 3vw;
+}
+
+.tal-home__our .our-works .list-porject li:nth-child(2n+1) {
+    justify-content: flex-start;
+}
+
+.tal-home__our .our-works .project-card {
+    width: 45.02vw;
+}
+
+.tal-home__our .our-works .project-card .thumb {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-top: 66.66%;
+    position: relative;
+}
+
+.tal-home__our .our-works .project-card .thumb img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.tal-home__our .our-works .project-card .type-client {
+    display: flex;
+    align-items: center;
+    font-size: 0.9vw;
+    line-height: 135%;
+    color: #F0F0E9;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
+
+.tal-home__our .our-works .project-card .client-name {
+    flex-grow: 1;
+    display: block;
+    color: #F0F0E9;
+}
+
+.tal-home__our .our-works .project-card .date {
+    display: block;
+    flex-shrink: 0;
+    margin-left: 15px;
+    color: #F0F0E9;
+}
+
+.tal-home__our .our-works .project-card .name-project {
+    font-size: 1.4vw;
+    line-height: 135%;
+    font-family: SuisseIntl-Medium;
+    color: #F0F0E9;
+    display: block;
+}
+
 .tal-home__ecosys {
-  background: #F0F0E9;
-  display: flex;
-  border-radius: 20px 20px 0 0;
-  overflow: hidden; }
-  .tal-home__ecosys .heading {
-    width: 66.78vh; }
-  .tal-home__ecosys .list-ecosys {
+    background: #F0F0E9;
+    /* display: flex; */
+    border-radius: 20px 20px 0 0;
+    /* overflow: hidden; */
+}
+
+.tal-home__ecosys .heading {
+    width: 66.78vh;
+}
+
+.tal-home__ecosys .list-ecosys {
     display: flex;
     gap: 8.47vh;
-    height: 100%; }
-  .tal-home__ecosys .eco-wrapper {
+    height: 100%;
+}
+
+.tal-home__ecosys .eco-wrapper {
     display: flex;
     box-sizing: border-box;
     padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
     gap: 8.47vh;
-    height: 100vh; }
-  .tal-home__ecosys .heading {
+    height: 100vh;
+}
+
+.tal-home__ecosys .heading {
     font-size: 15vh;
     line-height: 80.5%;
     font-family: RoslindaleDC-Light;
@@ -454,21 +703,35 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #222222; }
-    .tal-home__ecosys .heading span {
-      color: #BD9445; }
-  .tal-home__ecosys li {
+    color: #222222;
+}
+
+.tal-home__ecosys .heading span {
+    color: #BD9445;
+}
+
+.tal-home__ecosys li {
     width: 101.69vh;
-    height: 100%; }
-    .tal-home__ecosys li:nth-child(1) .ecosys-card {
-      background: #132050; }
-    .tal-home__ecosys li:nth-child(2) .ecosys-card {
-      background: #F04624; }
-    .tal-home__ecosys li:nth-child(3) .ecosys-card {
-      background: #CDD3D8; }
-      .tal-home__ecosys li:nth-child(3) .ecosys-card .des {
-        color: #091A54; }
-  .tal-home__ecosys .ecosys-card {
+    height: 100%;
+}
+
+.tal-home__ecosys li:nth-child(1) .ecosys-card {
+    background: #132050;
+}
+
+.tal-home__ecosys li:nth-child(2) .ecosys-card {
+    background: #F04624;
+}
+
+.tal-home__ecosys li:nth-child(3) .ecosys-card {
+    background: #CDD3D8;
+}
+
+.tal-home__ecosys li:nth-child(3) .ecosys-card .des {
+    color: #091A54;
+}
+
+.tal-home__ecosys .ecosys-card {
     border-radius: 20px;
     height: 100%;
     width: 100%;
@@ -476,103 +739,143 @@ a {
     flex-direction: column;
     justify-content: space-between;
     padding: 5.08vh;
-    box-sizing: border-box; }
-  .tal-home__ecosys .thumb {
+    box-sizing: border-box;
+}
+
+.tal-home__ecosys .thumb {
     width: 33.90vh;
     height: 33.90vh;
     display: block;
-    margin-bottom: 8.81vh; }
-    .tal-home__ecosys .thumb img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-radius: 50%;
-      object-fit: cover; }
-  .tal-home__ecosys .logo {
+    margin-bottom: 8.81vh;
+}
+
+.tal-home__ecosys .thumb img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tal-home__ecosys .logo {
     width: 32vh;
-    display: block; }
-    .tal-home__ecosys .logo svg {
-      width: 100%;
-      display: block;
-      height: auto; }
-  .tal-home__ecosys .des {
+    display: block;
+}
+
+.tal-home__ecosys .logo svg {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+.tal-home__ecosys .des {
     font-size: 2.2vh;
     line-height: 135%;
     margin-top: auto;
     color: #F0F0E9;
-    white-space: normal; }
+    white-space: normal;
+}
+
 .tal-home__career {
-  border-radius: 0 0 20px 20px;
-  overflow: hidden; }
-  .tal-home__career .career-wrapper {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.tal-home__career .career-wrapper {
     display: flex;
-    align-items: stretch; }
-  .tal-home__career .thumbBox {
+    align-items: stretch;
+}
+
+.tal-home__career .thumbBox {
     flex-grow: 1;
     height: auto;
-    position: relative; }
-    .tal-home__career .thumbBox .images {
-      width: 100%;
-      height: 100%;
-      z-index: 1; }
-      .tal-home__career .thumbBox .images img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0; }
-    .tal-home__career .thumbBox .heading {
-      position: absolute;
-      top: 3.44vw;
-      left: 4.68vw;
-      z-index: 2;
-      font-size: 8vw;
-      line-height: 7vw;
-      letter-spacing: -0.01em;
-      font-family: RoslindaleDC-Light;
-      color: #E1E1DA;
-      width: 28.25vw; }
-  .tal-home__career .careerBox {
+    position: relative;
+}
+
+.tal-home__career .thumbBox .images {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.tal-home__career .thumbBox .images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tal-home__career .thumbBox .heading {
+    position: absolute;
+    top: 3.44vw;
+    left: 4.68vw;
+    z-index: 2;
+    font-size: 8vw;
+    line-height: 7vw;
+    letter-spacing: -0.01em;
+    font-family: RoslindaleDC-Light;
+    color: #E1E1DA;
+    width: 28.25vw;
+}
+
+.tal-home__career .careerBox {
     width: 673px;
     max-width: 100%;
     box-sizing: border-box;
     padding: 46px 40px;
-    background: #CDD3D8; }
-  .tal-home__career .des {
+    background: #CDD3D8;
+}
+
+.tal-home__career .des {
     font-size: 18px;
     line-height: 145%;
     letter-spacing: -0.03em;
     color: #091A54;
-    margin-bottom: 33px; }
-  .tal-home__career p + p {
-    margin-top: 26px; }
-  .tal-home__career .list-job {
+    margin-bottom: 33px;
+}
+
+.tal-home__career p+p {
+    margin-top: 26px;
+}
+
+.tal-home__career .list-job {
     margin-bottom: 37px;
     width: 550px;
-    max-width: 100%; }
-    .tal-home__career .list-job li {
-      padding-bottom: 12px;
-      box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
-      width: 100%; }
-      .tal-home__career .list-job li + li {
-        margin-top: 23px; }
-  .tal-home__career .job-link {
+    max-width: 100%;
+}
+
+.tal-home__career .list-job li {
+    padding-bottom: 12px;
+    box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
+    width: 100%;
+}
+
+.tal-home__career .list-job li+li {
+    margin-top: 23px;
+}
+
+.tal-home__career .job-link {
     font-size: 50px;
     line-height: 60px;
     font-family: RoslindaleDC-Light;
     margin-bottom: 13px;
     display: block;
-    color: #091A54; }
-  .tal-home__career .type {
+    color: #091A54;
+}
+
+.tal-home__career .type {
     display: flex;
     font-size: 14px;
     line-height: 133.7%;
     font-family: SuisseIntl-Medium;
     color: #091A54;
-    gap: 38px; }
-  .tal-home__career .view-all {
+    gap: 38px;
+}
+
+.tal-home__career .view-all {
     display: inline-block;
     font-size: 14px;
     line-height: 135%;
@@ -581,26 +884,31 @@ a {
     padding: 10px 20px;
     background: #091A54;
     border-radius: 38px;
-    color: #F0F0E9; }
+    color: #F0F0E9;
+}
 
 .tal-wrapper {
-  background: #000000;
-  padding-top: 60px;
-  font-family: SuisseIntl-Regular;
-  font-size: 16px; }
+    background: #000000;
+    padding-top: 60px;
+    font-family: SuisseIntl-Regular;
+    font-size: 16px;
+}
 
 .tal-wrapper__content {
-  box-sizing: border-box;
-  position: relative; }
+    box-sizing: border-box;
+    position: relative;
+}
 
 .top-border-radius {
-  top: 40px;
-  position: fixed;
-  height: 20px;
-  left: 10px;
-  z-index: 10;
-  background-color: #000000; }
-  .top-border-radius:before {
+    top: 40px;
+    position: fixed;
+    height: 20px;
+    left: 10px;
+    z-index: 10;
+    background-color: #000000;
+}
+
+.top-border-radius:before {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -609,28 +917,32 @@ a {
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0 -20px 0 0 #000000; }
+    box-shadow: 0 -20px 0 0 #000000;
+}
 
 .bottom-round {
-  position: fixed;
-  left: 10px;
-  bottom: 0;
-  z-index: 9999;
-  display: flex;
-  height: 10px;
-  justify-content: center;
-  align-items: flex-end; }
+    position: fixed;
+    left: 10px;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    height: 10px;
+    justify-content: center;
+    align-items: flex-end;
+}
 
 .bottom-border-radius {
-  position: absolute;
-  left: 0;
-  top: auto;
-  right: 0;
-  transform: rotate(180deg);
-  height: 10px;
-  background-color: #000000;
-  border-radius: 0px 0px 0px 0; }
-  .bottom-border-radius:before {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    transform: rotate(180deg);
+    height: 10px;
+    background-color: #000000;
+    border-radius: 0px 0px 0px 0;
+}
+
+.bottom-border-radius:before {
     content: "";
     position: absolute;
     background-color: transparent;
@@ -639,11 +951,14 @@ a {
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0 -20px 0 0 #000000; }
+    box-shadow: 0 -20px 0 0 #000000;
+}
 
 .tal-container {
-  border-left: 10px solid #000000;
-  border-right: 10px solid #000000;
-  box-sizing: border-box; }
+    border-left: 10px solid #000000;
+    border-right: 10px solid #000000;
+    box-sizing: border-box;
+}
+
 
 /*# sourceMappingURL=main.css.map */
