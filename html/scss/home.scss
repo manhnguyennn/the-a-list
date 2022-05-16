@@ -394,6 +394,7 @@
     }
   }
   &__ecosys {
+    overflow-y: hidden;
     background: #F0F0E9;
     border-radius: 20px 20px 0 0;
     .heading {
@@ -403,17 +404,16 @@
       display: flex;
       gap: 8.47vh;
       height: 100%;
+      box-sizing: border-box;
       padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
     }
     .animation-wrap {
       display: flex;
       box-sizing: border-box;
-
       gap: 8.47vh;
       height: 100vh;
 
     }
-
 
     .heading {
       font-size: 15vh;

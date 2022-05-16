@@ -1,0 +1,475 @@
+.tal-career {
+  &__cover {
+    position: relative;
+    video {
+      width: 100%;
+      height: calc(100vh - 60px);
+      object-fit: cover;
+      display: block;
+      z-index: 1;
+    }
+    .info-cover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      z-index: 2;
+    }
+    .titleBox {
+      font-family: RoslindaleDC-Light;
+      font-size: 27vh;
+      margin-bottom: 7vh;
+      line-height: 111.5%;
+      color: #F0F0E9;
+      text-align: center;
+
+    }
+    .sapo {
+      width: 81.69vh;
+      margin: 0 auto;
+      font-size: 2.8vh;
+      line-height: 133.7%;
+      text-align: center;
+      color: #E1E1DA;
+      font-family: SuisseIntl-Regular;
+    }
+    p + p {
+      margin-top: 3vh;
+    }
+  }
+  &__list {
+    padding: 3.95vw 4.39vw;
+    background: #F0F0E9;
+    .list-filters {
+      display: flex;
+      gap: 2vw;
+      margin-bottom: 4.53vw;
+    }
+    .filters {
+      width: 50%;
+      border: 1px solid #222222;
+      border-radius: 36px;
+      color: #222222;
+      text-align: center;
+      select {
+        font-size: 1vw;
+        line-height: 2vw;
+        text-transform: uppercase;
+        font-family: SuisseIntl-Medium;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        text-align: center;
+      }
+    }
+    .list-careers {
+      li + li {
+        margin-top: 0.87vw;
+        padding-top: 2.56vw;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+      }
+    }
+    .career {
+      display: block;
+    }
+    .name-job {
+      font-size: 3.5vw;
+      line-height: 3.9vw;
+      font-family: RoslindaleDC-Light;
+      margin-bottom: .9vw;
+      display: block;
+      color: #222222;
+    }
+    .type {
+      font-size: 1vw;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      display: flex;
+      gap: 2.78vw;
+      color: #222222;
+    }
+  }
+  &__detail-cover {
+    position: relative;
+    video {
+      width: 100%;
+      height: 43.89vh;
+      object-fit: cover;
+      display: block;
+      z-index: 1;
+    }
+    .info-cover {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      z-index: 2;
+    }
+    .titleBox {
+      font-family: RoslindaleDC-Light;
+      font-size: 8vh;
+      line-height: 8.8vh;
+      color: #F0F0E9;
+      text-align: center;
+
+    }
+  }
+  &__detail-content {
+    background: #F0F0E9;
+    padding: 2.34vw 2.92vw;
+
+    .header-content {
+      padding-bottom: 1.776vw;
+      margin-bottom: 5.85vw;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      position: relative;
+      .back-btn {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.75vw;
+        .icn {
+          margin-right: 0.65vw;
+          width: 1.53vw;
+          display: block;
+          svg {
+            width: 100%;
+            display: block;
+            height: auto;
+          }
+        }
+        .txt {
+          font-size: 1.1vw;
+          line-height: 133.7%;
+          font-family: SuisseIntl-Regular;
+          display: block;
+          text-transform: uppercase;
+          color: #222222;
+        }
+      }
+      .name-job {
+        font-size: 5.7vw;
+        line-height: 6vw;
+        font-family: RoslindaleDC-Light;
+        letter-spacing: -0.01em;
+        display: block;
+        color: #222222;
+        margin-bottom: 2.49vw;
+      }
+      .type {
+        display: flex;
+        gap: 3.66vw;
+        font-size: 1vw;
+        line-height: 133.7%;
+        text-transform: uppercase;
+        color: #222222;
+      }
+      .scrollTo-apply {
+        position: absolute;
+        right: 0;
+        bottom: 1.776vw;
+        font-size: 1vw;
+        line-height: 133.7%;
+        text-transform: uppercase;
+        background: #BD9445;
+        border-radius: 53px;
+        display: block;
+        padding: 0.73vw 1.46vw;
+        color: #F0F0E9;
+      }
+    }
+    .career__content-wrapper {
+      display: flex;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding-bottom: 80px;
+      flex-direction: column;
+      gap: 80px;
+    }
+    .content-box {
+
+      position: relative;
+      .numb {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 24px;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Regular;
+        color: #222222;
+
+      }
+      .total {
+        width: 700px;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+      .heading {
+        font-size: 24px;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Regular;
+        margin-bottom: 24px;
+        color: #222222;
+      }
+      .para {
+        font-size: 16px;
+        line-height: 135%;
+        color: #222222;
+
+      }
+    }
+
+  }
+  &__detail-apply {
+    background: #F0F0E9;
+    padding: 50px 0;
+    @keyframes spinner-border {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spinner-border {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      vertical-align: -0.125em;
+      border: 0.25em solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: 0.75s linear infinite spinner-border;
+    }
+
+    .apply-content {
+      width: 516px;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      &.loading {
+        cursor: default;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #F0F0E9;
+          opacity: .5;
+          z-index: 99;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 99999;
+          top: calc((100% - 2rem) / 2);
+          left: calc((100% - 2rem) / 2);
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem;
+          vertical-align: -0.125em;
+          border: 0.2em solid #222222;;
+          border-right-color: transparent;
+          border-radius: 50%;
+          animation: 0.75s linear infinite spinner-border;
+        }
+      }
+    }
+    .heading {
+      font-size: 50px;
+      line-height: 100%;
+      font-family: RoslindaleDC-Light;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+      color: #222222;
+    }
+    .des {
+      font-size: 12px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      margin-bottom: 14px;
+      color: #222222;
+      opacity: 0.5;
+    }
+    .label-name {
+      font-size: 14px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      color: #222222;
+      margin-bottom: 8px;
+      span {
+        color: #F04624;
+      }
+      i {
+        color: #626262;
+      }
+    }
+    input {
+      &:hover, &:focus {
+        border: 1px solid rgba(0, 0, 0, 1);
+      }
+      width: 100%;
+      box-sizing: border-box;
+      background: transparent;
+      transition: .15s ease;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 115px;
+      padding: 8px 16px;
+      font-size: 16px;
+      line-height: 133.7%;
+      /* or 21px */
+      font-family: SuisseIntl-Regular;
+      color: #000;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+    .status {
+      display: none;
+      margin-top: 7px;
+      font-size: 12px;
+      line-height: 133.7%;
+      padding-left: 16px;
+      color: #F04624;
+    }
+    .form-input {
+      margin-bottom: 14px;
+      &.wrong {
+        input {
+          &:hover, &:focus {
+            border: 1px solid rgba(0, 0, 0, 1);
+          }
+          border: 1px solid #F04624;
+        }
+        .status {
+          display: block;
+        }
+      }
+    }
+    .uploadBox {
+      &.default {
+        .progress {
+          display: none;
+        }
+        .file {
+          display: none;
+        }
+      }
+      &.active {
+        .des-input, .file, .upload-btn {
+          display: none;
+        }
+      }
+      &.finish {
+        .des-input, .progress {
+          display: none;
+        }
+      }
+      .des-input {
+        font-size: 12px;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Regular;
+        color: #222222;
+        opacity: 0.5;
+        margin-bottom: 8px;
+      }
+      .upload-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.12);
+        border-radius: 43px;
+        padding: 8px 16px;
+
+        .icn {
+          width: 20px;
+          display: block;
+          margin-right: 10px;
+          svg {
+            width: 100%;
+            display: block;
+            height: auto;
+          }
+
+        }
+        .txt {
+          font-size: 14px;
+          line-height: 133.7%;
+          font-family: SuisseIntl-Regular;
+          display: block;
+          color: #222222;
+        }
+      }
+
+      .progress {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 133.7%;
+        text-align: center;
+        color: #000000;
+        gap: 5px;
+        padding: 30px 0;
+      }
+      .meter {
+        position: relative;
+        background: #CDD3D8;
+        border-radius: 15px;
+        height: 6px;
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          background: #BD9445;
+          border-radius: 15px;
+          height: 100%;
+        }
+      }
+
+      .file {
+        font-size: 12px;
+        line-height: 133.7%;
+        a {
+          color: #000;
+        }
+        margin-bottom: 8px;
+        color: rgba(34, 34, 34, 0.5);
+      }
+    }
+    .submitBox {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .submit-btn {
+      font-size: 14px;
+      line-height: 133.7%;
+      background: #BD9445;
+      border-radius: 53px;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      padding: 10px 20px;
+      width: 100%;
+      box-sizing: border-box;
+      color: #F0F0E9;
+    }
+  }
+}

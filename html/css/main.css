@@ -18,30 +18,25 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  outline: none;
-}
+  outline: none; }
 
 textarea {
-  resize: none;
-}
+  resize: none; }
 
 input {
   outline: none;
   box-shadow: none;
-  text-shadow: none;
-}
+  text-shadow: none; }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0;
-}
+  margin: 0; }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
-}
+  -moz-appearance: textfield; }
 
 input[type=text],
 input[type=number],
@@ -53,39 +48,32 @@ textarea, select {
   -moz-appearance: none;
   appearance: none;
   -moz-appearance: textfield;
-  outline: none;
-}
+  outline: none; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
   line-height: 1;
   font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 .clearfix:after {
   visibility: hidden;
@@ -93,138 +81,113 @@ table {
   font-size: 0;
   content: " ";
   clear: both;
-  height: 0;
-}
+  height: 0; }
 
 a {
   text-decoration: none;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .bb05 {
-  border-bottom: 1px solid #E7E7E7;
-}
+  border-bottom: 1px solid #E7E7E7; }
 
 .bt05 {
-  border-top: 1px solid #E7E7E7;
-}
+  border-top: 1px solid #E7E7E7; }
 
 @media screen and (max-width: 800px) {
   .bb05 {
-    border-bottom: 0.5px solid #E7E7E7;
-  }
+    border-bottom: 0.5px solid #E7E7E7; }
 
   .bt05 {
-    border-top: 0.5px solid #E7E7E7;
-  }
-}
+    border-top: 0.5px solid #E7E7E7; } }
 @font-face {
   font-family: RoslindaleDC-Light;
-  src: url("../fonts/RoslindaleDC-Light.otf");
-}
+  src: url("../fonts/RoslindaleDC-Light.otf"); }
 @font-face {
   font-family: RoslindaleText-Regular;
-  src: url("../fonts/RoslindaleText-Regular.ttf");
-}
+  src: url("../fonts/RoslindaleText-Regular.ttf"); }
 @font-face {
   font-family: SuisseIntl-Regular;
-  src: url("../fonts/SuisseIntl-Regular.otf");
-}
+  src: url("../fonts/SuisseIntl-Regular.otf"); }
 @font-face {
   font-family: SuisseIntl-Medium;
-  src: url("../fonts/SuisseIntl-Medium.otf");
-}
+  src: url("../fonts/SuisseIntl-Medium.otf"); }
 .tal-home__cover {
-  position: relative;
-}
-.tal-home__cover video {
-  width: 100%;
-  height: calc(100vh - 60px);
-  object-fit: cover;
-  display: block;
-  z-index: 1;
-}
-.tal-home__cover .info-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  padding-left: 31.18vh;
-  padding-top: 7.45vh;
-  padding-right: 26.27vh;
-  padding-bottom: 8.47vh;
-}
-.tal-home__cover .titleBox {
-  font-family: RoslindaleDC-Light;
-  font-size: 16vh;
-  line-height: 111.5%;
-  color: #F0F0E9;
-}
-.tal-home__cover .titleBox .txt:nth-child(2) {
-  padding-left: 15.56vh;
-}
-.tal-home__cover .bottom-cover {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.tal-home__cover .list-navLinks {
-  width: 633px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-.tal-home__cover .list-navLinks li {
-  width: calc((100% - 7px) / 2);
-}
-.tal-home__cover .list-navLinks .nav-link-cover {
-  font-size: 14px;
-  line-height: 135%;
-  font-family: SuisseIntl-Regular;
-  color: #E1E1DA;
-  display: block;
-}
-.tal-home__cover .icn-des {
-  display: flex;
-  border: 1px solid #F0F0E9;
-  border-radius: 50%;
-  justify-content: flex-end;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-  align-items: center;
-  flex-direction: column;
-  width: 105px;
-  height: 105px;
-}
-.tal-home__cover .icn-des .txt {
-  font-size: 14px;
-  line-height: 95%;
-  text-align: center;
-  display: block;
-  font-family: SuisseIntl-Regular;
-  color: #F0F0E9;
-  margin-bottom: 12px;
-}
-.tal-home__cover .icn-des .icn {
-  display: block;
-  width: 9px;
-}
+  position: relative; }
+  .tal-home__cover video {
+    width: 100%;
+    height: calc(100vh - 60px);
+    object-fit: cover;
+    display: block;
+    z-index: 1; }
+  .tal-home__cover .info-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding-left: 31.18vh;
+    padding-top: 7.45vh;
+    padding-right: 26.27vh;
+    padding-bottom: 8.47vh; }
+  .tal-home__cover .titleBox {
+    font-family: RoslindaleDC-Light;
+    font-size: 16vh;
+    line-height: 111.5%;
+    color: #F0F0E9; }
+    .tal-home__cover .titleBox .txt:nth-child(2) {
+      padding-left: 15.56vh; }
+  .tal-home__cover .bottom-cover {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .tal-home__cover .list-navLinks {
+    width: 633px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px; }
+    .tal-home__cover .list-navLinks li {
+      width: calc((100% - 7px) / 2); }
+    .tal-home__cover .list-navLinks .nav-link-cover {
+      font-size: 14px;
+      line-height: 135%;
+      font-family: SuisseIntl-Regular;
+      color: #E1E1DA;
+      display: block; }
+  .tal-home__cover .icn-des {
+    display: flex;
+    border: 1px solid #F0F0E9;
+    border-radius: 50%;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    width: 105px;
+    height: 105px; }
+    .tal-home__cover .icn-des .txt {
+      font-size: 14px;
+      line-height: 95%;
+      text-align: center;
+      display: block;
+      font-family: SuisseIntl-Regular;
+      color: #F0F0E9;
+      margin-bottom: 12px; }
+    .tal-home__cover .icn-des .icn {
+      display: block;
+      width: 9px; }
 .tal-home__abus .textContent {
   background: #091A54;
   padding-top: 90px;
-  padding-bottom: 36.61vh;
-}
+  padding-bottom: 36.61vh; }
 .tal-home__abus .textContent-wrapper {
   width: 678px;
   max-width: 100%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 .tal-home__abus .heading {
   font-size: 90px;
   line-height: 111.5%;
@@ -232,19 +195,16 @@ a {
   text-align: center;
   margin-bottom: 25px;
   /* #D8E4B4 */
-  color: #BD9445;
-}
+  color: #BD9445; }
 .tal-home__abus .des {
   margin-bottom: 25px;
   font-size: 20px;
   line-height: 135%;
   font-family: SuisseIntl-Regular;
   text-align: center;
-  color: #F0F0E9;
-}
+  color: #F0F0E9; }
 .tal-home__abus p + p {
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 .tal-home__abus .view-more {
   font-size: 14px;
   line-height: 135%;
@@ -257,459 +217,1046 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 .tal-home__abus .videoContent {
-  background: #F0F0E9;
-}
+  background: #F0F0E9; }
 .tal-home__abus .videoBox {
   transform: translate3d(0, -24.06vh, 0);
-  width: 78.7vw;
-  margin: 0 auto;
-}
-.tal-home__abus .videoBox video {
-  width: 100%;
-  height: 42.45vw;
-  object-fit: cover;
-  display: block;
-  border-radius: 23px;
-}
+  width: 78.70vw;
+  margin: 0 auto; }
+  .tal-home__abus .videoBox video {
+    width: 100%;
+    height: 42.45vw;
+    object-fit: cover;
+    display: block;
+    border-radius: 23px; }
 .tal-home__our {
-  background: #F0F0E9;
-}
-.tal-home__our .our-expts {
-  padding-bottom: 6.56vw;
-}
-.tal-home__our .our-expts .heading {
-  font-size: 18.5vw;
-  line-height: 111.5%;
-  font-family: RoslindaleDC-Light;
-  text-align: center;
-  margin-bottom: 6vw;
-  color: #222222;
-}
-.tal-home__our .our-expts .heading span {
-  color: #BD9445;
-}
-.tal-home__our .our-expts .list-expts {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1.46vw;
-}
-.tal-home__our .our-expts .list-expts li {
-  width: 50%;
-  border-top: 1px solid rgba(34, 34, 34, 0.12);
-  box-sizing: border-box;
-  padding-top: 4.31vw;
-  padding-bottom: 4.31vw;
-}
-.tal-home__our .our-expts .list-expts li:nth-child(2n) {
-  padding-left: 1.46vw;
-}
-.tal-home__our .our-expts .list-expts li:nth-child(2n+1) {
-  padding-right: 1.46vw;
-}
-.tal-home__our .our-expts .expts-card {
-  display: flex;
-}
-.tal-home__our .our-expts .expts-card .thumb {
-  width: 14.49vw;
-  margin-right: 1.9vw;
-  flex-shrink: 0;
-}
-.tal-home__our .our-expts .expts-card .thumb img, .tal-home__our .our-expts .expts-card .thumb video {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-.tal-home__our .our-expts .expts-card .total {
-  flex-grow: 1;
-}
-.tal-home__our .our-expts .expts-card .type {
-  display: flex;
-  align-items: center;
-  margin-bottom: 34px;
-}
-.tal-home__our .our-expts .expts-card .type .numb {
-  width: 4vw;
-  height: 4vw;
-  font-size: 2.5vw;
-  border: 1px solid #222222;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 84.5%;
-  text-align: center;
-  letter-spacing: -0.01em;
-  color: #222222;
-  margin-right: 22px;
-  flex-shrink: 0;
-}
-.tal-home__our .our-expts .expts-card .type .txt {
-  flex-grow: 1;
-  font-size: 1.7vw;
-  line-height: 117%;
-  font-family: SuisseIntl-Medium;
-  display: block;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  color: #222222;
-}
-.tal-home__our .our-expts .expts-card .sapo {
-  font-size: 1vw;
-  line-height: 155%;
-  color: #222222;
-}
-.tal-home__our .our-clients {
-  z-index: 3;
-  position: relative;
-}
-.tal-home__our .our-clients .videoBG {
-  width: 100%;
-  position: relative;
-}
-.tal-home__our .our-clients .videoBG video {
-  width: 100%;
-  height: 44.51vw;
-  object-fit: cover;
-  display: block;
-  z-index: 1;
-  border-radius: 20px 20px 0px 0px;
-}
-.tal-home__our .our-clients .videoBG .heading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-  line-height: 90%;
-  font-family: RoslindaleDC-Light;
-  text-align: center;
-  font-size: 6vw;
-  color: #F0F0E9;
-  z-index: 2;
-}
-.tal-home__our .our-clients .client-list {
-  background: #091A54;
-  padding: 5.12vw 5.49vw;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5.27vw;
-  border-radius: 0 0 20px 20px;
-}
-.tal-home__our .our-clients .client-list li {
-  width: 14.2857142857%;
-}
-.tal-home__our .our-clients .client-list .client {
-  display: block;
-}
-.tal-home__our .our-clients .client-list .client img {
-  width: 100%;
-  display: block;
-}
-.tal-home__our .our-works {
-  background: #000000;
-  padding-top: 124px;
-  padding-bottom: 95px;
-  z-index: 2;
-}
-.tal-home__our .our-works .works-content {
-  width: 74.96vw;
-  margin: 0 auto 128px;
-}
-.tal-home__our .our-works .heading {
-  font-size: 113.15px;
-  line-height: 90%;
-  font-family: RoslindaleDC-Light;
-  margin-bottom: 36px;
-  text-align: center;
-  color: #F0F0E9;
-}
-.tal-home__our .our-works .heading span {
-  color: #BD9445;
-}
-.tal-home__our .our-works .des {
-  font-size: 18px;
-  line-height: 117%;
-  width: 478px;
-  margin: 0 auto 36px;
-  max-width: 100%;
-  text-align: center;
-  letter-spacing: -0.03em;
-  color: #F0F0E9;
-}
-.tal-home__our .our-works .view-more {
-  font-size: 14px;
-  line-height: 135%;
-  font-family: SuisseIntl-Regular;
-  color: #F0F0E9;
-  width: 162px;
-  height: 39px;
-  background: #BD9445;
-  border-radius: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-.tal-home__our .our-works .work-project {
-  width: 74.96vw;
-  margin: 0 auto;
-}
-.tal-home__our .our-works .list-porject li {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
-.tal-home__our .our-works .list-porject li + li {
-  margin-top: 3vw;
-}
-.tal-home__our .our-works .list-porject li:nth-child(2n+1) {
-  justify-content: flex-start;
-}
-.tal-home__our .our-works .project-card {
-  width: 45.02vw;
-}
-.tal-home__our .our-works .project-card .thumb {
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-  padding-top: 66.66%;
-  position: relative;
-}
-.tal-home__our .our-works .project-card .thumb img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  object-fit: cover;
-  border-radius: 12px;
-}
-.tal-home__our .our-works .project-card .type-client {
-  display: flex;
-  align-items: center;
-  font-size: 0.9vw;
-  line-height: 135%;
-  color: #F0F0E9;
-  opacity: 0.6;
-  margin-bottom: 5px;
-}
-.tal-home__our .our-works .project-card .client-name {
-  flex-grow: 1;
-  display: block;
-  color: #F0F0E9;
-}
-.tal-home__our .our-works .project-card .date {
-  display: block;
-  flex-shrink: 0;
-  margin-left: 15px;
-  color: #F0F0E9;
-}
-.tal-home__our .our-works .project-card .name-project {
-  font-size: 1.4vw;
-  line-height: 135%;
-  font-family: SuisseIntl-Medium;
-  color: #F0F0E9;
-  display: block;
-}
+  background: #F0F0E9; }
+  .tal-home__our .our-expts {
+    padding-bottom: 6.56vw; }
+    .tal-home__our .our-expts .heading {
+      font-size: 18.5vw;
+      line-height: 111.5%;
+      font-family: RoslindaleDC-Light;
+      text-align: center;
+      margin-bottom: 6vw;
+      color: #222222; }
+      .tal-home__our .our-expts .heading span {
+        color: #BD9445; }
+    .tal-home__our .our-expts .list-expts {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 1.46vw; }
+      .tal-home__our .our-expts .list-expts li {
+        width: 50%;
+        border-top: 1px solid rgba(34, 34, 34, 0.12);
+        box-sizing: border-box;
+        padding-top: 4.31vw;
+        padding-bottom: 4.31vw; }
+        .tal-home__our .our-expts .list-expts li:nth-child(2n) {
+          padding-left: 1.46vw; }
+        .tal-home__our .our-expts .list-expts li:nth-child(2n+1) {
+          padding-right: 1.46vw; }
+    .tal-home__our .our-expts .expts-card {
+      display: flex; }
+      .tal-home__our .our-expts .expts-card .thumb {
+        width: 14.49vw;
+        margin-right: 1.9vw;
+        flex-shrink: 0; }
+        .tal-home__our .our-expts .expts-card .thumb img, .tal-home__our .our-expts .expts-card .thumb video {
+          width: 100%;
+          display: block;
+          height: auto; }
+      .tal-home__our .our-expts .expts-card .total {
+        flex-grow: 1; }
+      .tal-home__our .our-expts .expts-card .type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 34px; }
+        .tal-home__our .our-expts .expts-card .type .numb {
+          width: 4vw;
+          height: 4vw;
+          font-size: 2.5vw;
+          border: 1px solid #222222;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          line-height: 84.5%;
+          text-align: center;
+          letter-spacing: -0.01em;
+          color: #222222;
+          margin-right: 22px;
+          flex-shrink: 0; }
+        .tal-home__our .our-expts .expts-card .type .txt {
+          flex-grow: 1;
+          font-size: 1.7vw;
+          line-height: 117%;
+          font-family: SuisseIntl-Medium;
+          display: block;
+          letter-spacing: -0.03em;
+          text-transform: uppercase;
+          color: #222222; }
+      .tal-home__our .our-expts .expts-card .sapo {
+        font-size: 1vw;
+        line-height: 155%;
+        color: #222222; }
+  .tal-home__our .our-clients {
+    z-index: 3;
+    position: relative; }
+    .tal-home__our .our-clients .videoBG {
+      width: 100%;
+      position: relative; }
+      .tal-home__our .our-clients .videoBG video {
+        width: 100%;
+        height: 44.51vw;
+        object-fit: cover;
+        display: block;
+        z-index: 1;
+        border-radius: 20px 20px 0px 0px; }
+      .tal-home__our .our-clients .videoBG .heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        line-height: 90%;
+        font-family: RoslindaleDC-Light;
+        text-align: center;
+        font-size: 6vw;
+        color: #F0F0E9;
+        z-index: 2; }
+    .tal-home__our .our-clients .client-list {
+      background: #091A54;
+      padding: 5.12vw 5.49vw;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5.27vw;
+      border-radius: 0 0 20px 20px; }
+      .tal-home__our .our-clients .client-list li {
+        width: calc(100% / 7); }
+      .tal-home__our .our-clients .client-list .client {
+        display: block; }
+        .tal-home__our .our-clients .client-list .client img {
+          width: 100%;
+          display: block; }
+  .tal-home__our .our-works {
+    background: #000000;
+    padding-top: 124px;
+    padding-bottom: 95px;
+    z-index: 2; }
+    .tal-home__our .our-works .works-content {
+      width: 74.96vw;
+      margin: 0 auto 128px; }
+    .tal-home__our .our-works .heading {
+      font-size: 113.15px;
+      line-height: 90%;
+      font-family: RoslindaleDC-Light;
+      margin-bottom: 36px;
+      text-align: center;
+      color: #F0F0E9; }
+      .tal-home__our .our-works .heading span {
+        color: #BD9445; }
+    .tal-home__our .our-works .des {
+      font-size: 18px;
+      line-height: 117%;
+      width: 478px;
+      margin: 0 auto 36px;
+      max-width: 100%;
+      text-align: center;
+      letter-spacing: -0.03em;
+      color: #F0F0E9; }
+    .tal-home__our .our-works .view-more {
+      font-size: 14px;
+      line-height: 135%;
+      font-family: SuisseIntl-Regular;
+      color: #F0F0E9;
+      width: 162px;
+      height: 39px;
+      background: #BD9445;
+      border-radius: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto; }
+    .tal-home__our .our-works .work-project {
+      width: 74.96vw;
+      margin: 0 auto; }
+    .tal-home__our .our-works .list-porject li {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end; }
+      .tal-home__our .our-works .list-porject li + li {
+        margin-top: 3vw; }
+      .tal-home__our .our-works .list-porject li:nth-child(2n + 1) {
+        justify-content: flex-start; }
+    .tal-home__our .our-works .project-card {
+      width: 45.02vw; }
+      .tal-home__our .our-works .project-card .thumb {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding-top: 66.66%;
+        position: relative; }
+        .tal-home__our .our-works .project-card .thumb img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+          object-fit: cover;
+          border-radius: 12px; }
+      .tal-home__our .our-works .project-card .type-client {
+        display: flex;
+        align-items: center;
+        font-size: 0.9vw;
+        line-height: 135%;
+        color: #F0F0E9;
+        opacity: 0.6;
+        margin-bottom: 5px; }
+      .tal-home__our .our-works .project-card .client-name {
+        flex-grow: 1;
+        display: block;
+        color: #F0F0E9; }
+      .tal-home__our .our-works .project-card .date {
+        display: block;
+        flex-shrink: 0;
+        margin-left: 15px;
+        color: #F0F0E9; }
+      .tal-home__our .our-works .project-card .name-project {
+        font-size: 1.4vw;
+        line-height: 135%;
+        font-family: SuisseIntl-Medium;
+        color: #F0F0E9;
+        display: block; }
 .tal-home__ecosys {
+  overflow-y: hidden;
   background: #F0F0E9;
-  border-radius: 20px 20px 0 0;
-}
-.tal-home__ecosys .heading {
-  width: 66.78vh;
-}
-.tal-home__ecosys .list-ecosys {
-  display: flex;
-  gap: 8.47vh;
-  height: 100%;
-  padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
-}
-.tal-home__ecosys .animation-wrap {
-  display: flex;
-  box-sizing: border-box;
-  gap: 8.47vh;
-  height: 100vh;
-}
-.tal-home__ecosys .heading {
-  font-size: 15vh;
-  line-height: 80.5%;
-  font-family: RoslindaleDC-Light;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #222222;
-  padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
-}
-.tal-home__ecosys .heading span {
-  color: #BD9445;
-}
-.tal-home__ecosys li {
-  width: 101.69vh;
-  height: 100%;
-}
-.tal-home__ecosys li:nth-child(1) .ecosys-card {
-  background: #132050;
-}
-.tal-home__ecosys li:nth-child(2) .ecosys-card {
-  background: #F04624;
-}
-.tal-home__ecosys li:nth-child(3) .ecosys-card {
-  background: #CDD3D8;
-}
-.tal-home__ecosys li:nth-child(3) .ecosys-card .des {
-  color: #091A54;
-}
-.tal-home__ecosys .ecosys-card {
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 5.08vh;
-  box-sizing: border-box;
-}
-.tal-home__ecosys .thumb {
-  width: 33.9vh;
-  height: 33.9vh;
-  display: block;
-  margin-bottom: 8.81vh;
-}
-.tal-home__ecosys .thumb img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.tal-home__ecosys .logo {
-  width: 32vh;
-  display: block;
-}
-.tal-home__ecosys .logo svg {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-.tal-home__ecosys .des {
-  font-size: 2.2vh;
-  line-height: 135%;
-  margin-top: auto;
-  color: #F0F0E9;
-  white-space: normal;
-}
+  border-radius: 20px 20px 0 0; }
+  .tal-home__ecosys .heading {
+    width: 66.78vh; }
+  .tal-home__ecosys .list-ecosys {
+    display: flex;
+    gap: 8.47vh;
+    height: 100%;
+    box-sizing: border-box;
+    padding: calc(6.77vh + 60px) 6.77vh 6.77vh; }
+  .tal-home__ecosys .animation-wrap {
+    display: flex;
+    box-sizing: border-box;
+    gap: 8.47vh;
+    height: 100vh; }
+  .tal-home__ecosys .heading {
+    font-size: 15vh;
+    line-height: 80.5%;
+    font-family: RoslindaleDC-Light;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #222222;
+    padding: calc(6.77vh + 60px) 6.77vh 6.77vh; }
+    .tal-home__ecosys .heading span {
+      color: #BD9445; }
+  .tal-home__ecosys li {
+    width: 101.69vh;
+    height: 100%; }
+    .tal-home__ecosys li:nth-child(1) .ecosys-card {
+      background: #132050; }
+    .tal-home__ecosys li:nth-child(2) .ecosys-card {
+      background: #F04624; }
+    .tal-home__ecosys li:nth-child(3) .ecosys-card {
+      background: #CDD3D8; }
+      .tal-home__ecosys li:nth-child(3) .ecosys-card .des {
+        color: #091A54; }
+  .tal-home__ecosys .ecosys-card {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5.08vh;
+    box-sizing: border-box; }
+  .tal-home__ecosys .thumb {
+    width: 33.90vh;
+    height: 33.90vh;
+    display: block;
+    margin-bottom: 8.81vh; }
+    .tal-home__ecosys .thumb img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover; }
+  .tal-home__ecosys .logo {
+    width: 32vh;
+    display: block; }
+    .tal-home__ecosys .logo svg {
+      width: 100%;
+      display: block;
+      height: auto; }
+  .tal-home__ecosys .des {
+    font-size: 2.2vh;
+    line-height: 135%;
+    margin-top: auto;
+    color: #F0F0E9;
+    white-space: normal; }
 .tal-home__career {
   border-radius: 0 0 20px 20px;
-  overflow: hidden;
-}
-.tal-home__career .career-wrapper {
-  display: flex;
-  align-items: stretch;
-}
-.tal-home__career .thumbBox {
-  flex-grow: 1;
-  height: auto;
-  position: relative;
-}
-.tal-home__career .thumbBox .images {
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.tal-home__career .thumbBox .images img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.tal-home__career .thumbBox .heading {
-  position: absolute;
-  top: 3.44vw;
-  left: 4.68vw;
-  z-index: 2;
-  font-size: 8vw;
-  line-height: 7vw;
-  letter-spacing: -0.01em;
-  font-family: RoslindaleDC-Light;
-  color: #E1E1DA;
-  width: 28.25vw;
-}
-.tal-home__career .careerBox {
-  width: 673px;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 46px 40px;
+  overflow: hidden; }
+  .tal-home__career .career-wrapper {
+    display: flex;
+    align-items: stretch; }
+  .tal-home__career .thumbBox {
+    flex-grow: 1;
+    height: auto;
+    position: relative; }
+    .tal-home__career .thumbBox .images {
+      width: 100%;
+      height: 100%;
+      z-index: 1; }
+      .tal-home__career .thumbBox .images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .tal-home__career .thumbBox .heading {
+      position: absolute;
+      top: 3.44vw;
+      left: 4.68vw;
+      z-index: 2;
+      font-size: 8vw;
+      line-height: 7vw;
+      letter-spacing: -0.01em;
+      font-family: RoslindaleDC-Light;
+      color: #E1E1DA;
+      width: 28.25vw; }
+  .tal-home__career .careerBox {
+    width: 673px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 46px 40px;
+    background: #CDD3D8; }
+  .tal-home__career .des {
+    font-size: 18px;
+    line-height: 145%;
+    letter-spacing: -0.03em;
+    color: #091A54;
+    margin-bottom: 33px; }
+  .tal-home__career p + p {
+    margin-top: 26px; }
+  .tal-home__career .list-job {
+    margin-bottom: 37px;
+    width: 550px;
+    max-width: 100%; }
+    .tal-home__career .list-job li {
+      padding-bottom: 12px;
+      box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
+      width: 100%; }
+      .tal-home__career .list-job li + li {
+        margin-top: 23px; }
+  .tal-home__career .job-link {
+    font-size: 50px;
+    line-height: 60px;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: 13px;
+    display: block;
+    color: #091A54; }
+  .tal-home__career .type {
+    display: flex;
+    font-size: 14px;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Medium;
+    color: #091A54;
+    gap: 38px; }
+  .tal-home__career .view-all {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 135%;
+    font-family: SuisseIntl-Medium;
+    text-align: center;
+    padding: 10px 20px;
+    background: #091A54;
+    border-radius: 38px;
+    color: #F0F0E9; }
+
+.tal-career__cover {
+  position: relative; }
+  .tal-career__cover video {
+    width: 100%;
+    height: calc(100vh - 60px);
+    object-fit: cover;
+    display: block;
+    z-index: 1; }
+  .tal-career__cover .info-cover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    z-index: 2; }
+  .tal-career__cover .titleBox {
+    font-family: RoslindaleDC-Light;
+    font-size: 27vh;
+    margin-bottom: 7vh;
+    line-height: 111.5%;
+    color: #F0F0E9;
+    text-align: center; }
+  .tal-career__cover .sapo {
+    width: 81.69vh;
+    margin: 0 auto;
+    font-size: 2.8vh;
+    line-height: 133.7%;
+    text-align: center;
+    color: #E1E1DA;
+    font-family: SuisseIntl-Regular; }
+  .tal-career__cover p + p {
+    margin-top: 3vh; }
+.tal-career__list {
+  padding: 3.95vw 4.39vw;
+  background: #F0F0E9; }
+  .tal-career__list .list-filters {
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 4.53vw; }
+  .tal-career__list .filters {
+    width: 50%;
+    border: 1px solid #222222;
+    border-radius: 36px;
+    color: #222222;
+    text-align: center; }
+    .tal-career__list .filters select {
+      font-size: 1vw;
+      line-height: 2vw;
+      text-transform: uppercase;
+      font-family: SuisseIntl-Medium;
+      width: 100%;
+      border: none;
+      outline: none;
+      background: none;
+      text-align: center; }
+  .tal-career__list .list-careers li + li {
+    margin-top: 0.87vw;
+    padding-top: 2.56vw;
+    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+  .tal-career__list .career {
+    display: block; }
+  .tal-career__list .name-job {
+    font-size: 3.5vw;
+    line-height: 3.9vw;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: .9vw;
+    display: block;
+    color: #222222; }
+  .tal-career__list .type {
+    font-size: 1vw;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular;
+    display: flex;
+    gap: 2.78vw;
+    color: #222222; }
+.tal-career__detail-cover {
+  position: relative; }
+  .tal-career__detail-cover video {
+    width: 100%;
+    height: 43.89vh;
+    object-fit: cover;
+    display: block;
+    z-index: 1; }
+  .tal-career__detail-cover .info-cover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    z-index: 2; }
+  .tal-career__detail-cover .titleBox {
+    font-family: RoslindaleDC-Light;
+    font-size: 8vh;
+    line-height: 8.8vh;
+    color: #F0F0E9;
+    text-align: center; }
+.tal-career__detail-content {
+  background: #F0F0E9;
+  padding: 2.34vw 2.92vw; }
+  .tal-career__detail-content .header-content {
+    padding-bottom: 1.776vw;
+    margin-bottom: 5.85vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    position: relative; }
+    .tal-career__detail-content .header-content .back-btn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.75vw; }
+      .tal-career__detail-content .header-content .back-btn .icn {
+        margin-right: 0.65vw;
+        width: 1.53vw;
+        display: block; }
+        .tal-career__detail-content .header-content .back-btn .icn svg {
+          width: 100%;
+          display: block;
+          height: auto; }
+      .tal-career__detail-content .header-content .back-btn .txt {
+        font-size: 1.1vw;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Regular;
+        display: block;
+        text-transform: uppercase;
+        color: #222222; }
+    .tal-career__detail-content .header-content .name-job {
+      font-size: 5.7vw;
+      line-height: 6vw;
+      font-family: RoslindaleDC-Light;
+      letter-spacing: -0.01em;
+      display: block;
+      color: #222222;
+      margin-bottom: 2.49vw; }
+    .tal-career__detail-content .header-content .type {
+      display: flex;
+      gap: 3.66vw;
+      font-size: 1vw;
+      line-height: 133.7%;
+      text-transform: uppercase;
+      color: #222222; }
+    .tal-career__detail-content .header-content .scrollTo-apply {
+      position: absolute;
+      right: 0;
+      bottom: 1.776vw;
+      font-size: 1vw;
+      line-height: 133.7%;
+      text-transform: uppercase;
+      background: #BD9445;
+      border-radius: 53px;
+      display: block;
+      padding: 0.73vw 1.46vw;
+      color: #F0F0E9; }
+  .tal-career__detail-content .career__content-wrapper {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-bottom: 80px;
+    flex-direction: column;
+    gap: 80px; }
+  .tal-career__detail-content .content-box {
+    position: relative; }
+    .tal-career__detail-content .content-box .numb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 24px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      color: #222222; }
+    .tal-career__detail-content .content-box .total {
+      width: 700px;
+      margin: 0 auto;
+      max-width: 100%; }
+    .tal-career__detail-content .content-box .heading {
+      font-size: 24px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      margin-bottom: 24px;
+      color: #222222; }
+    .tal-career__detail-content .content-box .para {
+      font-size: 16px;
+      line-height: 135%;
+      color: #222222; }
+.tal-career__detail-apply {
+  background: #F0F0E9;
+  padding: 50px 0; }
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg); } }
+  .tal-career__detail-apply .spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.75s linear infinite spinner-border; }
+  .tal-career__detail-apply .apply-content {
+    width: 516px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative; }
+    .tal-career__detail-apply .apply-content.loading {
+      cursor: default; }
+      .tal-career__detail-apply .apply-content.loading:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #F0F0E9;
+        opacity: .5;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .tal-career__detail-apply .apply-content.loading:after {
+        content: '';
+        position: absolute;
+        z-index: 99999;
+        top: calc((100% - 2rem) / 2);
+        left: calc((100% - 2rem) / 2);
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        vertical-align: -0.125em;
+        border: 0.2em solid #222222;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: 0.75s linear infinite spinner-border; }
+  .tal-career__detail-apply .heading {
+    font-size: 50px;
+    line-height: 100%;
+    font-family: RoslindaleDC-Light;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    color: #222222; }
+  .tal-career__detail-apply .des {
+    font-size: 12px;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular;
+    margin-bottom: 14px;
+    color: #222222;
+    opacity: 0.5; }
+  .tal-career__detail-apply .label-name {
+    font-size: 14px;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular;
+    color: #222222;
+    margin-bottom: 8px; }
+    .tal-career__detail-apply .label-name span {
+      color: #F04624; }
+    .tal-career__detail-apply .label-name i {
+      color: #626262; }
+  .tal-career__detail-apply input {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    transition: .15s ease;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 115px;
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 133.7%;
+    /* or 21px */
+    font-family: SuisseIntl-Regular;
+    color: #000; }
+    .tal-career__detail-apply input:hover, .tal-career__detail-apply input:focus {
+      border: 1px solid black; }
+    .tal-career__detail-apply input::placeholder {
+      color: rgba(0, 0, 0, 0.3); }
+  .tal-career__detail-apply .status {
+    display: none;
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 133.7%;
+    padding-left: 16px;
+    color: #F04624; }
+  .tal-career__detail-apply .form-input {
+    margin-bottom: 14px; }
+    .tal-career__detail-apply .form-input.wrong input {
+      border: 1px solid #F04624; }
+      .tal-career__detail-apply .form-input.wrong input:hover, .tal-career__detail-apply .form-input.wrong input:focus {
+        border: 1px solid black; }
+    .tal-career__detail-apply .form-input.wrong .status {
+      display: block; }
+  .tal-career__detail-apply .uploadBox.default .progress {
+    display: none; }
+  .tal-career__detail-apply .uploadBox.default .file {
+    display: none; }
+  .tal-career__detail-apply .uploadBox.active .des-input, .tal-career__detail-apply .uploadBox.active .file, .tal-career__detail-apply .uploadBox.active .upload-btn {
+    display: none; }
+  .tal-career__detail-apply .uploadBox.finish .des-input, .tal-career__detail-apply .uploadBox.finish .progress {
+    display: none; }
+  .tal-career__detail-apply .uploadBox .des-input {
+    font-size: 12px;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular;
+    color: #222222;
+    opacity: 0.5;
+    margin-bottom: 8px; }
+  .tal-career__detail-apply .uploadBox .upload-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 43px;
+    padding: 8px 16px; }
+    .tal-career__detail-apply .uploadBox .upload-btn .icn {
+      width: 20px;
+      display: block;
+      margin-right: 10px; }
+      .tal-career__detail-apply .uploadBox .upload-btn .icn svg {
+        width: 100%;
+        display: block;
+        height: auto; }
+    .tal-career__detail-apply .uploadBox .upload-btn .txt {
+      font-size: 14px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      display: block;
+      color: #222222; }
+  .tal-career__detail-apply .uploadBox .progress {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 133.7%;
+    text-align: center;
+    color: #000000;
+    gap: 5px;
+    padding: 30px 0; }
+  .tal-career__detail-apply .uploadBox .meter {
+    position: relative;
+    background: #CDD3D8;
+    border-radius: 15px;
+    height: 6px; }
+    .tal-career__detail-apply .uploadBox .meter span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: #BD9445;
+      border-radius: 15px;
+      height: 100%; }
+  .tal-career__detail-apply .uploadBox .file {
+    font-size: 12px;
+    line-height: 133.7%;
+    margin-bottom: 8px;
+    color: rgba(34, 34, 34, 0.5); }
+    .tal-career__detail-apply .uploadBox .file a {
+      color: #000; }
+  .tal-career__detail-apply .submitBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 14px; }
+  .tal-career__detail-apply .submit-btn {
+    font-size: 14px;
+    line-height: 133.7%;
+    background: #BD9445;
+    border-radius: 53px;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #F0F0E9; }
+
+.tal-abus__cover {
+  position: relative; }
+  .tal-abus__cover video {
+    width: 100%;
+    height: calc(100vh - 60px);
+    object-fit: cover;
+    display: block;
+    z-index: 1; }
+  .tal-abus__cover .info-cover {
+    position: absolute;
+    top: 13.90vh;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 155.08vh;
+    z-index: 2; }
+  .tal-abus__cover .titleBox {
+    font-family: RoslindaleDC-Light;
+    font-size: 15vh;
+    line-height: 111.5%;
+    color: #F0F0E9;
+    text-align: center; }
+.tal-abus__culture {
+  background: #F0F0E9;
+  padding: 2.92vw; }
+  .tal-abus__culture .heading {
+    font-size: 5.2vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    color: #BD9445;
+    margin-bottom: 2.5vw; }
+  .tal-abus__culture .list-imgCulture {
+    margin-bottom: 2.5vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.53vw;
+    align-items: flex-end; }
+    .tal-abus__culture .list-imgCulture li {
+      width: calc((100% - 4.59vw) / 4); }
+  .tal-abus__culture .imgCulture {
+    width: 100%;
+    position: relative; }
+    .tal-abus__culture .imgCulture.landscape {
+      padding-top: 66%; }
+    .tal-abus__culture .imgCulture.square {
+      padding-top: 100%; }
+    .tal-abus__culture .imgCulture.vertical {
+      padding-top: 126%; }
+    .tal-abus__culture .imgCulture img {
+      top: 0;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px; }
+  .tal-abus__culture .textBox {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 133.7%;
+    color: #222222; }
+    .tal-abus__culture .textBox .left {
+      width: 265px;
+      font-family: SuisseIntl-Medium; }
+    .tal-abus__culture .textBox .right {
+      width: 633px;
+      max-width: 100%;
+      font-family: SuisseIntl-Regular; }
+    .tal-abus__culture .textBox p + p {
+      margin-top: 25px; }
+.tal-abus__people {
   background: #CDD3D8;
-}
-.tal-home__career .des {
-  font-size: 18px;
-  line-height: 145%;
-  letter-spacing: -0.03em;
   color: #091A54;
-  margin-bottom: 33px;
-}
-.tal-home__career p + p {
-  margin-top: 26px;
-}
-.tal-home__career .list-job {
-  margin-bottom: 37px;
-  width: 550px;
-  max-width: 100%;
-}
-.tal-home__career .list-job li {
-  padding-bottom: 12px;
-  box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
-  width: 100%;
-}
-.tal-home__career .list-job li + li {
-  margin-top: 23px;
-}
-.tal-home__career .job-link {
-  font-size: 50px;
-  line-height: 60px;
-  font-family: RoslindaleDC-Light;
-  margin-bottom: 13px;
-  display: block;
-  color: #091A54;
-}
-.tal-home__career .type {
-  display: flex;
-  font-size: 14px;
-  line-height: 133.7%;
-  font-family: SuisseIntl-Medium;
-  color: #091A54;
-  gap: 38px;
-}
-.tal-home__career .view-all {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 135%;
-  font-family: SuisseIntl-Medium;
-  text-align: center;
-  padding: 10px 20px;
+  padding: 2.92vw; }
+  .tal-abus__people .heading {
+    font-size: 5.2vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: 2.5vw; }
+  .tal-abus__people .people-wrapper {
+    display: flex;
+    gap: 2.26vw; }
+  .tal-abus__people .peopleBox {
+    width: 50%; }
+    .tal-abus__people .peopleBox:nth-child(2) {
+      padding-top: 6vw; }
+  .tal-abus__people .thumb {
+    width: 100%;
+    padding-top: 100%;
+    display: block;
+    margin-bottom: 2.7vw;
+    position: relative; }
+    .tal-abus__people .thumb img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      object-fit: cover;
+      border-radius: 15px; }
+  .tal-abus__people .name {
+    font-size: 4vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    display: block;
+    margin-bottom: 1.97vw;
+    color: #091A54; }
+  .tal-abus__people .pos {
+    font-size: 1vw;
+    line-height: 133.7%;
+    text-transform: uppercase;
+    margin-bottom: 2.27vw; }
+  .tal-abus__people .des {
+    font-size: 1.15vw;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular; }
+.tal-abus__wtwork {
   background: #091A54;
-  border-radius: 38px;
-  color: #F0F0E9;
-}
+  padding: 2.92vw; }
+  .tal-abus__wtwork .heading {
+    font-size: 5.2vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: 2.5vw;
+    color: #F0F0E9;
+    text-align: center; }
+    .tal-abus__wtwork .heading span {
+      color: #BD9445; }
+  .tal-abus__wtwork .list-loca {
+    display: flex;
+    gap: 2.26vw; }
+  .tal-abus__wtwork .loca {
+    width: 50%;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden; }
+    .tal-abus__wtwork .loca .thumb {
+      padding-top: 62.87%;
+      width: 100%;
+      display: block;
+      background: #201F1F;
+      position: relative; }
+      .tal-abus__wtwork .loca .thumb img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover; }
+    .tal-abus__wtwork .loca .total {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box; }
+    .tal-abus__wtwork .loca .name-pos {
+      font-size: 4vw;
+      line-height: 111.5%;
+      font-family: RoslindaleDC-Light;
+      margin-bottom: 0.8vw;
+      display: block;
+      color: #F0F0E9; }
+    .tal-abus__wtwork .loca .addr {
+      font-size: 1vw;
+      line-height: 133.7%;
+      display: block;
+      text-align: center;
+      color: #F0F0E9; }
+
+.tal-ourworks__header {
+  padding-top: 6.8vw;
+  margin-bottom: 10.83vw; }
+  .tal-ourworks__header .heading {
+    font-size: 19vw;
+    line-height: 19vw;
+    letter-spacing: -0.01em;
+    color: #F0F0E9;
+    font-family: RoslindaleDC-Light;
+    margin-bottom: 1.1vw;
+    text-align: center; }
+  .tal-ourworks__header .list-filters {
+    display: flex;
+    gap: 2vw;
+    justify-content: center; }
+  .tal-ourworks__header .filters {
+    display: flex;
+    align-items: center;
+    gap: 5px; }
+  .tal-ourworks__header .selectBox {
+    border: 1px solid #F0F0E9;
+    border-radius: 36px;
+    position: relative; }
+    .tal-ourworks__header .selectBox .icn {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      z-index: 1;
+      width: 12px;
+      display: block; }
+      .tal-ourworks__header .selectBox .icn svg {
+        width: 100%;
+        display: block;
+        height: auto; }
+  .tal-ourworks__header .label {
+    font-size: .6vw;
+    line-height: 133.7%;
+    text-transform: uppercase;
+    color: #F0F0E9; }
+  .tal-ourworks__header select {
+    font-family: SuisseIntl-Medium;
+    border: none;
+    outline: none;
+    background: none;
+    width: auto;
+    padding: 0 42px 0 16px;
+    font-size: .8vw;
+    line-height: 2vw;
+    text-transform: uppercase;
+    color: #F0F0E9;
+    z-index: 2; }
+    .tal-ourworks__header select option {
+      border-radius: 36px;
+      border: 1px solid #F0F0E9;
+      width: 100%;
+      line-height: 30px;
+      height: 24px;
+      box-sizing: border-box;
+      background: #000;
+      padding: 8px 16px; }
+      .tal-ourworks__header select option:hover {
+        background: #F0F0E9;
+        color: #000; }
+.tal-ourworks__project {
+  padding: 0 7.9vw; }
+  .tal-ourworks__project .list-project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.02vw;
+    grid-row-gap: 3.07vw; }
+  .tal-ourworks__project .project .thumb {
+    display: block;
+    width: 100%;
+    padding-top: 92.09%;
+    position: relative;
+    margin-bottom: 0.58vw; }
+    .tal-ourworks__project .project .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 8px; }
+  .tal-ourworks__project .project .name-project {
+    font-size: 1.3vw;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Medium;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    display: block;
+    color: #F0F0E9;
+    margin-bottom: 0.58vw; }
+  .tal-ourworks__project .project .type {
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    font-size: .8vw;
+    line-height: 133.7%;
+    font-family: SuisseIntl-Regular;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    gap: 1.61vw;
+    color: #F0F0E9; }
 
 .tal-wrapper {
   background: #000000;
-  padding-top: 60px;
   font-family: SuisseIntl-Regular;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 .tal-wrapper__content {
   box-sizing: border-box;
-  position: relative;
-}
+  position: relative; }
 
 .top-border-radius {
   top: 40px;
@@ -717,19 +1264,17 @@ a {
   height: 20px;
   left: 10px;
   z-index: 10;
-  background-color: #000000;
-}
-.top-border-radius:before {
-  content: "";
-  position: absolute;
-  background-color: transparent;
-  bottom: -50px;
-  height: 50px;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -20px 0 0 #000000;
-}
+  background-color: #000000; }
+  .top-border-radius:before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -20px 0 0 #000000; }
 
 .bottom-round {
   position: fixed;
@@ -739,8 +1284,7 @@ a {
   display: flex;
   height: 10px;
   justify-content: center;
-  align-items: flex-end;
-}
+  align-items: flex-end; }
 
 .bottom-border-radius {
   position: absolute;
@@ -750,24 +1294,53 @@ a {
   transform: rotate(180deg);
   height: 10px;
   background-color: #000000;
-  border-radius: 0px 0px 0px 0;
-}
-.bottom-border-radius:before {
-  content: "";
-  position: absolute;
-  background-color: transparent;
-  bottom: -50px;
-  height: 50px;
-  width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -20px 0 0 #000000;
-}
+  border-radius: 0px 0px 0px 0; }
+  .bottom-border-radius:before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -20px 0 0 #000000; }
 
-.tal-container {
+.scroll-content {
   border-left: 10px solid #000000;
-  border-right: 10px solid #000000;
+  border-right: 20px solid #000000;
   box-sizing: border-box;
-}
+  padding-top: 60px;
+  padding-bottom: 60px; }
+
+.scrollbar-track.show {
+  border-radius: 15px;
+  background: #000; }
+
+.scrollbar-thumb {
+  background: #F0F0E9 !important; }
+
+.smooth-scroll {
+  overflow-y: hidden !important; }
+
+.smooth-scroll #scroll-container {
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+  margin: 0; }
+
+.horizontal {
+  overflow-x: hidden; }
+
+.horizontal .pin-wrap,
+.horizontal .animation-wrap {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100vh; }
+
+.horizontal-item {
+  display: flex;
+  height: 100vh; }
 
 /*# sourceMappingURL=main.css.map */

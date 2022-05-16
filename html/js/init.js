@@ -36,8 +36,8 @@
 
         const windowWidth = () => {
             let wW = document.documentElement.clientWidth - 20;
-            $('.top-border-radius').css('width', wW);
-            $('.bottom-round').css('width', wW);
+            $('.top-border-radius').css('width', wW - 10);
+            $('.bottom-round').css('width', wW - 10);
         };
         window.addEventListener('resize', windowWidth);
         windowWidth();
@@ -60,46 +60,45 @@
             // ================================
             const horizontalSections = gsap.utils.toArray('div.horizontal');
 
-            horizontalSections.forEach(function (sec, i) {	
+            horizontalSections.forEach(function (sec, i) {
                 var thisPinWrap = sec.querySelector('.pin-wrap');
                 var thisAnimWrap = thisPinWrap.querySelector('.animation-wrap');
                 var sections = gsap.utils.toArray(".horizontal-item");
-                var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth); 
-                var scrollTween = gsap.fromTo(thisAnimWrap, { 
+                var getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
+                var scrollTween = gsap.fromTo(thisAnimWrap, {
                     x: () => thisAnimWrap.classList.contains('to-right') ? getToValue() : 0
-                }, { 
-                    x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue(), 
+                }, {
+                    x: () => thisAnimWrap.classList.contains('to-right') ? 0 : getToValue(),
                     ease: "none", // <-- IMPORTANT!
                     scrollTrigger: {
-                    trigger: sec,		
-                    //scroller: document.querySelector('#scroll-container'), // neccessary setting for smooth-scrollbar on body
-                    pinType: 'transform', // neccessary setting for smooth-scrollbar on body
-                    start: "top top",
-                    end: "+=5000",
-                    pin: thisPinWrap,
-                    invalidateOnRefresh: true,
-                    anticipatePin: 1,
-                    scrub: true,
-                    // markers: true,
+                        trigger: sec,
+                        //scroller: document.querySelector('#scroll-container'), // neccessary setting for smooth-scrollbar on body
+                        pinType: 'transform', // neccessary setting for smooth-scrollbar on body
+                        start: "top top",
+                        end: "+=3500",
+                        pin: thisPinWrap,
+                        invalidateOnRefresh: true,
+                        anticipatePin: 1,
+                        scrub: true,
+                        // markers: true,
                     }
                 });
-                
+
                 // Add class to active item
                 // =========================
                 sections.forEach((sct, i) => {
                     ScrollTrigger.create({
-                    trigger: sct,
-                    containerAnimation: scrollTween,
-                    start: thisAnimWrap.classList.contains('to-right') ? "100% 50%" : "0% 50%",
-                    end: thisAnimWrap.classList.contains('to-right') ? "0% 50%" : "100% 50%",
-                    toggleClass: { targets: sct, className: "active" },
-                    // markers: true
+                        trigger: sct,
+                        containerAnimation: scrollTween,
+                        start: thisAnimWrap.classList.contains('to-right') ? "100% 50%" : "0% 50%",
+                        end: thisAnimWrap.classList.contains('to-right') ? "0% 50%" : "100% 50%",
+                        toggleClass: {targets: sct, className: "active"},
+                        // markers: true
                     });
-                    
+
                 });
 
             });
-
 
 
         } else {

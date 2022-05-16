@@ -1,18 +1,22 @@
 @charset "utf-8";
 
+//commons
 @import "reset";
 @import "mixins";
 @import "fonts";
+//elements
 @import "header";
 @import "footer";
+//layouts
 @import "home";
 @import "work";
 @import "detail-work";
 @import "career";
+@import "about-us";
+@import "our_works";
 
 .tal-wrapper {
   background: #000000;
-  padding-top: 60px;
   font-family: SuisseIntl-Regular;
   font-size: 16px;
 }
@@ -77,8 +81,51 @@
 }
 
 .tal-container {
+
+}
+
+.scroll-content {
   border-left: 10px solid #000000;
-  border-right: 10px solid #000000;
+  border-right: 20px solid #000000;
   box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.scrollbar-track.show {
+  border-radius: 15px;
+  background: #000;
+}
+
+.scrollbar-thumb {
+  background: #F0F0E9 !important;
+}
+
+.smooth-scroll {
+  overflow-y: hidden !important;
+}
+
+.smooth-scroll #scroll-container {
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+  margin: 0;
+}
+
+.horizontal {
+  overflow-x: hidden;
+}
+
+.horizontal .pin-wrap,
+.horizontal .animation-wrap {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.horizontal-item {
+  display: flex;
+  height: 100vh;
 }
 
