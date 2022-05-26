@@ -129,15 +129,3 @@
   height: 100vh;
 }
 
-@media screen and (max-width: 780px) {
-  .tal-wrapper {
-    padding-top: 46px;
-  }
-  .top-border-radius {
-    top: 26px;
-  }
-  .bottom-round, .top-border-radius {
-    width: 100vw;
-    left: 0;
-  }
-}

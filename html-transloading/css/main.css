@@ -138,8 +138,9 @@ a {
     font-family: RoslindaleDC-Light;
     font-size: 16vh;
     line-height: 111.5%;
-    color: #F0F0E9;
-    text-align: center; }
+    color: #F0F0E9; }
+    .tal-home__cover .titleBox .txt:nth-child(2) {
+      padding-left: 15.56vh; }
   .tal-home__cover .bottom-cover {
     display: flex;
     align-items: center;
@@ -583,151 +584,6 @@ a {
     border-radius: 38px;
     color: #F0F0E9; }
 
-@media screen and (max-width: 780px) {
-  .tal-home__cover video {
-    height: calc((100vh - 46px)); }
-  .tal-home__cover .info-cover {
-    padding: 9.82vh 0 0; }
-  .tal-home__cover .titleBox {
-    font-size: 69px;
-    line-height: 99.5%; }
-  .tal-home__cover .list-navLinks {
-    display: none; }
-  .tal-home__cover .icn-des {
-    background: #BD9445;
-    border: none;
-    margin: 0 auto 30px; }
-  .tal-home__abus .textContent {
-    padding-bottom: 177px; }
-  .tal-home__abus .heading {
-    font-size: 52px; }
-  .tal-home__abus .des {
-    font-size: 16px;
-    width: 300px;
-    margin: 0 auto 25px; }
-  .tal-home__abus .videoBox {
-    width: 93vw;
-    transform: translate3d(0, -28.06vw, 0);
-    height: 53.91vw; }
-    .tal-home__abus .videoBox video {
-      height: 100%; }
-  .tal-home__our .our-expts .heading {
-    font-size: 84px;
-    line-height: 80.5%;
-    margin-bottom: 39px; }
-  .tal-home__our .our-expts .list-expts {
-    padding: 0 18px; }
-    .tal-home__our .our-expts .list-expts li {
-      border: none;
-      padding: 0;
-      width: 100%;
-      margin-bottom: 54px; }
-      .tal-home__our .our-expts .list-expts li:nth-child(2n) {
-        padding: 0; }
-      .tal-home__our .our-expts .list-expts li:nth-child(2n+1) {
-        padding: 0; }
-  .tal-home__our .our-expts .expts-card {
-    display: block; }
-    .tal-home__our .our-expts .expts-card .thumb {
-      width: 198px;
-      margin: 0 auto 54px; }
-    .tal-home__our .our-expts .expts-card .type .numb {
-      width: 53px;
-      height: 53px;
-      font-size: 34px; }
-    .tal-home__our .our-expts .expts-card .type .txt {
-      font-size: 22px;
-      line-height: 117%; }
-    .tal-home__our .our-expts .expts-card .sapo {
-      font-size: 16px; }
-  .tal-home__our .our-clients .videoBG video {
-    height: 68.8vw; }
-  .tal-home__our .our-clients .videoBG .heading {
-    font-size: 60px;
-    width: 100%; }
-  .tal-home__our .our-works {
-    padding-top: 100px; }
-    .tal-home__our .our-works .works-content {
-      width: 332px;
-      margin: 0 auto 80px; }
-    .tal-home__our .our-works .heading {
-      font-size: 84.8527px;
-      line-height: 80.5%; }
-      .tal-home__our .our-works .heading br {
-        display: none; }
-    .tal-home__our .our-works .work-project {
-      width: 100%;
-      padding: 0 20px;
-      box-sizing: border-box; }
-    .tal-home__our .our-works .list-porject li + li {
-      margin-top: 30px; }
-    .tal-home__our .our-works .project-card {
-      width: 100%; }
-      .tal-home__our .our-works .project-card .type-client {
-        font-size: 12px; }
-      .tal-home__our .our-works .project-card .name-project {
-        font-size: 20px; }
-  .tal-home__ecosys.horizontal .pin-wrap, .tal-home__ecosys.horizontal .animation-wrap, .tal-home__ecosys.horizontal .horizontal-item {
-    height: auto;
-    display: block; }
-  .tal-home__ecosys.horizontal .horizontal-item {
-    padding: 0 20px; }
-    .tal-home__ecosys.horizontal .horizontal-item:nth-child(2) {
-      padding: 30px 20px; }
-  .tal-home__ecosys .heading {
-    padding: 49px 0 0;
-    font-size: 66px;
-    flex-direction: row;
-    text-align: center;
-    width: 100%; }
-  .tal-home__ecosys .list-ecosys {
-    padding: 0;
-    flex-direction: column;
-    gap: 20px; }
-  .tal-home__ecosys li {
-    width: 100%; }
-  .tal-home__ecosys .ecosys-card {
-    padding: 24px;
-    gap: 39px; }
-  .tal-home__ecosys .thumb {
-    width: 100%;
-    padding-top: 100%;
-    margin: 0;
-    position: relative;
-    height: auto; }
-    .tal-home__ecosys .thumb img {
-      position: absolute;
-      top: 0;
-      left: 0; }
-  .tal-home__ecosys .logo {
-    width: 231px; }
-  .tal-home__ecosys .des {
-    font-size: 14px; }
-  .tal-home__career .career-wrapper {
-    display: block; }
-  .tal-home__career .thumbBox {
-    width: 100%;
-    height: 141.33vw; }
-    .tal-home__career .thumbBox .heading {
-      font-size: 94.1885px;
-      line-height: 80px;
-      width: 100%;
-      left: 0;
-      top: 0;
-      box-sizing: border-box;
-      padding-top: 33px;
-      padding-left: 20px; }
-  .tal-home__career .careerBox {
-    padding: 30px 20px 100px; }
-  .tal-home__career .des {
-    font-size: 16px; }
-  .tal-home__career .job-link {
-    font-size: 35px;
-    line-height: 107%; }
-  .tal-home__career .type {
-    font-size: 12px; }
-  .tal-home__career .view-all {
-    transform: translateX(50%); } }
 .tal-career__cover {
   position: relative; }
   .tal-career__cover video {
@@ -1486,16 +1342,5 @@ a {
 .horizontal-item {
   display: flex;
   height: 100vh; }
-
-@media screen and (max-width: 780px) {
-  .tal-wrapper {
-    padding-top: 46px; }
-
-  .top-border-radius {
-    top: 26px; }
-
-  .bottom-round, .top-border-radius {
-    width: 100vw;
-    left: 0; } }
 
 /*# sourceMappingURL=main.css.map */
