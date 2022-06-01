@@ -15,7 +15,15 @@
 @import "about-us";
 @import "our_works";
 
+body{
+  background: #000;
+}
+
 .tal-wrapper {
+  transition: .65s ease;
+  &.active {
+    transform: translate3d(0, 90vh, 0);
+  }
   background: #000000;
   font-family: SuisseIntl-Regular;
   font-size: 16px;

@@ -33,17 +33,29 @@
 
         let me = this;
 
+        $('.tal-header .menuBtn').click(function () {
+            if ($(this).parent().hasClass('active')) {
+                $(this).parent().removeClass('active');
+                $('.tal-wrapper').removeClass('active').delay(300)
+            }
+            else {
+                $(this).parent().addClass('active').delay(300);
+                $('.tal-wrapper').addClass('active')
+            }
+        });
 
-
-        window.addEventListener('resize', windowWidth);
-        windowWidth();
-
+        $('.tal-header .nav-link').click(function () {
+            $('.menuGroup').removeClass('active');
+            $('.tal-wrapper').removeClass('active')
+        });
         if (me.windowW > 800) {
             const windowWidth = () => {
                 let wW = document.documentElement.clientWidth - 20;
                 $('.top-border-radius').css('width', wW - 10);
                 $('.bottom-round').css('width', wW - 10);
             };
+            window.addEventListener('resize', windowWidth);
+            windowWidth();
             allPage();
         } else {
 

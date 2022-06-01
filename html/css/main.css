@@ -111,6 +111,167 @@ a {
 @font-face {
   font-family: SuisseIntl-Medium;
   src: url("../fonts/SuisseIntl-Medium.otf"); }
+.tal-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999; }
+  .tal-header svg {
+    width: 100%;
+    height: auto;
+    display: block; }
+  .tal-header .header-content {
+    background: #000000;
+    padding: 11px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    box-sizing: border-box; }
+  .tal-header .menuGroup.active .menuBtn .icn i:nth-child(1) {
+    top: 8px;
+    left: 1px;
+    transform: rotate(45deg); }
+  .tal-header .menuGroup.active .menuBtn .icn i:nth-child(2) {
+    opacity: 0;
+    visibility: hidden; }
+  .tal-header .menuGroup.active .menuBtn .icn i:nth-child(3) {
+    top: 8px;
+    left: 1px;
+    transform: rotate(-45deg); }
+  .tal-header .menuGroup.active .menuExpand {
+    top: 60px; }
+  .tal-header .menuBtn {
+    display: flex;
+    align-items: center;
+    gap: 21px; }
+    .tal-header .menuBtn .icn {
+      width: 22px;
+      height: 20px;
+      display: block;
+      position: relative; }
+      .tal-header .menuBtn .icn i {
+        transition: .3s linear;
+        width: 100%;
+        height: 2px;
+        background: #F0F0E9;
+        position: absolute;
+        left: 0; }
+        .tal-header .menuBtn .icn i:nth-child(1) {
+          top: 0; }
+        .tal-header .menuBtn .icn i:nth-child(2) {
+          top: 50%;
+          transition: .15s linear;
+          transform: translateY(-50%); }
+        .tal-header .menuBtn .icn i:nth-child(3) {
+          bottom: 0; }
+    .tal-header .menuBtn .txt {
+      font-size: 12px;
+      line-height: 133.7%;
+      display: block;
+      text-transform: uppercase;
+      color: #F0F0E9; }
+  .tal-header .menuExpand {
+    top: -90vh;
+    background: #000;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    transition: top .7s ease;
+    justify-content: center; }
+    .tal-header .menuExpand .list-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .tal-header .menuExpand .list-nav li + li {
+        margin-top: 8px; }
+      .tal-header .menuExpand .list-nav li {
+        display: inline-block; }
+    .tal-header .menuExpand .nav-link {
+      font-size: 50px;
+      line-height: 146.5%;
+      font-family: RoslindaleDC-Light;
+      text-align: center;
+      color: #F0F0E9;
+      opacity: 0.7;
+      position: relative;
+      transition: width .3s ease;
+      display: inline-block; }
+      .tal-header .menuExpand .nav-link:before {
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        display: block;
+        box-sizing: border-box;
+        background: #fff;
+        content: '';
+        transition: width .3s ease; }
+      .tal-header .menuExpand .nav-link.active, .tal-header .menuExpand .nav-link:hover {
+        opacity: 1; }
+        .tal-header .menuExpand .nav-link.active:before, .tal-header .menuExpand .nav-link:hover:before {
+          width: 100%; }
+  .tal-header .tal-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 157px;
+    transform: translateY(-50%) translateX(-50%);
+    display: block; }
+    .tal-header .tal-logo .text {
+      width: 100%;
+      display: block;
+      z-index: 1; }
+    .tal-header .tal-logo .logo {
+      width: 26px;
+      position: absolute;
+      display: block;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%); }
+  .tal-header .socialsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; }
+    .tal-header .socialsBox .txt {
+      font-size: 12px;
+      line-height: 133.7%;
+      text-transform: uppercase;
+      color: #F0F0E9;
+      display: block; }
+    .tal-header .socialsBox .socials-link {
+      width: 20px;
+      display: block; }
+
+@media screen and (max-width: 780px) {
+  .tal-header .header-content {
+    flex-direction: row-reverse;
+    padding: 8px 20px;
+    height: 46px; }
+  .tal-header .menuBtn .txt {
+    display: none; }
+  .tal-header .menuExpand .nav-link {
+    font-size: 36px; }
+  .tal-header .tal-logo {
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 125px;
+    position: relative; }
+    .tal-header .tal-logo .logo {
+      width: 20px; }
+  .tal-header .socialsBox {
+    display: none; } }
 .tal-home__cover {
   position: relative; }
   .tal-home__cover video {
@@ -510,7 +671,8 @@ a {
   .tal-home__career .thumbBox {
     flex-grow: 1;
     height: auto;
-    position: relative; }
+    position: relative;
+    min-height: 77vh; }
     .tal-home__career .thumbBox .images {
       width: 100%;
       height: 100%;
@@ -1393,10 +1555,16 @@ a {
     gap: 1.61vw;
     color: #F0F0E9; }
 
+body {
+  background: #000; }
+
 .tal-wrapper {
+  transition: .65s ease;
   background: #000000;
   font-family: SuisseIntl-Regular;
   font-size: 16px; }
+  .tal-wrapper.active {
+    transform: translate3d(0, 90vh, 0); }
 
 .tal-wrapper__content {
   box-sizing: border-box;
