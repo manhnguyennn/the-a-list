@@ -119,4 +119,25 @@
 
         }
     },
+    workdetail: function () {
+
+
+        let me = this;
+
+
+        if (me.windowW > 800) {
+            let swiperRc = new Swiper('.swiper-recent-work', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: ".tal-worksdetail__recent .swiper-button-next",
+                    prevEl: ".tal-worksdetail__recent .swiper-button-prev",
+                },
+
+            });
+        } else {
+
+
+        }
+    },
 };

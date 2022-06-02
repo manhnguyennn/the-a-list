@@ -15,7 +15,7 @@
 @import "about-us";
 @import "our_works";
 
-body{
+body {
   background: #000;
 }
 
@@ -147,5 +147,13 @@ body{
   .bottom-round, .top-border-radius {
     width: 100vw;
     left: 0;
+  }
+  .smooth-scroll #scroll-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .smooth-scroll {
+    overflow-y: auto !important;
   }
 }

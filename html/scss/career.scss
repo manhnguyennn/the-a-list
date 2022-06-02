@@ -473,3 +473,137 @@
     }
   }
 }
+
+@media screen and (max-width: 780px) {
+  .tal-career {
+    &__cover {
+
+      video {
+        height: calc(100vh - 46px);
+      }
+      .info-cover {
+        padding: 0 4vh;
+      }
+      .titleBox {
+        font-size: 9vh;
+        margin-bottom: 4vh;
+
+      }
+      .sapo {
+        font-size: 16px;
+        width: 100%;
+      }
+      p + p {
+
+      }
+    }
+    &__list {
+      padding: 54px 20px;
+      .list-filters {
+        margin-bottom: 30px;
+        gap: 10px;
+      }
+      .filters {
+
+        select {
+          font-size: 12px;
+          line-height: 36px;
+        }
+      }
+      .list-careers {
+        li + li {
+          padding-top: 20px;
+          margin-top: 12px;
+        }
+      }
+      .career {
+
+      }
+      .name-job {
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 13px;
+      }
+      .type {
+        font-size: 12px;
+        gap: 38px;
+      }
+    }
+    &__detail-cover {
+
+      video {
+        height: 80.26vw;
+      }
+      .info-cover {
+
+      }
+      .titleBox {
+        font-size: 11vw;
+        line-height: 12vw;
+
+      }
+    }
+    &__detail-content {
+      padding: 32px 20px 40px;
+
+      .header-content {
+        margin-bottom: 27px;
+        padding: 0;
+        .back-btn {
+          margin-bottom: 30px;
+          .icn {
+            width: 20px;
+            margin-right: 9px;
+          }
+          .txt {
+            font-size: 18px;
+          }
+        }
+        .name-job {
+          font-size: 40px;
+          line-height: 48px;
+          margin-bottom: 24px;
+        }
+        .type {
+          font-size: 12px;
+          flex-wrap: wrap;
+          gap: 10px 50px;
+          margin-bottom: 16px;
+        }
+        .scrollTo-apply {
+          position: relative;
+          bottom: auto;
+          right: auto;
+          font-size: 14px;
+          padding: 10px 20px;
+          text-align: center;
+          margin-bottom: 27px;
+        }
+      }
+      .career__content-wrapper {
+
+      }
+      .content-box {
+
+        .numb {
+
+          position: relative;
+          margin-bottom: 12px;
+        }
+        .total {
+
+        }
+        .heading {
+
+        }
+        .para {
+
+        }
+      }
+
+    }
+    &__detail-apply {
+      padding: 0 20px 40px;
+    }
+  }
+}

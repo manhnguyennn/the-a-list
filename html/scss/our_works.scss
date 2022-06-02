@@ -86,7 +86,10 @@
       grid-row-gap: 3.07vw;
     }
     .project {
+      display: flex;
+      flex-direction: column;
       .thumb {
+        order: 1;
         display: block;
         width: 100%;
         padding-top: 92.09%;
@@ -104,6 +107,7 @@
         }
       }
       .name-project {
+        order: 3;
         font-size: 1.3vw;
         line-height: 133.7%;
         font-family: SuisseIntl-Medium;
@@ -114,6 +118,7 @@
         margin-bottom: 0.58vw;
       }
       .type {
+        order: 2;
         opacity: 0.6;
         display: flex;
         align-items: center;
@@ -124,6 +129,67 @@
         text-transform: uppercase;
         gap: 1.61vw;
         color: #F0F0E9;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .tal-ourworks {
+    &__header {
+      padding-top: 40px;
+      margin-bottom: 50px;
+      .heading {
+        font-size: 90px;
+        margin-bottom: 50px;
+        line-height: 90px;
+      }
+      .list-filters {
+        padding: 0 20px;
+        justify-content: space-between;
+      }
+      .filters {
+
+      }
+      .selectBox {
+
+        .icn {
+
+        }
+      }
+      .label {
+        font-size: 12px;
+      }
+      select {
+        font-size: 12px;
+        line-height: 36px;
+        padding: 0 33px 0 14px;
+        option {
+          font-size: 12px;
+          line-height: 36px;
+        }
+      }
+
+    }
+    &__project {
+      padding: 0 20px 50px;
+      .list-project {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 28px;
+      }
+      .project {
+
+        .thumb {
+          margin-bottom: 10px;
+        }
+        .name-project {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        .type {
+          font-size: 12px;
+          justify-content: space-between;
+        }
       }
     }
   }

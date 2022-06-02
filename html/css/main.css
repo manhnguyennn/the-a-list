@@ -890,6 +890,233 @@ a {
     font-size: 12px; }
   .tal-home__career .view-all {
     transform: translateX(50%); } }
+.tal-worksdetail__wrapper {
+  background: #F0F0E9; }
+.tal-worksdetail__cover {
+  position: relative; }
+  .tal-worksdetail__cover .imgBox {
+    width: 100%;
+    height: calc(100vh - 60px); }
+    .tal-worksdetail__cover .imgBox img {
+      z-index: 1;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      height: 100%; }
+  .tal-worksdetail__cover .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.1%, #000000 100%); }
+  .tal-worksdetail__cover .back-btn {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+    z-index: 3;
+    left: 25px;
+    top: 20px;
+    background: #000000;
+    border-radius: 38px;
+    box-sizing: border-box; }
+    .tal-worksdetail__cover .back-btn .icn {
+      display: block;
+      width: 20px; }
+      .tal-worksdetail__cover .back-btn .icn svg {
+        width: 100%;
+        display: block;
+        height: auto; }
+    .tal-worksdetail__cover .back-btn .txt {
+      font-size: 14px;
+      line-height: 135%;
+      display: block;
+      text-transform: uppercase;
+      color: #F0F0E9; }
+.tal-worksdetail__total {
+  box-sizing: border-box;
+  padding: 54px 0 62px; }
+  .tal-worksdetail__total .title {
+    font-size: 170px;
+    line-height: 204px;
+    font-family: RoslindaleDC-Light;
+    text-align: center;
+    color: #222222; }
+  .tal-worksdetail__total .typeGroup {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 133.7%;
+    gap: 16px;
+    color: #222222;
+    margin-bottom: 21px; }
+  .tal-worksdetail__total .type {
+    display: inline-block;
+    padding: 4px 16px;
+    gap: 10px;
+    border: 1px solid #222222;
+    border-radius: 36px; }
+  .tal-worksdetail__total .sapo {
+    width: 486px;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    font-family: RoslindaleText-Regular;
+    color: #222222; }
+.tal-worksdetail__content {
+  width: calc(100% - 80px);
+  margin: 0 auto 120px;
+  border-top: 1px solid rgba(34, 34, 34, 0.12); }
+  .tal-worksdetail__content .content-wrapper {
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto; }
+.tal-worksdetail__references {
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto 62px; }
+  .tal-worksdetail__references .heading {
+    font-size: 32px;
+    line-height: 133.7%;
+    margin-bottom: 24px;
+    color: #222222; }
+  .tal-worksdetail__references .list-links li {
+    padding-top: 24px;
+    border-top: 1px solid #000000;
+    margin-bottom: 24px; }
+  .tal-worksdetail__references .rf-link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px; }
+    .tal-worksdetail__references .rf-link .txt {
+      flex-grow: 1;
+      font-size: 18px;
+      line-height: 135%;
+      font-family: SuisseIntl-Medium;
+      display: block;
+      color: #222222; }
+    .tal-worksdetail__references .rf-link .icn {
+      flex-shrink: 0;
+      width: 32px; }
+      .tal-worksdetail__references .rf-link .icn svg {
+        width: 100%;
+        display: block;
+        height: auto; }
+.tal-worksdetail__prevnext {
+  border-top: 1px solid rgba(34, 34, 34, 0.12);
+  padding: 62px 40px 57px;
+  display: flex;
+  justify-content: space-between; }
+  .tal-worksdetail__prevnext .nav-link-project {
+    width: 390px;
+    max-width: 100%; }
+    .tal-worksdetail__prevnext .nav-link-project:nth-child(2) {
+      text-align: right; }
+    .tal-worksdetail__prevnext .nav-link-project .txt {
+      font-size: 16px;
+      line-height: 133.7%;
+      margin-bottom: 4px;
+      color: #222222; }
+    .tal-worksdetail__prevnext .nav-link-project .link-prj {
+      font-size: 24px;
+      line-height: 125%;
+      display: block;
+      font-family: SuisseIntl-Medium;
+      color: #222222; }
+.tal-worksdetail__recent {
+  background: #000;
+  padding: 47px 25px; }
+  .tal-worksdetail__recent .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px; }
+    .tal-worksdetail__recent .heading .txt {
+      font-size: 4vw;
+      line-height: 100%;
+      font-family: RoslindaleDC-Light;
+      color: #F0F0E9; }
+  .tal-worksdetail__recent .funcsBox {
+    display: flex;
+    gap: 25px; }
+  .tal-worksdetail__recent .swiper-button-prev, .tal-worksdetail__recent .swiper-button-next {
+    cursor: pointer;
+    background: none;
+    width: 32px;
+    height: auto;
+    opacity: 1;
+    margin: 0;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    box-shadow: none;
+    border: none;
+    position: relative;
+    display: block; }
+    .tal-worksdetail__recent .swiper-button-prev.swiper-button-disabled, .tal-worksdetail__recent .swiper-button-next.swiper-button-disabled {
+      opacity: .5;
+      cursor: default; }
+    .tal-worksdetail__recent .swiper-button-prev svg, .tal-worksdetail__recent .swiper-button-next svg {
+      width: 100%;
+      display: block;
+      height: auto; }
+  .tal-worksdetail__recent .swiper-recent-work .swiper-wrapper {
+    gap: 10px; }
+  .tal-worksdetail__recent .swiper-recent-work .swiper-slide {
+    width: 24.52vw; }
+    .tal-worksdetail__recent .swiper-recent-work .swiper-slide:nth-last-child(1) {
+      margin-right: 10px; }
+  .tal-worksdetail__recent .project {
+    display: flex;
+    flex-direction: column; }
+    .tal-worksdetail__recent .project .thumb {
+      order: 1;
+      display: block;
+      width: 100%;
+      padding-top: 92.09%;
+      position: relative;
+      margin-bottom: 0.58vw; }
+      .tal-worksdetail__recent .project .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 8px; }
+    .tal-worksdetail__recent .project .name-project {
+      order: 3;
+      font-size: 1.3vw;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Medium;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      display: block;
+      color: #F0F0E9; }
+    .tal-worksdetail__recent .project .type {
+      margin-bottom: 0.58vw;
+      order: 2;
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      font-size: .8vw;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      gap: 1.61vw;
+      color: #F0F0E9; }
+
 .tal-career__cover {
   position: relative; }
   .tal-career__cover video {
@@ -1268,6 +1495,74 @@ a {
     box-sizing: border-box;
     color: #F0F0E9; }
 
+@media screen and (max-width: 780px) {
+  .tal-career__cover video {
+    height: calc(100vh - 46px); }
+  .tal-career__cover .info-cover {
+    padding: 0 4vh; }
+  .tal-career__cover .titleBox {
+    font-size: 9vh;
+    margin-bottom: 4vh; }
+  .tal-career__cover .sapo {
+    font-size: 16px;
+    width: 100%; }
+  .tal-career__list {
+    padding: 54px 20px; }
+    .tal-career__list .list-filters {
+      margin-bottom: 30px;
+      gap: 10px; }
+    .tal-career__list .filters select {
+      font-size: 12px;
+      line-height: 36px; }
+    .tal-career__list .list-careers li + li {
+      padding-top: 20px;
+      margin-top: 12px; }
+    .tal-career__list .name-job {
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 13px; }
+    .tal-career__list .type {
+      font-size: 12px;
+      gap: 38px; }
+  .tal-career__detail-cover video {
+    height: 80.26vw; }
+  .tal-career__detail-cover .titleBox {
+    font-size: 11vw;
+    line-height: 12vw; }
+  .tal-career__detail-content {
+    padding: 32px 20px 40px; }
+    .tal-career__detail-content .header-content {
+      margin-bottom: 27px;
+      padding: 0; }
+      .tal-career__detail-content .header-content .back-btn {
+        margin-bottom: 30px; }
+        .tal-career__detail-content .header-content .back-btn .icn {
+          width: 20px;
+          margin-right: 9px; }
+        .tal-career__detail-content .header-content .back-btn .txt {
+          font-size: 18px; }
+      .tal-career__detail-content .header-content .name-job {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 24px; }
+      .tal-career__detail-content .header-content .type {
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 10px 50px;
+        margin-bottom: 16px; }
+      .tal-career__detail-content .header-content .scrollTo-apply {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        font-size: 14px;
+        padding: 10px 20px;
+        text-align: center;
+        margin-bottom: 27px; }
+    .tal-career__detail-content .content-box .numb {
+      position: relative;
+      margin-bottom: 12px; }
+  .tal-career__detail-apply {
+    padding: 0 20px 40px; } }
 .tal-abus__cover {
   position: relative; }
   .tal-abus__cover video {
@@ -1278,21 +1573,83 @@ a {
     z-index: 1; }
   .tal-abus__cover .info-cover {
     position: absolute;
-    top: 13.90vh;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 155.08vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     z-index: 2; }
   .tal-abus__cover .titleBox {
     font-family: RoslindaleDC-Light;
     font-size: 15vh;
     line-height: 111.5%;
     color: #F0F0E9;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vh;
+    width: 155.34vh; }
+.tal-abus__corevalue {
+  background: #222222;
+  padding: 2.92vw; }
+  .tal-abus__corevalue .heading {
+    font-size: 5.2vw;
+    line-height: 111.5%;
+    font-family: RoslindaleDC-Light;
+    color: #BD9445;
+    margin-bottom: 2.5vw;
     text-align: center; }
+  .tal-abus__corevalue .des {
+    width: 352px;
+    font-size: 16px;
+    margin: 0 auto 2.5vw;
+    line-height: 133.7%;
+    text-align: center;
+    color: #F0F0E9; }
+  .tal-abus__corevalue .list-value {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.46vw;
+    row-gap: 2.5vw;
+    flex-wrap: wrap; }
+    .tal-abus__corevalue .list-value li {
+      width: calc((100% - 2.92vw) / 3);
+      height: auto; }
+  .tal-abus__corevalue .value {
+    transition: .3s ease;
+    width: 100%;
+    height: 100%;
+    background: #F0F0E9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.83vw;
+    box-sizing: border-box; }
+    .tal-abus__corevalue .value:hover {
+      background: #BD9445; }
+      .tal-abus__corevalue .value:hover .title, .tal-abus__corevalue .value:hover .sapo {
+        color: #F0F0E9; }
+    .tal-abus__corevalue .value .title {
+      font-size: 20px;
+      line-height: 133.7%;
+      margin-bottom: 2.5vw;
+      color: #BD9445; }
+    .tal-abus__corevalue .value .sapo {
+      font-size: 16px;
+      line-height: 133.7%;
+      color: #222222;
+      margin-bottom: auto; }
+    .tal-abus__corevalue .value .imgBox {
+      width: 8.78vw; }
+      .tal-abus__corevalue .value .imgBox img {
+        width: 100%;
+        display: block; }
 .tal-abus__culture {
   background: #F0F0E9;
   padding: 2.92vw; }
@@ -1448,6 +1805,95 @@ a {
       text-align: center;
       color: #F0F0E9; }
 
+@media screen and (max-width: 780px) {
+  .tal-abus__cover video {
+    height: calc(100vh - 46px); }
+  .tal-abus__cover .titleBox {
+    flex-direction: column;
+    font-size: 8vh;
+    gap: 1vh; }
+  .tal-abus__corevalue {
+    padding: 40px 20px; }
+    .tal-abus__corevalue .heading {
+      font-size: 60px;
+      margin-bottom: 20px; }
+    .tal-abus__corevalue .des {
+      margin-bottom: 30px;
+      width: 100%; }
+    .tal-abus__corevalue .list-value {
+      gap: 25px; }
+      .tal-abus__corevalue .list-value li {
+        width: 100%; }
+    .tal-abus__corevalue .value {
+      padding: 20px 15px; }
+      .tal-abus__corevalue .value .title {
+        margin-bottom: 25px;
+        font-size: 18px; }
+      .tal-abus__corevalue .value .sapo {
+        margin-bottom: 25px;
+        font-size: 14px; }
+      .tal-abus__corevalue .value .imgBox {
+        width: 120px; }
+  .tal-abus__culture {
+    padding: 40px 20px; }
+    .tal-abus__culture .heading {
+      font-size: 74px;
+      margin-bottom: 30px; }
+    .tal-abus__culture .list-imgCulture {
+      gap: 30px 10px;
+      margin-bottom: 37px; }
+      .tal-abus__culture .list-imgCulture li {
+        width: calc((100% - 10px) / 2); }
+    .tal-abus__culture .textBox {
+      display: block; }
+      .tal-abus__culture .textBox .left {
+        width: 100%;
+        margin-bottom: 20px; }
+  .tal-abus__people {
+    padding: 40px 20px; }
+    .tal-abus__people .heading {
+      font-size: 74px;
+      margin-bottom: 30px; }
+    .tal-abus__people .people-wrapper {
+      gap: 37px;
+      flex-direction: column; }
+    .tal-abus__people .peopleBox {
+      width: 100vw;
+      margin-left: -20px; }
+      .tal-abus__people .peopleBox + .peopleBox {
+        margin-top: 0; }
+    .tal-abus__people .thumb {
+      margin-bottom: 37px; }
+      .tal-abus__people .thumb img {
+        border-radius: 0; }
+    .tal-abus__people .name {
+      padding: 0 20px;
+      font-size: 50px;
+      margin-bottom: 37px; }
+    .tal-abus__people .pos {
+      font-size: 14px;
+      padding: 0 20px;
+      margin-bottom: 37px; }
+    .tal-abus__people .des {
+      font-size: 17px;
+      padding: 0 20px; }
+  .tal-abus__wtwork {
+    padding: 40px 20px; }
+    .tal-abus__wtwork .heading {
+      font-size: 60px;
+      margin-bottom: 37px; }
+    .tal-abus__wtwork .list-loca {
+      gap: 33px;
+      flex-direction: column; }
+    .tal-abus__wtwork .loca {
+      width: 100%; }
+      .tal-abus__wtwork .loca .total {
+        padding: 0 20px; }
+      .tal-abus__wtwork .loca .name-pos {
+        font-size: 48px;
+        margin-bottom: 28px; }
+      .tal-abus__wtwork .loca .addr {
+        font-size: 16px; } }
 .tal-ourworks__header {
   padding-top: 6.8vw;
   margin-bottom: 10.83vw; }
@@ -1519,42 +1965,81 @@ a {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1.02vw;
     grid-row-gap: 3.07vw; }
-  .tal-ourworks__project .project .thumb {
-    display: block;
-    width: 100%;
-    padding-top: 92.09%;
-    position: relative;
-    margin-bottom: 0.58vw; }
-    .tal-ourworks__project .project .thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 8px; }
-  .tal-ourworks__project .project .name-project {
-    font-size: 1.3vw;
-    line-height: 133.7%;
-    font-family: SuisseIntl-Medium;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    display: block;
-    color: #F0F0E9;
-    margin-bottom: 0.58vw; }
-  .tal-ourworks__project .project .type {
-    opacity: 0.6;
+  .tal-ourworks__project .project {
     display: flex;
-    align-items: center;
-    font-size: .8vw;
-    line-height: 133.7%;
-    font-family: SuisseIntl-Regular;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    gap: 1.61vw;
-    color: #F0F0E9; }
+    flex-direction: column; }
+    .tal-ourworks__project .project .thumb {
+      order: 1;
+      display: block;
+      width: 100%;
+      padding-top: 92.09%;
+      position: relative;
+      margin-bottom: 0.58vw; }
+      .tal-ourworks__project .project .thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 8px; }
+    .tal-ourworks__project .project .name-project {
+      order: 3;
+      font-size: 1.3vw;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Medium;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      display: block;
+      color: #F0F0E9;
+      margin-bottom: 0.58vw; }
+    .tal-ourworks__project .project .type {
+      order: 2;
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      font-size: .8vw;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      gap: 1.61vw;
+      color: #F0F0E9; }
 
+@media screen and (max-width: 780px) {
+  .tal-ourworks__header {
+    padding-top: 40px;
+    margin-bottom: 50px; }
+    .tal-ourworks__header .heading {
+      font-size: 90px;
+      margin-bottom: 50px;
+      line-height: 90px; }
+    .tal-ourworks__header .list-filters {
+      padding: 0 20px;
+      justify-content: space-between; }
+    .tal-ourworks__header .label {
+      font-size: 12px; }
+    .tal-ourworks__header select {
+      font-size: 12px;
+      line-height: 36px;
+      padding: 0 33px 0 14px; }
+      .tal-ourworks__header select option {
+        font-size: 12px;
+        line-height: 36px; }
+  .tal-ourworks__project {
+    padding: 0 20px 50px; }
+    .tal-ourworks__project .list-project {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 28px; }
+    .tal-ourworks__project .project .thumb {
+      margin-bottom: 10px; }
+    .tal-ourworks__project .project .name-project {
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .tal-ourworks__project .project .type {
+      font-size: 12px;
+      justify-content: space-between; } }
 body {
   background: #000; }
 
@@ -1664,6 +2149,14 @@ body {
 
   .bottom-round, .top-border-radius {
     width: 100vw;
-    left: 0; } }
+    left: 0; }
+
+  .smooth-scroll #scroll-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+
+  .smooth-scroll {
+    overflow-y: auto !important; } }
 
 /*# sourceMappingURL=main.css.map */
