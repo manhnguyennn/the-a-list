@@ -1,0 +1,12 @@
+.animFadeUp {
+  opacity: 0;
+  transform: translate3d(0, 120%, 0);
+}
+.animFadeUp.animated {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.72s linear, transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-delay: 0.4s;
+}
+
+/*# sourceMappingURL=animate.css.map */
