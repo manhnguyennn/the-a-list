@@ -1,4 +1,4 @@
-﻿function allPage(){
+﻿function allPage() {
     console.log("allPage");
     // =======================
     // Begin Smooth Scrollbar
@@ -15,39 +15,65 @@
             continuousScrolling: true,
             alwaysShowTracks: true
         });
-    
-    
+
+
         // 3rd party library setup
         // More info: https://greensock.com/docs/v3/Plugins/ScrollTrigger/static.scrollerProxy()
         // ========================
         let scrollPositionX = 0,
             scrollPositionY = 0,
             bodyScrollBar = Scrollbar.init(document.getElementById("scroll-container"));
-    
-        bodyScrollBar.addListener(({ offset }) => {  
+
+        bodyScrollBar.addListener(({offset}) => {
             scrollPositionX = offset.x;
             scrollPositionY = offset.y;
         });
-    
+
         bodyScrollBar.setPosition(0, 0);
         bodyScrollBar.track.xAxis.element.remove();
-    
+
         // Tell ScrollTrigger to use these proxy getter/setter methods for the "body" element:
         ScrollTrigger.scrollerProxy("body", {
-        scrollTop(value) {
-            if (arguments.length) {
-                bodyScrollBar.scrollTop = value;
+            scrollTop(value) {
+                if (arguments.length) {
+                    bodyScrollBar.scrollTop = value;
+                }
+                return bodyScrollBar.scrollTop;
             }
-            return bodyScrollBar.scrollTop;
-        }
         });
-    
+
         // when smooth scroller updates, tell ScrollTrigger to update() too. 
         bodyScrollBar.addListener(ScrollTrigger.update);
     }
-    
+
     // =======================
     // End Smooth Scrollbar
     // =======================
-  
+
+
+    let animfade = gsap.utils.toArray(".animFadeUp"), scrollTween;
+    let prlitem = gsap.utils.toArray("data-speed"), scrollTween2;
+
+
+    animfade.forEach((panel, i) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top bottom",
+            end: "+=200%",
+            onEnter: () => panel.classList.add("animated"),
+            // toggleClass: {targets: panel, className: "animated"},
+        });
+    });
+
+    gsap.to("[data-speed]", {
+        y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
+        ease: "none",
+        scrollTrigger: {
+            start: 0,
+            end: "max",
+            invalidateOnRefresh: true,
+            scrub: 0,
+            marker: true,
+        }
+    });
 }

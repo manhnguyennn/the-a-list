@@ -57,6 +57,12 @@
             window.addEventListener('resize', windowWidth);
             windowWidth();
             allPage();
+
+
+            // gsap.registerPlugin(ScrollTrigger);
+
+            // apply parallax effect to any element with a data-speed attribute
+
         } else {
 
 
