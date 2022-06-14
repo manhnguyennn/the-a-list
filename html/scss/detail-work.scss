@@ -1,9 +1,17 @@
 .tal-worksdetail {
   &__wrapper {
     background: #F0F0E9;
+    .detail-content {
+      position: relative;
+      transform: translate3d(0, calc(100vh - 60px), 0);
+      z-index: 2;
+      background: #F0F0E9;
+    }
   }
   &__cover {
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     .imgBox {
       width: 100%;
       height: calc(100vh - 60px);
@@ -56,6 +64,7 @@
       }
     }
   }
+
   &__total {
 
     box-sizing: border-box;

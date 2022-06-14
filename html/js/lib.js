@@ -52,8 +52,6 @@
 
 
     let animfade = gsap.utils.toArray(".animFadeUp"), scrollTween;
-    let prlitem = gsap.utils.toArray("data-speed"), scrollTween2;
-
 
     animfade.forEach((panel, i) => {
         ScrollTrigger.create({
@@ -65,15 +63,18 @@
         });
     });
 
-    gsap.to("[data-speed]", {
-        y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
-        ease: "none",
-        scrollTrigger: {
-            start: 0,
-            end: "max",
-            invalidateOnRefresh: true,
-            scrub: 0,
-            marker: true,
-        }
+    document.querySelectorAll('.parallax').forEach(function (prl) {
+        // Now do something with my button
+        gsap.to(prl, {
+            y: "-8vw",
+            ease: "none",
+            scrollTrigger: {
+                trigger: prl,
+                // start: "top bottom", // the default values
+                // end: "bottom top",
+                scrub: true
+            },
+        });
     });
+
 }

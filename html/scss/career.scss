@@ -1,7 +1,9 @@
 .tal-career {
   &__cover {
-    position: relative;
-    video {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    video, img {
       width: 100%;
       height: calc(100vh - 60px);
       object-fit: cover;
@@ -44,6 +46,9 @@
     }
   }
   &__list {
+    position: relative;
+    z-index: 2;
+    transform: translate3d(0, calc(100vh - 60px), 0);
     padding: 3.95vw 4.39vw;
     background: #F0F0E9;
     .list-filters {
@@ -97,8 +102,10 @@
     }
   }
   &__detail-cover {
-    position: relative;
-    video {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    video, img {
       width: 100%;
       height: 43.89vh;
       object-fit: cover;
@@ -128,9 +135,11 @@
     }
   }
   &__detail-content {
+    transform: translate3d(0, 43.89vh, 0);
     background: #F0F0E9;
     padding: 2.34vw 2.92vw;
-
+    z-index: 2;
+    position: relative;
     .header-content {
       padding-bottom: 1.776vw;
       margin-bottom: 5.85vw;

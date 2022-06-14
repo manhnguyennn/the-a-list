@@ -111,7 +111,7 @@
                         containerAnimation: scrollTween,
                         start: thisAnimWrap.classList.contains('to-right') ? "100% 50%" : "0% 50%",
                         end: thisAnimWrap.classList.contains('to-right') ? "0% 50%" : "100% 50%",
-                        toggleClass: {targets: sct, className: "active"},
+                        toggleClass: {targets: sct, className: "animated"},
                         // markers: true
                     });
 
@@ -120,6 +120,92 @@
             });
 
 
+        } else {
+
+
+        }
+    },
+    careerList: function () {
+
+
+        let me = this;
+
+
+        if (me.windowW > 800) {
+            let trfContent = document.querySelector('.tal-career__list');
+            let trfCover = document.querySelector('.tal-career__cover  .titleBox');
+            let trfSapo = document.querySelector('.tal-career__cover  .sapo');
+            let trfHeight = window.innerHeight - 60;
+            console.log('transform offset' + trfHeight);
+            gsap.to(trfContent, {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfContent,
+                    start: 0, // the default values
+                    end: trfHeight,
+                    scrub: true
+                },
+            });
+            gsap.to(trfCover, {
+                scale: 0.7,
+                opacity: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfCover / 2,
+                    start: 0, // the default values
+                    end: trfHeight,
+                    scrub: true
+                },
+            });
+            gsap.to(trfSapo, {
+                scale: 0.7,
+                opacity: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfCover / 2,
+                    start: 0, // the default values
+                    end: trfHeight,
+                    scrub: true
+                },
+            });
+        } else {
+
+
+        }
+    },
+    career: function () {
+
+
+        let me = this;
+
+
+        if (me.windowW > 800) {
+            let trfContent = document.querySelector('.tal-career__detail-content');
+            let trfCover = document.querySelector('.tal-career__detail-cover .titleBox');
+            let trfHeight = (window.innerHeight / 2.27);
+            console.log('transform offset' + trfHeight);
+            gsap.to(trfContent, {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfContent,
+                    start: 0, // the default values
+                    end: trfHeight,
+                    scrub: true
+                },
+            });
+            gsap.to(trfCover, {
+                scale: 0.7,
+                opacity: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfCover / 2,
+                    start: 0, // the default values
+                    end: trfHeight,
+                    scrub: true
+                },
+            });
         } else {
 
 
@@ -141,6 +227,21 @@
                 },
 
             });
+
+            let trfContent = document.querySelector('.detail-content');
+            let trfHeight = (window.innerHeight / 2.27);
+            console.log('transform offset' + trfHeight);
+            gsap.to(trfContent, {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfContent,
+                    start: 0, // the default values
+                    end: trfHeight * 2,
+                    scrub: true
+                },
+            });
+
         } else {
 
 
