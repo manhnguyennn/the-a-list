@@ -58,6 +58,19 @@
             windowWidth();
             allPage();
 
+            document.querySelectorAll('.parallax').forEach(function (prl) {
+                // Now do something with my button
+                gsap.to(prl, {
+                    y: "-8vw",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: prl,
+                        // start: "top bottom", // the default values
+                        // end: "bottom top",
+                        scrub: true
+                    },
+                });
+            });
 
             // gsap.registerPlugin(ScrollTrigger);
 
@@ -65,8 +78,34 @@
 
         } else {
 
-
+            document.querySelectorAll('.parallax').forEach(function (prl) {
+                // Now do something with my button
+                gsap.to(prl, {
+                    y: "-18vw",
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: prl,
+                        // start: "top bottom", // the default values
+                        // end: "bottom top",
+                        scrub: true
+                    },
+                });
+            });
         }
+
+        let animfade = gsap.utils.toArray(".animFadeUp"), scrollTween;
+
+        animfade.forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top bottom",
+                end: "+=200%",
+                onEnter: () => panel.classList.add("animated"),
+                // toggleClass: {targets: panel, className: "animated"},
+            });
+        });
+
+
     },
     home: function () {
 
@@ -243,6 +282,26 @@
             });
 
         } else {
+            let swiperRc = new Swiper('.swiper-recent-work', {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+                freeMode: true,
+
+            });
+
+            let trfContent = document.querySelector('.detail-content');
+            let trfHeight = (window.innerWidth);
+            console.log('transform offset' + trfHeight);
+            gsap.to(trfContent, {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfContent,
+                    start: 0, // the default values
+                    end: trfHeight * 2,
+                    scrub: true
+                },
+            });
 
 
         }

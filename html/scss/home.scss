@@ -503,18 +503,19 @@
       height: auto;
       position: relative;
       min-height: 77vh;
+      overflow: hidden;
       .images {
         width: 100%;
         height: 100%;
         z-index: 1;
         img {
-          width: 100%;
-          height: 100%;
+          width: 150%;
+          height: 150%;
           object-fit: cover;
           display: block;
           position: absolute;
           top: 0;
-          left: 0;
+          left: calc(-50% / 2);
         }
       }
       .heading {
@@ -857,7 +858,11 @@
         width: 100%;
         height: 141.33vw;
         .images {
-
+          img {
+            width: 160%;
+            height: 160%;
+            left: calc(-60% / 2);
+          }
         }
         .heading {
 

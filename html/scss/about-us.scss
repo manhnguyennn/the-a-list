@@ -299,16 +299,16 @@
 @media screen and (max-width: 780px) {
   .tal-abus {
     &__cover {
-      video {
-        height: calc(100vh - 46px);
+      video, img {
+        height: 156.8vw;
       }
       .info-cover {
 
       }
       .titleBox {
         flex-direction: column;
-        font-size: 8vh;
-        gap: 1vh;
+        font-size: 15vw;
+        gap: 2vw;
       }
     }
     &__corevalue {

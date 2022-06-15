@@ -1,0 +1,35 @@
+.content-object {
+  margin-bottom: 40px; }
+  .content-object.align-left, .content-object.align-right {
+    width: 400px; }
+  .content-object.align-left {
+    float: left;
+    margin-right: 25px;
+    margin-left: -160px; }
+  .content-object.align-right {
+    float: right;
+    margin-left: 25px;
+    margin-right: -160px; }
+  .content-object.align-overflow {
+    width: 980px;
+    margin-left: -160px; }
+  .content-object.align-fullwidth {
+    width: 100vw;
+    margin-left: calc((100vw - 660px) / -2);
+    position: relative;
+    z-index: 1; }
+
+.image-object a {
+  display: block;
+  outline: none; }
+  .image-object a img {
+    display: block;
+    width: 100%; }
+
+@media screen and (max-width: 760px) {
+  .content-object {
+    float: none !important;
+    margin: 0 -20px 5vw !important;
+    width: 100vw !important; } }
+
+/*# sourceMappingURL=content-objects.css.map */

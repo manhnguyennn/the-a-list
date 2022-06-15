@@ -486,7 +486,7 @@
 @media screen and (max-width: 780px) {
   .tal-career {
     &__cover {
-
+      position: relative;
       video {
         height: calc(100vh - 46px);
       }
@@ -507,6 +507,7 @@
       }
     }
     &__list {
+      transform: translate3d(0, 0, 0);
       padding: 54px 20px;
       .list-filters {
         margin-bottom: 30px;
