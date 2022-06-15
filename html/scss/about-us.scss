@@ -1,7 +1,9 @@
 .tal-abus {
   &__cover {
-    position: relative;
-    video {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    video, img {
       width: 100%;
       height: calc(100vh - 60px);
       object-fit: cover;
@@ -34,6 +36,11 @@
       width: 155.34vh;
     }
   }
+  &__content {
+    position: relative;
+    z-index: 2;
+    transform: translate3d(0, calc(100vh - 60px), 0);
+  }
   &__corevalue {
     background: #222222;
     padding: 2.92vw;
@@ -54,6 +61,8 @@
       color: #F0F0E9;
     }
     .list-value {
+      width: 1246px;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       column-gap: 1.46vw;
@@ -79,12 +88,12 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding: 1.83vw;
+      padding: 25px;
       box-sizing: border-box;
       .title {
         font-size: 20px;
         line-height: 133.7%;
-        margin-bottom: 2.5vw;
+        margin-bottom: 37px;
 
         color: #BD9445;
       }
@@ -95,7 +104,8 @@
         margin-bottom: auto;
       }
       .imgBox {
-        width: 8.78vw;
+        width: 120px;
+        margin-top: 37px;
         img {
           width: 100%;
           display: block;

@@ -1826,8 +1826,10 @@ a {
   .tal-career__detail-apply {
     padding: 0 20px 40px; } }
 .tal-abus__cover {
-  position: relative; }
-  .tal-abus__cover video {
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+  .tal-abus__cover video, .tal-abus__cover img {
     width: 100%;
     height: calc(100vh - 60px);
     object-fit: cover;
@@ -1856,6 +1858,10 @@ a {
     justify-content: center;
     gap: 5vh;
     width: 155.34vh; }
+.tal-abus__content {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(0, calc(100vh - 60px), 0); }
 .tal-abus__corevalue {
   background: #222222;
   padding: 2.92vw; }
@@ -1874,6 +1880,8 @@ a {
     text-align: center;
     color: #F0F0E9; }
   .tal-abus__corevalue .list-value {
+    width: 1246px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     column-gap: 1.46vw;
@@ -1891,7 +1899,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.83vw;
+    padding: 25px;
     box-sizing: border-box; }
     .tal-abus__corevalue .value:hover {
       background: #BD9445; }
@@ -1900,7 +1908,7 @@ a {
     .tal-abus__corevalue .value .title {
       font-size: 20px;
       line-height: 133.7%;
-      margin-bottom: 2.5vw;
+      margin-bottom: 37px;
       color: #BD9445; }
     .tal-abus__corevalue .value .sapo {
       font-size: 16px;
@@ -1908,7 +1916,8 @@ a {
       color: #222222;
       margin-bottom: auto; }
     .tal-abus__corevalue .value .imgBox {
-      width: 8.78vw; }
+      width: 120px;
+      margin-top: 37px; }
       .tal-abus__corevalue .value .imgBox img {
         width: 100%;
         display: block; }

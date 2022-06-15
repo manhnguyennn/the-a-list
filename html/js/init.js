@@ -230,8 +230,46 @@
                 scrollTrigger: {
                     trigger: trfContent,
                     start: 0, // the default values
+                    end: trfHeight / 2,
+                    scrub: true
+                },
+            });
+            gsap.to(trfCover, {
+                scale: 0.7,
+                opacity: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfCover / 2,
+                    start: 0, // the default values
                     end: trfHeight,
                     scrub: true
+                },
+            });
+        } else {
+
+
+        }
+    },
+    about: function () {
+
+
+        let me = this;
+
+
+        if (me.windowW > 800) {
+            let trfContent = document.querySelector('.tal-abus__content');
+            let trfCover = document.querySelector('.tal-abus__cover  .info-cover');
+            let trfHeight = window.innerHeight;
+            console.log('transform offset' + trfHeight);
+            gsap.to(trfContent, {
+                y: 0,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: trfContent,
+                    start: 0, // the default values
+                    end: trfHeight / 2,
+                    scrub: true,
+                    marker: true
                 },
             });
             gsap.to(trfCover, {
