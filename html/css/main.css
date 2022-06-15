@@ -382,6 +382,30 @@ a {
     color: #F0F0E9;
     opacity: 0.5; }
 
+@media screen and (max-width: 780px) {
+  .tal-footer {
+    padding: 0; }
+    .tal-footer .content-footer {
+      padding: 35px 20px;
+      box-sizing: border-box; }
+    .tal-footer .flex-footer {
+      flex-direction: column; }
+      .tal-footer .flex-footer + .flex-footer {
+        margin-top: 50px; }
+    .tal-footer .tal-logo {
+      display: none; }
+    .tal-footer .scrl-top {
+      display: none; }
+    .tal-footer .ft-group {
+      margin: 0;
+      flex-direction: column;
+      gap: 15px; }
+    .tal-footer .addrss-box {
+      width: 100%; }
+    .tal-footer .copyright {
+      text-align: left;
+      width: 100%;
+      margin-top: 47px; } }
 .tal-home__cover {
   position: relative; }
   .tal-home__cover video {

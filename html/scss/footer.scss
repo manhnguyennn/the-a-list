@@ -114,11 +114,78 @@
       color: #E1E1DA;
     }
   }
-  .copyright{
+  .copyright {
     font-size: 12px;
     line-height: 133.7%;
     text-align: right;
     color: #F0F0E9;
     opacity: 0.5;
   }
+}
+
+@media screen and (max-width: 780px) {
+  .tal-footer {
+    padding: 0;
+    .content-footer {
+      padding: 35px 20px;
+      box-sizing: border-box;
+    }
+    .flex-footer {
+      & + .flex-footer {
+        margin-top: 50px;
+      }
+
+      &.alit-content-start {
+
+      }
+      &.alit-content-end {
+
+      }
+      flex-direction: column;
+    }
+    .tal-logo {
+      display: none;
+    }
+    .scrl-top {
+      display: none;
+    }
+    .ft-group {
+      margin: 0;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .footer-type {
+
+      .label {
+
+        .txt {
+
+        }
+        .icn {
+
+        }
+      }
+      .ft-info {
+
+      }
+    }
+    .addrss-gr {
+
+    }
+    .addrss-box {
+      width: 100%;
+      .label {
+
+      }
+      .addrss {
+
+      }
+    }
+    .copyright {
+      text-align: left;
+      width: 100%;
+      margin-top: 47px;
+    }
+  }
+
 }
