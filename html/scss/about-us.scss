@@ -321,6 +321,9 @@
         gap: 2vw;
       }
     }
+    &__content {
+      transform: translate3d(0, 156.8vw, 0);
+    }
     &__corevalue {
       padding: 40px 20px;
       .heading {
@@ -332,6 +335,7 @@
         width: 100%;
       }
       .list-value {
+        width: 100%;
         gap: 25px;
         li {
           width: 100%;

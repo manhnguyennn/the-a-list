@@ -541,7 +541,7 @@
     }
     &__detail-cover {
 
-      video {
+      video, img {
         height: 80.26vw;
       }
       .info-cover {
@@ -555,7 +555,7 @@
     }
     &__detail-content {
       padding: 32px 20px 40px;
-
+      transform: translate3d(0, 80.26vw, 0);
       .header-content {
         margin-bottom: 27px;
         padding: 0;
@@ -613,7 +613,6 @@
 
     }
     &__detail-apply {
-      padding: 0 20px 40px;
     }
   }
 }
