@@ -1,8 +1,10 @@
 .tal-abus {
   &__cover {
-    position: fixed;
     width: 100%;
     z-index: 1;
+    position: relative;
+    height: calc(100vh - 60px);
+    overflow: hidden;
     video, img {
       width: 100%;
       height: calc(100vh - 60px);
@@ -39,7 +41,7 @@
   &__content {
     position: relative;
     z-index: 2;
-    transform: translate3d(0, calc(100vh - 60px), 0);
+
   }
   &__corevalue {
     background: #222222;
@@ -181,8 +183,12 @@
   &__people {
     background: #CDD3D8;
     color: #091A54;
-    padding: 2.92vw;
+    padding: 120px 2.92vw;
+
     .heading {
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
       font-size: 5.2vw;
       line-height: 111.5%;
       font-family: RoslindaleDC-Light;
@@ -191,6 +197,9 @@
     .people-wrapper {
       display: flex;
       gap: 2.26vw;
+      width: 1200px;
+      max-width: 100%;
+      margin: 0 auto;
     }
     .peopleBox {
       &:nth-child(2) {
@@ -202,7 +211,7 @@
       width: 100%;
       padding-top: 100%;
       display: block;
-      margin-bottom: 2.7vw;
+      margin-bottom: 37px;
       position: relative;
       img {
         width: 100%;
@@ -216,21 +225,21 @@
       }
     }
     .name {
-      font-size: 4vw;
+      font-size: 60px;
       line-height: 111.5%;
       font-family: RoslindaleDC-Light;
       display: block;
-      margin-bottom: 1.97vw;
+      margin-bottom: 20px;
       color: #091A54;
     }
     .pos {
-      font-size: 1vw;
+      font-size: 14px;
       line-height: 133.7%;
       text-transform: uppercase;
-      margin-bottom: 2.27vw;
+      margin-bottom: 37px;
     }
     .des {
-      font-size: 1.15vw;
+      font-size: 17px;
       line-height: 133.7%;
       font-family: SuisseIntl-Regular;
     }
@@ -309,6 +318,7 @@
 @media screen and (max-width: 780px) {
   .tal-abus {
     &__cover {
+      height: 156.8vw;
       video, img {
         height: 156.8vw;
       }
@@ -322,7 +332,7 @@
       }
     }
     &__content {
-      transform: translate3d(0, 156.8vw, 0);
+
     }
     &__corevalue {
       padding: 40px 20px;

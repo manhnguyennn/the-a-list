@@ -37,10 +37,15 @@
             if ($(this).parent().hasClass('active')) {
                 $(this).parent().removeClass('active');
                 $('.tal-wrapper').removeClass('active').delay(300)
+                $('.list-nav').removeClass('active')
             }
             else {
                 $(this).parent().addClass('active').delay(300);
-                $('.tal-wrapper').addClass('active')
+                $('.tal-wrapper').addClass('active');
+                setTimeout(function () {
+                    $('.list-nav').addClass('active')
+                }, 500);
+
             }
         });
 
@@ -104,7 +109,6 @@
                 // toggleClass: {targets: panel, className: "animated"},
             });
         });
-
 
     },
     home: function () {
@@ -257,7 +261,7 @@
                 scrollTrigger: {
                     trigger: trfContent,
                     start: 0, // the default values
-                    end: trfHeight ,
+                    end: trfHeight,
                     scrub: true
                 },
             });
@@ -281,20 +285,10 @@
 
 
         if (me.windowW > 800) {
-            let trfContent = document.querySelector('.tal-abus__content');
             let trfCover = document.querySelector('.tal-abus__cover  .info-cover');
             let trfHeight = window.innerHeight - 60;
             console.log('transform offset' + trfHeight);
-            gsap.to(trfContent, {
-                y: 0,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: trfContent,
-                    start: 0, // the default values
-                    duration: trfHeight * 4,
-                    scrub: true,
-                },
-            });
+
             gsap.to(trfCover, {
                 scale: 0.7,
                 opacity: 0,
@@ -307,20 +301,8 @@
                 },
             });
         } else {
-            let trfContent = document.querySelector('.tal-abus__content');
             let trfCover = document.querySelector('.tal-abus__cover  .info-cover');
             let trfHeight = window.innerHeight - 46;
-            console.log('transform offset' + trfHeight);
-            gsap.to(trfContent, {
-                y: 0,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: trfContent,
-                    start: 0, // the default values
-                    duration: trfHeight ,
-                    scrub: true,
-                },
-            });
             gsap.to(trfCover, {
                 scale: 0.7,
                 opacity: 0,

@@ -105,6 +105,13 @@
       li {
         display: inline-block;
       }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.65s linear;
       display: flex;
       align-items: center;
       justify-content: center;

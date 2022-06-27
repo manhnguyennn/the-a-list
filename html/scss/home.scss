@@ -147,11 +147,11 @@
     .our-expts {
       padding-bottom: 6.56vw;
       .heading {
-        font-size: 18.5vw;
+        font-size: 250px;
+        margin-bottom: 80px;
         line-height: 111.5%;
         font-family: RoslindaleDC-Light;
         text-align: center;
-        margin-bottom: 6vw;
         color: #222222;
         span {
           color: #BD9445;
@@ -160,26 +160,28 @@
       .list-expts {
         display: flex;
         flex-wrap: wrap;
-        padding: 0 1.46vw;
+        width: 1286px;
+        margin: 0 auto;
         li {
           width: 50%;
           border-top: 1px solid rgba(34, 34, 34, .12);
           box-sizing: border-box;
-          padding-top: 4.31vw;
-          padding-bottom: 4.31vw;
+
+          padding-bottom: 50px;
+          padding-top: 50px;
           &:nth-child(2n) {
-            padding-left: 1.46vw;
+            padding-left: 20px;
           }
           &:nth-child(2n+1) {
-            padding-right: 1.46vw;
+            padding-right: 20px;
           }
         }
       }
       .expts-card {
         display: flex;
         .thumb {
-          width: 14.49vw;
-          margin-right: 1.9vw;
+          width: 198px;
+          margin-right: 20px;
           flex-shrink: 0;
           img, video {
             width: 100%;
@@ -195,9 +197,9 @@
           align-items: center;
           margin-bottom: 34px;
           .numb {
-            width: 4vw;
-            height: 4vw;
-            font-size: 2.5vw;
+            font-size: 33px;
+            width: 53px;
+            height: 53px;
             border: 1px solid #222222;
             border-radius: 50%;
             display: flex;
@@ -212,7 +214,7 @@
           }
           .txt {
             flex-grow: 1;
-            font-size: 1.7vw;
+            font-size: 24px;
             line-height: 117%;
             font-family: SuisseIntl-Medium;
             display: block;
@@ -222,7 +224,7 @@
           }
         }
         .sapo {
-          font-size: 1vw;
+          font-size: 16px;
           line-height: 155%;
           color: #222222;
 
