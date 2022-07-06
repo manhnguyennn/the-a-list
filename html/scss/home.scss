@@ -260,14 +260,13 @@
         }
       }
       .client-list {
-        background: #091A54;
-        padding: 5.12vw 5.49vw;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5.27vw;
-        border-radius: 0 0 20px 20px;
+        background: #F0F0E9;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4.9vw;
+        padding: 5.12vw;
         li {
-          width: calc(100% / 7);
+
         }
         .client {
           display: block;
@@ -347,16 +346,16 @@
           display: block;
           margin-bottom: 10px;
           width: 100%;
-          padding-top: 66.66%;
+          padding-top: 66.67%;
           position: relative;
           overflow: hidden;
           border-radius: 12px;
           img {
-            width: 160%;
-            height: 160%;
+            width: 100%;
+            height: 100%;
             position: absolute;
-            top: calc((-40%) / 2);
-            left: calc((-20%) / 2);
+            top: 0;
+            left: 0;
             display: block;
             object-fit: cover;
           }
@@ -596,6 +595,93 @@
 
     }
   }
+  &__contactus {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .heading {
+      font-size: 121px;
+      line-height: 102px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      font-family: RoslindaleDC-Light;
+      color: #BD9445;
+      margin-bottom: 36px;
+    }
+    .des {
+      font-size: 18px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Regular;
+      text-align: center;
+      width: 526px;
+      max-width: 100%;
+      margin: 0 auto 15px;
+
+      color: #E1E1DA;
+    }
+    .img-contact {
+      width: 180px;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    .form-contact {
+      width: 720px;
+      display: flex;
+      align-items: flex-end;
+      gap: 26px;
+    }
+    .form-group {
+      &:nth-child(1) {
+        width: 174px;
+
+      }
+      &:nth-child(2) {
+        width: 319px;
+
+      }
+      .label-name {
+        font-size: 12px;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Medium;
+        margin-bottom: 11px;
+        text-transform: uppercase;
+        color: #BD9445;
+      }
+      input {
+        border: 1px solid #F0F0E9;
+        border-radius: 36px;
+        padding: 12px 16px;
+        font-size: 16px;
+        line-height: 133.7%;
+        font-family: SuisseIntl-Medium;
+        color: #F0F0E9;
+        width: 100%;
+        box-sizing: border-box;
+        background: none;
+        &::placeholder {
+          opacity: 0.6;
+        }
+      }
+    }
+    .submit-contact {
+      font-size: 16px;
+      line-height: 133.7%;
+      font-family: SuisseIntl-Medium;
+      background: #F0F0E9;
+      border-radius: 36px;
+      width: 174px;
+      height: 45px;
+      color: #222222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -675,6 +761,8 @@
         }
         .list-expts {
           padding: 0 18px;
+          box-sizing: border-box;
+          max-width: 100%;
           li {
             border: none;
             padding: 0;
@@ -727,7 +815,9 @@
           }
         }
         .client-list {
-
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1vw 8vw;
+          padding: 7vw;
           li {
 
           }
@@ -909,6 +999,45 @@
       }
       .view-all {
         transform: translateX(50%);
+      }
+    }
+    &__contactus {
+
+      .heading {
+        font-size: 60px;
+        line-height: 84.5%;
+        margin-bottom: 35px;
+      }
+      .des {
+        width: 290px;
+      }
+      .img-contact {
+
+      }
+      .form-contact {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 23px;
+        box-sizing: border-box;
+        align-items: center;
+      }
+      .form-group {
+        &:nth-child(1) {
+          width: 100%;
+        }
+        &:nth-child(2) {
+
+          width: 100%;
+        }
+        .label-name {
+
+        }
+        input {
+
+        }
+      }
+      .submit-contact {
+
       }
     }
   }
