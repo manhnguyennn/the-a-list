@@ -2602,10 +2602,12 @@ a {
     gap: 2.26vw;
     width: 1200px;
     max-width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
   .tal-abus__people .peopleBox {
-    width: 50%; }
-    .tal-abus__people .peopleBox:nth-child(2) {
+    width: calc((100% - 2.26vw) / 2); }
+    .tal-abus__people .peopleBox:nth-child(2n) {
       padding-top: 6vw; }
   .tal-abus__people .thumb {
     width: 100%;
@@ -2783,6 +2785,8 @@ a {
       margin-left: -20px; }
       .tal-abus__people .peopleBox + .peopleBox {
         margin-top: 0; }
+      .tal-abus__people .peopleBox:nth-child(2n) {
+        padding: 0; }
     .tal-abus__people .thumb {
       margin-bottom: 37px; }
       .tal-abus__people .thumb img {

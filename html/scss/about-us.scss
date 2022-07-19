@@ -200,12 +200,13 @@
       width: 1200px;
       max-width: 100%;
       margin: 0 auto;
+      flex-wrap: wrap;
     }
     .peopleBox {
-      &:nth-child(2) {
+      &:nth-child(2n) {
         padding-top: 6vw;
       }
-      width: 50%;
+      width: calc((100% - 2.26vw) / 2);
     }
     .thumb {
       width: 100%;
@@ -418,7 +419,9 @@
         & + .peopleBox {
           margin-top: 0;
         }
-
+        &:nth-child(2n) {
+          padding: 0;
+        }
         width: 100vw;
         margin-left: -20px;
       }
