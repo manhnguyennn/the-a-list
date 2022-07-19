@@ -70,14 +70,14 @@
   &__total {
 
     box-sizing: border-box;
-    padding: 54px 0 62px;
+    padding: 100px 0;
     .title {
       font-size: 6vw;
       line-height: 7.1vw;
       font-family: RoslindaleDC-Light;
       text-align: center;
       color: #222222;
-
+      padding: 0 6vw;
     }
     .typeGroup {
       display: flex;
@@ -347,6 +347,7 @@
     &__total {
       padding: 30px 0;
       .title {
+        padding: 0;
         font-size: 65px;
         line-height: 70px;
         margin-bottom: 20px;

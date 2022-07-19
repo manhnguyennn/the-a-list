@@ -1537,13 +1537,14 @@ a {
 .tal-worksdetail__total {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 54px 0 62px; }
+  padding: 100px 0; }
   .tal-worksdetail__total .title {
     font-size: 6vw;
     line-height: 7.1vw;
     font-family: RoslindaleDC-Light;
     text-align: center;
-    color: #222222; }
+    color: #222222;
+    padding: 0 6vw; }
   .tal-worksdetail__total .typeGroup {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1790,6 +1791,7 @@ a {
   .tal-worksdetail__total {
     padding: 30px 0; }
     .tal-worksdetail__total .title {
+      padding: 0;
       font-size: 65px;
       line-height: 70px;
       margin-bottom: 20px; }
