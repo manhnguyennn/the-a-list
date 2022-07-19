@@ -2428,7 +2428,7 @@ a {
   .tal-abus__cover .titleBox {
     font-family: RoslindaleDC-Light;
     font-size: 15vh;
-    line-height: 111.5%;
+    line-height: 87.5%;
     color: #F0F0E9;
     text-align: center;
     display: -webkit-box;
@@ -2725,7 +2725,8 @@ a {
       -ms-flex-direction: column;
       flex-direction: column;
       font-size: 15vw;
-      gap: 2vw; }
+      gap: 2vw;
+      line-height: 102%; }
   .tal-abus__corevalue {
     padding: 40px 20px; }
     .tal-abus__corevalue .heading {
