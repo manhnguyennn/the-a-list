@@ -44,7 +44,7 @@
       gap: 10px;
       z-index: 3;
       left: 25px;
-      top: 20px;
+      top: 50px;
       background: #000000;
       border-radius: 38px;
       box-sizing: border-box;
@@ -72,8 +72,8 @@
     box-sizing: border-box;
     padding: 54px 0 62px;
     .title {
-      font-size: 170px;
-      line-height: 204px;
+      font-size: 6vw;
+      line-height: 7.1vw;
       font-family: RoslindaleDC-Light;
       text-align: center;
       color: #222222;
@@ -82,7 +82,7 @@
     .typeGroup {
       display: flex;
       justify-content: center;
-      font-size: 12px;
+      font-size: 1vw;
       line-height: 133.7%;
       gap: 16px;
       color: #222222;
@@ -93,7 +93,6 @@
         opacity: 1;
       }
       transition: .3s;
-      opacity: 0.4;
       display: inline-block;
       padding: 4px 16px;
       gap: 10px;
@@ -348,11 +347,12 @@
     &__total {
       padding: 30px 0;
       .title {
-        font-size: 70px;
-        line-height: 84px;
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 20px;
       }
       .typeGroup {
-
+        font-size: 13px;
       }
       .type {
 

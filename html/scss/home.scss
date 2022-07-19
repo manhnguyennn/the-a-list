@@ -644,6 +644,11 @@
         width: 319px;
 
       }
+      &.wrong {
+        input {
+          border: 1px solid #BA1A1A;
+        }
+      }
       .label-name {
         font-size: 12px;
         line-height: 133.7%;
