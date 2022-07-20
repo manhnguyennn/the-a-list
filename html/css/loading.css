@@ -1,0 +1,66 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  visibility: hidden;
+  background: #000000;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .loading-screen .ld-logo {
+    position: relative;
+    z-index: 2;
+    width: 13.43vw; }
+    .loading-screen .ld-logo svg {
+      width: 100%;
+      display: block;
+      height: auto; }
+  .loading-screen:before {
+    width: 100%;
+    height: 150%;
+    display: block;
+    content: '';
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    bottom: -100vh;
+    background: #fff;
+    -webkit-animation: loadingscreen 2.5s ease-in-out infinite;
+    animation: loadingscreen 2.5s ease-in-out infinite; }
+  .loading-screen.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999999;
+    bottom: 100vh; }
+
+@-webkit-keyframes loadingscreen {
+  0% {
+    bottom: -150vh; }
+  50% {
+    bottom: 150vh; }
+  100% {
+    bottom: 150vh; } }
+
+@media screen and (max-width: 780px) {
+  .loading-screen {
+    width: 100vw; }
+    .loading-screen .ld-logo {
+      width: 50vw; } }
+
+/*# sourceMappingURL=loading.css.map */

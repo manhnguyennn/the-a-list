@@ -1,0 +1,66 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 0;
+  opacity: 0;
+  transition: .5s ease;
+  visibility: hidden;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ld-logo {
+    position: relative;
+    z-index: 2;
+    width: 13.43vw;
+    svg {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+  &:before {
+    width: 100%;
+    height: 150%;
+    display: block;
+    content: '';
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    bottom: -100vh;
+    background: #fff;
+    animation: loadingscreen 2.5s ease-in-out infinite;
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999999;
+    bottom: 100vh;
+  }
+}
+
+@-webkit-keyframes loadingscreen {
+  0% {
+    bottom: -150vh;
+  }
+  50% {
+    bottom: 150vh;
+  }
+  100% {
+    bottom: 150vh;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .loading-screen {
+    width: 100vw;
+    .ld-logo {
+      width: 50vw;
+    }
+  }
+}
