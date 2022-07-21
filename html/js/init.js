@@ -186,7 +186,7 @@
                 scrollTrigger: {
                     trigger: trfContent,
                     start: 0, // the default values
-                    end: trfHeight,
+                    end: trfHeight / 2,
                     scrub: true
                 },
             });
