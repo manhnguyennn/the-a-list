@@ -409,10 +409,15 @@ a {
     flex-direction: row-reverse;
     padding: 8px 20px;
     height: 46px; }
+  .tal-header .menuGroup.active .menuExpand {
+    top: 46px; }
   .tal-header .menuBtn .txt {
     display: none; }
-  .tal-header .menuExpand .nav-link {
-    font-size: 36px; }
+  .tal-header .menuExpand {
+    top: calc(-100vh + 46px);
+    height: calc(100vh - 46px); }
+    .tal-header .menuExpand .nav-link {
+      font-size: 36px; }
   .tal-header .tal-logo {
     top: auto;
     left: auto;
