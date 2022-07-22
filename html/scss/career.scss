@@ -58,22 +58,62 @@
       gap: 2vw;
       margin-bottom: 4.53vw;
     }
+
     .filters {
       width: 50%;
       border: 1px solid #222222;
       border-radius: 36px;
       color: #222222;
       text-align: center;
+
+      .selectBox {
+        border: 1px solid #F0F0E9;
+        border-radius: 36px;
+
+        position: relative;
+        .icn {
+          position: absolute;
+          top: 50%;
+          right: 16px;
+          transform: translateY(-50%);
+          z-index: 1;
+
+          width: 12px;
+          display: block;
+          svg {
+            width: 100%;
+            display: block;
+            height: auto;
+          }
+        }
+      }
+
       select {
+        box-sizing: border-box;
+        font-family: SuisseIntl-Medium;
+        border: none;
+        width: 100%;
+        outline: none;
+        background: none;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
         font-size: 1vw;
         line-height: 2vw;
         text-transform: uppercase;
-        font-family: SuisseIntl-Medium;
-        width: 100%;
-        border: none;
-        outline: none;
-        background: none;
-        text-align: center;
+        color: #222222;
+        z-index: 2;
+        option {
+          color: #222222;
+          background: #fff;
+          border-radius: 36px;
+          border: 1px solid #F0F0E9;
+          width: 100%;
+          line-height: 30px;
+          height: 24px;
+          box-sizing: border-box;
+          padding: 8px 16px;
+        }
       }
     }
     .list-careers {
@@ -519,6 +559,8 @@
 
         select {
           font-size: 12px;
+          text-align: left;
+          padding: 0px 16px;
           line-height: 36px;
         }
       }

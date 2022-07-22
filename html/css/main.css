@@ -1988,16 +1988,51 @@ a {
     border-radius: 36px;
     color: #222222;
     text-align: center; }
+    .tal-career__list .filters .selectBox {
+      border: 1px solid #F0F0E9;
+      border-radius: 36px;
+      position: relative; }
+      .tal-career__list .filters .selectBox .icn {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 1;
+        width: 12px;
+        display: block; }
+        .tal-career__list .filters .selectBox .icn svg {
+          width: 100%;
+          display: block;
+          height: auto; }
     .tal-career__list .filters select {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: SuisseIntl-Medium;
+      border: none;
+      width: 100%;
+      outline: none;
+      background: none;
+      padding: 0;
+      box-sizing: border-box;
+      text-align: center;
       font-size: 1vw;
       line-height: 2vw;
       text-transform: uppercase;
-      font-family: SuisseIntl-Medium;
-      width: 100%;
-      border: none;
-      outline: none;
-      background: none;
-      text-align: center; }
+      color: #222222;
+      z-index: 2; }
+      .tal-career__list .filters select option {
+        color: #222222;
+        background: #fff;
+        border-radius: 36px;
+        border: 1px solid #F0F0E9;
+        width: 100%;
+        line-height: 30px;
+        height: 24px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 8px 16px; }
   .tal-career__list .list-careers li + li {
     margin-top: 0.87vw;
     padding-top: 2.56vw;
@@ -2415,6 +2450,8 @@ a {
       gap: 10px; }
     .tal-career__list .filters select {
       font-size: 12px;
+      text-align: left;
+      padding: 0px 16px;
       line-height: 36px; }
     .tal-career__list .list-careers li + li {
       padding-top: 20px;
