@@ -1,4 +1,11 @@
-.loading-screen {
+.loading-screen-out {
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999999;
+    bottom: 100vh;
+  }
+
   position: fixed;
   top: 0;
   left: 0;
@@ -9,58 +16,114 @@
   opacity: 0;
   transition: .5s ease;
   visibility: hidden;
-  background: #000000;
+  background: #fff;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  .ld-logo {
-    position: relative;
-    z-index: 2;
-    width: 13.43vw;
-    svg {
-      width: 100%;
-      display: block;
-      height: auto;
-    }
-  }
-  &:before {
-    width: 100%;
-    height: 150%;
-    display: block;
-    content: '';
-    left: 0;
-    z-index: 1;
-    position: absolute;
-    bottom: -100vh;
-    background: #fff;
-    animation: loadingscreen 2.5s ease-in-out infinite;
-  }
+}
+
+.loading-screen-in {
   &.active {
     opacity: 1;
     visibility: visible;
     z-index: 999999;
     bottom: 100vh;
   }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 0;
+  opacity: 0;
+  transition: .5s ease;
+  visibility: hidden;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ld-logo {
+    position: relative;
+    z-index: 2;
+    width: 13.43vw;
+    margin: 0 auto 18px;
+
+    svg {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+
+
+  .loading-content {
+    transition: .3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .ld-progress {
+    margin: 0 auto;
+    width: 19.79vw;
+  }
+
+  .meter {
+    position: relative;
+    background: rgba(56, 56, 56, 0.12);
+    border-radius: 81px;
+    height: 6px;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    span {
+      transition: .15s ease;
+      width: 0%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: #222222;
+      height: 100%;
+    }
+  }
+
+  .count {
+    font-size: .8vw;
+    line-height: 135%;
+    font-family: SuisseIntl-Regular;
+    text-align: center;
+    color: #222222;
+  }
 }
 
-@-webkit-keyframes loadingscreen {
-  0% {
-    bottom: -150vh;
-  }
-  50% {
-    bottom: 150vh;
-  }
-  100% {
-    bottom: 150vh;
-  }
-}
 
 @media screen and (max-width: 780px) {
-  .loading-screen {
+  .loading-screen-out {
     width: 100vw;
+  }
+  .loading-screen-in {
+    width: 100vw;
+
     .ld-logo {
       width: 50vw;
+    }
+
+    .ld-progress {
+      width: 80vw;
+
+      .count {
+        font-size: 12px;
+      }
     }
   }
 }

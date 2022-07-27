@@ -27,7 +27,8 @@ textarea {
 
 input {
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-shadow: none;
 }
 
@@ -136,78 +137,158 @@ a {
 }
 .animFadeUp {
   opacity: 0;
-  transform: translate3d(0, 2vw, 0);
+  -webkit-transform: translate3d(0, 2vw, 0);
+          transform: translate3d(0, 2vw, 0);
 }
 .animFadeUp.animated {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.65s linear, -webkit-transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: opacity 0.65s linear, -webkit-transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: opacity 0.65s linear, transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: opacity 0.65s linear, transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition-delay: 0.4s;
+  transition: opacity 0.65s linear, transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.75s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
-.loading-screen {
+.loading-screen-out {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 0;
   opacity: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
   transition: 0.5s ease;
   visibility: hidden;
-  background: #000000;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.loading-screen .ld-logo {
-  position: relative;
-  z-index: 2;
-  width: 13.43vw;
-}
-.loading-screen .ld-logo svg {
-  width: 100%;
-  display: block;
-  height: auto;
-}
-.loading-screen:before {
-  width: 100%;
-  height: 150%;
-  display: block;
-  content: "";
-  left: 0;
-  z-index: 1;
-  position: absolute;
-  bottom: -100vh;
   background: #fff;
-  animation: loadingscreen 2.5s ease-in-out infinite;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.loading-screen.active {
+.loading-screen-out.active {
   opacity: 1;
   visibility: visible;
   z-index: 999999;
   bottom: 100vh;
 }
 
-@-webkit-keyframes loadingscreen {
-  0% {
-    bottom: -150vh;
-  }
-  50% {
-    bottom: 150vh;
-  }
-  100% {
-    bottom: 150vh;
-  }
+.loading-screen-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  visibility: hidden;
+  background: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+.loading-screen-in.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999999;
+  bottom: 100vh;
+}
+.loading-screen-in .ld-logo {
+  position: relative;
+  z-index: 2;
+  width: 13.43vw;
+  margin: 0 auto 18px;
+}
+.loading-screen-in .ld-logo svg {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.loading-screen-in .loading-content {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.loading-screen-in .loading-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+.loading-screen-in .ld-progress {
+  margin: 0 auto;
+  width: 19.79vw;
+}
+.loading-screen-in .meter {
+  position: relative;
+  background: rgba(56, 56, 56, 0.12);
+  border-radius: 81px;
+  height: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.loading-screen-in .meter span {
+  -webkit-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
+  transition: 0.15s ease;
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: #222222;
+  height: 100%;
+}
+.loading-screen-in .count {
+  font-size: 0.8vw;
+  line-height: 135%;
+  font-family: SuisseIntl-Regular;
+  text-align: center;
+  color: #222222;
+}
+
 @media screen and (max-width: 780px) {
-  .loading-screen {
+  .loading-screen-out {
     width: 100vw;
   }
-  .loading-screen .ld-logo {
+
+  .loading-screen-in {
+    width: 100vw;
+  }
+  .loading-screen-in .ld-logo {
     width: 50vw;
+  }
+  .loading-screen-in .ld-progress {
+    width: 80vw;
+  }
+  .loading-screen-in .ld-progress .count {
+    font-size: 12px;
   }
 }
 .tal-header {
@@ -225,17 +306,26 @@ a {
 .tal-header .header-content {
   background: #000000;
   padding: 11px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   height: 60px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .tal-header .menuGroup.active .menuBtn .icn i:nth-child(1) {
   top: 8px;
   left: 1px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .tal-header .menuGroup.active .menuBtn .icn i:nth-child(2) {
   opacity: 0;
@@ -244,14 +334,20 @@ a {
 .tal-header .menuGroup.active .menuBtn .icn i:nth-child(3) {
   top: 8px;
   left: 1px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .tal-header .menuGroup.active .menuExpand {
   top: 60px;
 }
 .tal-header .menuBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 21px;
 }
 .tal-header .menuBtn .icn {
@@ -261,6 +357,8 @@ a {
   position: relative;
 }
 .tal-header .menuBtn .icn i {
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
   transition: 0.3s linear;
   width: 100%;
   height: 2px;
@@ -273,8 +371,12 @@ a {
 }
 .tal-header .menuBtn .icn i:nth-child(2) {
   top: 50%;
+  -webkit-transition: 0.15s linear;
+  -o-transition: 0.15s linear;
   transition: 0.15s linear;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .tal-header .menuBtn .icn i:nth-child(3) {
   bottom: 0;
@@ -294,19 +396,38 @@ a {
   left: 0;
   width: 100%;
   height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: top 0.7s ease;
+  -o-transition: top 0.7s ease;
   transition: top 0.7s ease;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tal-header .menuExpand .list-nav {
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 0.65s linear;
+  -o-transition: opacity 0.65s linear;
   transition: opacity 0.65s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .tal-header .menuExpand .list-nav li + li {
   margin-top: 8px;
@@ -326,6 +447,8 @@ a {
   color: #F0F0E9;
   opacity: 0.7;
   position: relative;
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
   display: inline-block;
 }
@@ -336,9 +459,12 @@ a {
   left: 0;
   position: absolute;
   display: block;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #fff;
   content: "";
+  -webkit-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
 .tal-header .menuExpand .nav-link.active, .tal-header .menuExpand .nav-link:hover {
@@ -352,7 +478,9 @@ a {
   top: 50%;
   left: 50%;
   width: 157px;
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   display: block;
 }
 .tal-header .tal-logo .text {
@@ -367,12 +495,20 @@ a {
   z-index: 2;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
 }
 .tal-header .socialsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 .tal-header .socialsBox .txt {
@@ -389,7 +525,10 @@ a {
 
 @media screen and (max-width: 780px) {
   .tal-header .header-content {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
     padding: 8px 20px;
     height: 46px;
   }
@@ -409,7 +548,9 @@ a {
   .tal-header .tal-logo {
     top: auto;
     left: auto;
-    transform: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
     width: 125px;
     position: relative;
   }
@@ -431,17 +572,25 @@ a {
   margin: 0 auto;
 }
 .tal-footer .flex-footer {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .tal-footer .flex-footer + .flex-footer {
   margin-top: 80px;
 }
 .tal-footer .flex-footer.alit-content-start {
-  align-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .tal-footer .flex-footer.alit-content-end {
-  align-items: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 .tal-footer .tal-logo {
   display: block;
@@ -454,21 +603,36 @@ a {
 }
 .tal-footer .scrl-top {
   margin-left: 50px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 105px;
   height: 105px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 1px solid #F0F0E9;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 12px;
 }
 .tal-footer .scrl-top .icn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .tal-footer .scrl-top .txt {
   font-size: 14px;
@@ -478,9 +642,14 @@ a {
   color: #F0F0E9;
 }
 .tal-footer .ft-group {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   gap: 59px;
   margin-left: 40px;
   margin-right: auto;
@@ -489,8 +658,12 @@ a {
   width: 281px;
 }
 .tal-footer .footer-type .label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 9px;
   margin-bottom: 5px;
 }
@@ -515,9 +688,12 @@ a {
   line-height: 133.7%;
   display: block;
   color: #E1E1DA;
-  box-shadow: 0px 3px 0px #F5F6F1;
+  -webkit-box-shadow: 0px 3px 0px #F5F6F1;
+          box-shadow: 0px 3px 0px #F5F6F1;
 }
 .tal-footer .addrss-gr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 40px;
 }
@@ -550,10 +726,14 @@ a {
   }
   .tal-footer .content-footer {
     padding: 35px 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .tal-footer .flex-footer {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .tal-footer .flex-footer + .flex-footer {
     margin-top: 50px;
@@ -566,7 +746,10 @@ a {
   }
   .tal-footer .ft-group {
     margin: 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 15px;
   }
   .tal-footer .addrss-box {
@@ -584,7 +767,8 @@ a {
 .tal-home__cover video {
   width: 100%;
   height: calc(100vh - 60px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   z-index: 1;
 }
@@ -592,10 +776,18 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -612,14 +804,23 @@ a {
   text-align: center;
 }
 .tal-home__cover .bottom-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .tal-home__cover .list-navLinks {
   width: 633px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 7px;
 }
 .tal-home__cover .list-navLinks li {
@@ -633,14 +834,24 @@ a {
   display: block;
 }
 .tal-home__cover .icn-des {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: 1px solid #F0F0E9;
   border-radius: 50%;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-bottom: 10px;
-  box-sizing: border-box;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 105px;
   height: 105px;
 }
@@ -696,23 +907,31 @@ a {
   height: 39px;
   background: #BD9445;
   border-radius: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 .tal-home__abus .videoContent {
   background: #F0F0E9;
 }
 .tal-home__abus .videoBox {
-  transform: translate3d(0, -24.06vh, 0);
+  -webkit-transform: translate3d(0, -24.06vh, 0);
+          transform: translate3d(0, -24.06vh, 0);
   width: 78.7vw;
   margin: 0 auto;
 }
 .tal-home__abus .videoBox video {
   width: 100%;
   height: 42.45vw;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   border-radius: 23px;
 }
@@ -732,15 +951,19 @@ a {
   color: #BD9445;
 }
 .tal-home__our .our-expts .list-expts {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 1286px;
   margin: 0 auto;
 }
 .tal-home__our .our-expts .list-expts li {
   width: 50%;
   border-top: 1px solid rgba(34, 34, 34, 0.12);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -751,12 +974,15 @@ a {
   padding-right: 20px;
 }
 .tal-home__our .our-expts .expts-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .tal-home__our .our-expts .expts-card .thumb {
   width: 198px;
   margin-right: 20px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .tal-home__our .our-expts .expts-card .thumb img, .tal-home__our .our-expts .expts-card .thumb video {
   width: 100%;
@@ -764,11 +990,17 @@ a {
   height: auto;
 }
 .tal-home__our .our-expts .expts-card .total {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .tal-home__our .our-expts .expts-card .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 34px;
 }
 .tal-home__our .our-expts .expts-card .type .numb {
@@ -777,18 +1009,27 @@ a {
   height: 53px;
   border: 1px solid #222222;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   line-height: 84.5%;
   text-align: center;
   letter-spacing: -0.01em;
   color: #222222;
   margin-right: 22px;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 .tal-home__our .our-expts .expts-card .type .txt {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 24px;
   line-height: 117%;
   font-family: SuisseIntl-Medium;
@@ -815,7 +1056,8 @@ a {
 .tal-home__our .our-clients .videoBG video {
   width: 100%;
   height: 44.51vw;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   z-index: 1;
   border-radius: 20px 20px 0px 0px;
@@ -824,7 +1066,9 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   line-height: 90%;
   font-family: RoslindaleDC-Light;
   text-align: center;
@@ -834,7 +1078,9 @@ a {
 }
 .tal-home__our .our-clients .client-list {
   background: #F0F0E9;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 4.9vw 1fr 4.9vw 1fr 4.9vw 1fr 4.9vw 1fr 4.9vw 1fr 4.9vw 1fr;
   grid-template-columns: repeat(7, 1fr);
   gap: 4.9vw;
   padding: 5.12vw;
@@ -887,9 +1133,15 @@ a {
   height: 39px;
   background: #BD9445;
   border-radius: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
 }
 .tal-home__our .our-works .work-project {
@@ -898,14 +1150,20 @@ a {
 }
 .tal-home__our .our-works .list-porject li {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .tal-home__our .our-works .list-porject li + li {
   margin-top: 3vw;
 }
 .tal-home__our .our-works .list-porject li:nth-child(2n+1) {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .tal-home__our .our-works .project-card {
   width: 45.02vw;
@@ -926,11 +1184,16 @@ a {
   top: 0;
   left: 0;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tal-home__our .our-works .project-card .type-client {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 0.9vw;
   line-height: 135%;
   color: #F0F0E9;
@@ -938,13 +1201,16 @@ a {
   margin-bottom: 5px;
 }
 .tal-home__our .our-works .project-card .client-name {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: block;
   color: #F0F0E9;
 }
 .tal-home__our .our-works .project-card .date {
   display: block;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   margin-left: 15px;
   color: #F0F0E9;
 }
@@ -964,15 +1230,21 @@ a {
   width: 66.78vh;
 }
 .tal-home__ecosys .list-ecosys {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 8.47vh;
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
 }
 .tal-home__ecosys .animation-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   gap: 8.47vh;
   height: 100vh;
 }
@@ -981,9 +1253,16 @@ a {
   line-height: 80.5%;
   font-family: RoslindaleDC-Light;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #222222;
   padding: calc(6.77vh + 60px) 6.77vh 6.77vh;
 }
@@ -1010,11 +1289,19 @@ a {
   border-radius: 20px;
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 5.08vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .tal-home__ecosys .thumb {
   width: 33.9vh;
@@ -1027,7 +1314,8 @@ a {
   height: 100%;
   display: block;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tal-home__ecosys .logo {
   width: 32vh;
@@ -1050,11 +1338,17 @@ a {
   overflow: hidden;
 }
 .tal-home__career .career-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 .tal-home__career .thumbBox {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: auto;
   position: relative;
   min-height: 77vh;
@@ -1068,7 +1362,8 @@ a {
 .tal-home__career .thumbBox .images img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -1089,7 +1384,8 @@ a {
 .tal-home__career .careerBox {
   width: 673px;
   max-width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 46px 40px;
   background: #CDD3D8;
 }
@@ -1110,7 +1406,8 @@ a {
 }
 .tal-home__career .list-job li {
   padding-bottom: 12px;
-  box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
+  -webkit-box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
+          box-shadow: inset 0px -1px 0px rgba(19, 32, 80, 0.2);
   width: 100%;
 }
 .tal-home__career .list-job li + li {
@@ -1125,6 +1422,8 @@ a {
   color: #091A54;
 }
 .tal-home__career .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 14px;
   line-height: 133.7%;
@@ -1145,10 +1444,19 @@ a {
 }
 .tal-home__contactus {
   padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tal-home__contactus .heading {
   font-size: 121px;
@@ -1179,8 +1487,12 @@ a {
 }
 .tal-home__contactus .form-contact {
   width: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 26px;
 }
 .tal-home__contactus .form-group:nth-child(1) {
@@ -1209,8 +1521,21 @@ a {
   font-family: SuisseIntl-Medium;
   color: #F0F0E9;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: none;
+}
+.tal-home__contactus .form-group input::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+.tal-home__contactus .form-group input::-moz-placeholder {
+  opacity: 0.6;
+}
+.tal-home__contactus .form-group input:-ms-input-placeholder {
+  opacity: 0.6;
+}
+.tal-home__contactus .form-group input::-ms-input-placeholder {
+  opacity: 0.6;
 }
 .tal-home__contactus .form-group input::placeholder {
   opacity: 0.6;
@@ -1224,9 +1549,15 @@ a {
   width: 174px;
   height: 45px;
   color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 780px) {
@@ -1261,7 +1592,8 @@ a {
   }
   .tal-home__abus .videoBox {
     width: 93vw;
-    transform: translate3d(0, -28.06vw, 0);
+    -webkit-transform: translate3d(0, -28.06vw, 0);
+            transform: translate3d(0, -28.06vw, 0);
     height: 53.91vw;
   }
   .tal-home__abus .videoBox video {
@@ -1274,7 +1606,8 @@ a {
   }
   .tal-home__our .our-expts .list-expts {
     padding: 0 18px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     max-width: 100%;
   }
   .tal-home__our .our-expts .list-expts li {
@@ -1316,6 +1649,7 @@ a {
     width: 100%;
   }
   .tal-home__our .our-clients .client-list {
+    -ms-grid-columns: 1fr 8vw 1fr 8vw 1fr;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vw 8vw;
     padding: 7vw;
@@ -1337,7 +1671,8 @@ a {
   .tal-home__our .our-works .work-project {
     width: 100%;
     padding: 0 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .tal-home__our .our-works .list-porject li + li {
     margin-top: 30px;
@@ -1364,13 +1699,19 @@ a {
   .tal-home__ecosys .heading {
     padding: 49px 0 0;
     font-size: 66px;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     text-align: center;
     width: 100%;
   }
   .tal-home__ecosys .list-ecosys {
     padding: 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
   }
   .tal-home__ecosys li {
@@ -1416,7 +1757,8 @@ a {
     width: 100%;
     left: 0;
     top: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 33px;
     padding-left: 20px;
   }
@@ -1434,7 +1776,9 @@ a {
     font-size: 12px;
   }
   .tal-home__career .view-all {
-    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+            transform: translateX(50%);
   }
   .tal-home__contactus .heading {
     font-size: 60px;
@@ -1445,11 +1789,17 @@ a {
     width: 290px;
   }
   .tal-home__contactus .form-contact {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     padding: 0 23px;
-    box-sizing: border-box;
-    align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .tal-home__contactus .form-group:nth-child(1) {
     width: 100%;
@@ -1521,7 +1871,8 @@ a {
 }
 .tal-worksdetail__wrapper .detail-content {
   position: relative;
-  transform: translate3d(0, calc(100vh - 60px), 0);
+  -webkit-transform: translate3d(0, calc(100vh - 60px), 0);
+          transform: translate3d(0, calc(100vh - 60px), 0);
   z-index: 2;
   background: #F0F0E9;
 }
@@ -1536,7 +1887,8 @@ a {
 }
 .tal-worksdetail__cover .imgBox img {
   z-index: 1;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   display: block;
   height: 100%;
@@ -1550,12 +1902,18 @@ a {
   content: "";
   width: 100%;
   height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(65.1%, rgba(0, 0, 0, 0)), to(#000000));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 65.1%, #000000 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65.1%, #000000 100%);
 }
 .tal-worksdetail__cover .back-btn {
   position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 20px;
   gap: 10px;
   z-index: 3;
@@ -1563,7 +1921,8 @@ a {
   top: 50px;
   background: #000000;
   border-radius: 38px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .tal-worksdetail__cover .back-btn .icn {
   display: block;
@@ -1582,7 +1941,8 @@ a {
   color: #F0F0E9;
 }
 .tal-worksdetail__total {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 100px 0;
 }
 .tal-worksdetail__total .title {
@@ -1594,8 +1954,12 @@ a {
   padding: 0 6vw;
 }
 .tal-worksdetail__total .typeGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1vw;
   line-height: 133.7%;
   gap: 16px;
@@ -1603,6 +1967,8 @@ a {
   margin-bottom: 21px;
 }
 .tal-worksdetail__total .type {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
   padding: 4px 16px;
@@ -1669,13 +2035,21 @@ a {
   margin-bottom: 24px;
 }
 .tal-worksdetail__references .rf-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 60px;
 }
 .tal-worksdetail__references .rf-link .txt {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 18px;
   line-height: 135%;
   font-family: SuisseIntl-Medium;
@@ -1683,7 +2057,8 @@ a {
   color: #222222;
 }
 .tal-worksdetail__references .rf-link .icn {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 32px;
 }
 .tal-worksdetail__references .rf-link .icn svg {
@@ -1694,8 +2069,12 @@ a {
 .tal-worksdetail__prevnext {
   border-top: 1px solid rgba(34, 34, 34, 0.12);
   padding: 62px 40px 57px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .tal-worksdetail__prevnext .nav-link-project {
   width: 390px;
@@ -1722,9 +2101,15 @@ a {
   padding: 47px 25px;
 }
 .tal-worksdetail__recent .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 28px;
 }
 .tal-worksdetail__recent .heading .txt {
@@ -1734,6 +2119,8 @@ a {
   color: #F0F0E9;
 }
 .tal-worksdetail__recent .funcsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 25px;
 }
@@ -1748,7 +2135,8 @@ a {
   left: auto;
   right: auto;
   bottom: auto;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   border: none;
   position: relative;
   display: block;
@@ -1772,11 +2160,18 @@ a {
   margin-right: 10px;
 }
 .tal-worksdetail__recent .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .tal-worksdetail__recent .project .thumb {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   display: block;
   width: 100%;
   padding-top: 66.67%;
@@ -1786,7 +2181,8 @@ a {
 .tal-worksdetail__recent .project .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -1794,7 +2190,9 @@ a {
   border-radius: 8px;
 }
 .tal-worksdetail__recent .project .name-project {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   font-size: 1.3vw;
   line-height: 133.7%;
   font-family: SuisseIntl-Medium;
@@ -1805,10 +2203,16 @@ a {
 }
 .tal-worksdetail__recent .project .type {
   margin-bottom: 0.58vw;
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 0.8vw;
   line-height: 133.7%;
   font-family: SuisseIntl-Regular;
@@ -1820,7 +2224,8 @@ a {
 
 @media screen and (max-width: 780px) {
   .tal-worksdetail__wrapper .detail-content {
-    transform: translate3d(0, 100vw, 0);
+    -webkit-transform: translate3d(0, 100vw, 0);
+            transform: translate3d(0, 100vw, 0);
     padding: 20px;
   }
   .tal-worksdetail__cover .imgBox {
@@ -1854,7 +2259,8 @@ a {
   .tal-worksdetail__recent {
     width: 100vw;
     margin-left: -20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin-bottom: -20px;
     padding: 40px 0;
   }
@@ -1890,7 +2296,9 @@ a {
   }
   .tal-worksdetail__recent .project .type {
     font-size: 12px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .tal-career__cover {
@@ -1901,20 +2309,31 @@ a {
 .tal-career__cover video, .tal-career__cover img {
   width: 100%;
   height: calc(100vh - 60px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   z-index: 1;
 }
 .tal-career__cover .info-cover {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left top, left bottom, color-stop(45.6%, rgba(0, 0, 0, 0)), to(#000));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(top, rgba(0, 0, 0, 0) 45.6%, #000 100%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 45.6%, #000 100%);
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   z-index: 2;
 }
@@ -1940,14 +2359,18 @@ a {
 }
 .tal-career__list {
   min-height: 100vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   z-index: 2;
-  transform: translate3d(0, calc(100vh - 60px), 0);
+  -webkit-transform: translate3d(0, calc(100vh - 60px), 0);
+          transform: translate3d(0, calc(100vh - 60px), 0);
   padding: 3.95vw 4.39vw;
   background: #F0F0E9;
 }
 .tal-career__list .list-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2vw;
   margin-bottom: 4.53vw;
@@ -1968,7 +2391,9 @@ a {
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 1;
   width: 12px;
   display: block;
@@ -1979,7 +2404,8 @@ a {
   height: auto;
 }
 .tal-career__list .filters select {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: SuisseIntl-Medium;
   border: none;
   width: 100%;
@@ -2002,7 +2428,8 @@ a {
   width: 100%;
   line-height: 30px;
   height: 24px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 8px 16px;
 }
 .tal-career__list .list-careers li + li {
@@ -2025,6 +2452,8 @@ a {
   font-size: 1vw;
   line-height: 133.7%;
   font-family: SuisseIntl-Regular;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2.78vw;
   color: #222222;
@@ -2037,20 +2466,31 @@ a {
 .tal-career__detail-cover video, .tal-career__detail-cover img {
   width: 100%;
   height: 43.89vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   z-index: 1;
 }
 .tal-career__detail-cover .info-cover {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), -webkit-gradient(linear, left top, left bottom, color-stop(77.6%, rgba(0, 0, 0, 0)), to(#000000));
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), -o-linear-gradient(top, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0) 77.6%, #000000 100%);
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   z-index: 2;
 }
@@ -2062,7 +2502,8 @@ a {
   text-align: center;
 }
 .tal-career__detail-content {
-  transform: translate3d(0, 43.89vh, 0);
+  -webkit-transform: translate3d(0, 43.89vh, 0);
+          transform: translate3d(0, 43.89vh, 0);
   background: #F0F0E9;
   padding: 2.34vw 2.92vw;
   z-index: 2;
@@ -2075,8 +2516,12 @@ a {
   position: relative;
 }
 .tal-career__detail-content .header-content .back-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1.75vw;
 }
 .tal-career__detail-content .header-content .back-btn .icn {
@@ -2107,6 +2552,8 @@ a {
   margin-bottom: 2.49vw;
 }
 .tal-career__detail-content .header-content .type {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 3.66vw;
   font-size: 1vw;
@@ -2128,10 +2575,15 @@ a {
   color: #F0F0E9;
 }
 .tal-career__detail-content .career__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   padding-bottom: 80px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 80px;
 }
 .tal-career__detail-content .content-box {
@@ -2167,9 +2619,16 @@ a {
   background: #F0F0E9;
   padding: 50px 0;
 }
+@-webkit-keyframes spinner-border {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 @keyframes spinner-border {
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .tal-career__detail-apply .spinner-border {
@@ -2180,7 +2639,8 @@ a {
   border: 0.25em solid currentColor;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: 0.75s linear infinite spinner-border;
+  -webkit-animation: 0.75s linear infinite spinner-border;
+          animation: 0.75s linear infinite spinner-border;
 }
 .tal-career__detail-apply .apply-content {
   width: 516px;
@@ -2201,9 +2661,15 @@ a {
   background: #F0F0E9;
   opacity: 0.5;
   z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tal-career__detail-apply .apply-content.loading:after {
   content: "";
@@ -2218,7 +2684,8 @@ a {
   border: 0.2em solid #222222;
   border-right-color: transparent;
   border-radius: 50%;
-  animation: 0.75s linear infinite spinner-border;
+  -webkit-animation: 0.75s linear infinite spinner-border;
+          animation: 0.75s linear infinite spinner-border;
 }
 .tal-career__detail-apply .heading {
   font-size: 50px;
@@ -2251,8 +2718,11 @@ a {
 }
 .tal-career__detail-apply input {
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: transparent;
+  -webkit-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
   transition: 0.15s ease;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 115px;
@@ -2264,7 +2734,19 @@ a {
   color: #000;
 }
 .tal-career__detail-apply input:hover, .tal-career__detail-apply input:focus {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
+}
+.tal-career__detail-apply input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.tal-career__detail-apply input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.tal-career__detail-apply input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.tal-career__detail-apply input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 .tal-career__detail-apply input::placeholder {
   color: rgba(0, 0, 0, 0.3);
@@ -2284,7 +2766,7 @@ a {
   border: 1px solid #F04624;
 }
 .tal-career__detail-apply .form-input.wrong input:hover, .tal-career__detail-apply .form-input.wrong input:focus {
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
 }
 .tal-career__detail-apply .form-input.wrong .status {
   display: block;
@@ -2310,9 +2792,15 @@ a {
   margin-bottom: 8px;
 }
 .tal-career__detail-apply .uploadBox .upload-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: rgba(0, 0, 0, 0.12);
   border-radius: 43px;
   padding: 8px 16px;
@@ -2335,8 +2823,13 @@ a {
   color: #222222;
 }
 .tal-career__detail-apply .uploadBox .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 14px;
   line-height: 133.7%;
   text-align: center;
@@ -2369,9 +2862,16 @@ a {
   color: #000;
 }
 .tal-career__detail-apply .submitBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 14px;
 }
 .tal-career__detail-apply .submit-btn {
@@ -2384,7 +2884,8 @@ a {
   display: block;
   padding: 10px 20px;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #F0F0E9;
 }
 
@@ -2407,7 +2908,8 @@ a {
     width: 100%;
   }
   .tal-career__list {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     padding: 54px 20px;
   }
   .tal-career__list .list-filters {
@@ -2442,7 +2944,8 @@ a {
   }
   .tal-career__detail-content {
     padding: 32px 20px 40px;
-    transform: translate3d(0, 80.26vw, 0);
+    -webkit-transform: translate3d(0, 80.26vw, 0);
+            transform: translate3d(0, 80.26vw, 0);
   }
   .tal-career__detail-content .header-content {
     margin-bottom: 27px;
@@ -2465,7 +2968,8 @@ a {
   }
   .tal-career__detail-content .header-content .type {
     font-size: 12px;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 10px 50px;
     margin-bottom: 16px;
   }
@@ -2493,7 +2997,8 @@ a {
 .tal-abus__cover video, .tal-abus__cover img {
   width: 100%;
   height: calc(100vh - 60px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   z-index: 1;
 }
@@ -2501,11 +3006,21 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -2516,9 +3031,14 @@ a {
   line-height: 87.5%;
   color: #F0F0E9;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5vh;
   width: 155.34vh;
 }
@@ -2549,27 +3069,44 @@ a {
 .tal-abus__corevalue .list-value {
   width: 1246px;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  column-gap: 1.46vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1.46vw;
+     -moz-column-gap: 1.46vw;
+          column-gap: 1.46vw;
   row-gap: 2.5vw;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .tal-abus__corevalue .list-value li {
   width: calc((100% - 2.92vw) / 3);
   height: auto;
 }
 .tal-abus__corevalue .value {
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   transition: 0.3s ease;
   width: 100%;
   height: 100%;
   background: #F0F0E9;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 25px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .tal-abus__corevalue .value:hover {
   background: #BD9445;
@@ -2610,10 +3147,15 @@ a {
 }
 .tal-abus__culture .list-imgCulture {
   margin-bottom: 2.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 1.53vw;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .tal-abus__culture .list-imgCulture li {
   width: calc((100% - 4.59vw) / 4);
@@ -2637,13 +3179,18 @@ a {
   height: 100%;
   position: absolute;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   border-radius: 12px;
 }
 .tal-abus__culture .textBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 18px;
   line-height: 133.7%;
   color: #222222;
@@ -2675,12 +3222,15 @@ a {
   margin-bottom: 2.5vw;
 }
 .tal-abus__people .people-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2.26vw;
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .tal-abus__people .peopleBox {
   width: calc((100% - 2.26vw) / 2);
@@ -2702,7 +3252,8 @@ a {
   top: 0;
   left: 0;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
 }
 .tal-abus__people .name {
@@ -2741,6 +3292,8 @@ a {
   color: #BD9445;
 }
 .tal-abus__wtwork .list-loca {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2.26vw;
 }
@@ -2765,7 +3318,8 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .tal-abus__wtwork .loca .total {
   width: 100%;
@@ -2774,11 +3328,21 @@ a {
   left: 0;
   top: 0;
   z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .tal-abus__wtwork .loca .name-pos {
   font-size: 4vw;
@@ -2804,7 +3368,10 @@ a {
     height: 156.8vw;
   }
   .tal-abus__cover .titleBox {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 15vw;
     gap: 2vw;
     line-height: 102%;
@@ -2874,7 +3441,10 @@ a {
   }
   .tal-abus__people .people-wrapper {
     gap: 37px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .tal-abus__people .peopleBox {
     width: 100vw;
@@ -2915,7 +3485,10 @@ a {
   }
   .tal-abus__wtwork .list-loca {
     gap: 33px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .tal-abus__wtwork .loca {
     width: 100%;
@@ -2948,13 +3521,21 @@ a {
   text-align: center;
 }
 .tal-ourworks__header .list-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2vw;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .tal-ourworks__header .filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
 }
 .tal-ourworks__header .selectBox {
@@ -2966,7 +3547,9 @@ a {
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   z-index: 1;
   width: 12px;
   display: block;
@@ -3001,7 +3584,8 @@ a {
   width: 100%;
   line-height: 30px;
   height: 24px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #000;
   padding: 8px 16px;
 }
@@ -3013,17 +3597,26 @@ a {
   padding: 0 7.9vw;
 }
 .tal-ourworks__project .list-project {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1.02vw 1fr 1.02vw 1fr;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1.02vw;
   grid-row-gap: 3.07vw;
 }
 .tal-ourworks__project .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .tal-ourworks__project .project .thumb {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   display: block;
   width: 100%;
   padding-top: 66.67%;
@@ -3033,7 +3626,8 @@ a {
 .tal-ourworks__project .project .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -3041,7 +3635,9 @@ a {
   border-radius: 8px;
 }
 .tal-ourworks__project .project .name-project {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   font-size: 1.3vw;
   line-height: 133.7%;
   font-family: SuisseIntl-Medium;
@@ -3052,10 +3648,16 @@ a {
   margin-bottom: 0.58vw;
 }
 .tal-ourworks__project .project .type {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 0.8vw;
   line-height: 133.7%;
   font-family: SuisseIntl-Regular;
@@ -3063,7 +3665,9 @@ a {
   text-transform: uppercase;
   gap: 1.61vw;
   color: #F0F0E9;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 780px) {
@@ -3078,7 +3682,9 @@ a {
   }
   .tal-ourworks__header .list-filters {
     padding: 0 20px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .tal-ourworks__header .label {
     font-size: 12px;
@@ -3096,6 +3702,7 @@ a {
     padding: 0 20px 50px;
   }
   .tal-ourworks__project .list-project {
+    -ms-grid-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
     gap: 28px;
   }
@@ -3108,7 +3715,9 @@ a {
   }
   .tal-ourworks__project .project .type {
     font-size: 12px;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 body {
@@ -3116,17 +3725,21 @@ body {
 }
 
 .tal-wrapper {
+  -webkit-transition: 0.65s ease;
+  -o-transition: 0.65s ease;
   transition: 0.65s ease;
   background: #000000;
   font-family: SuisseIntl-Regular;
   font-size: 16px;
 }
 .tal-wrapper.active {
-  transform: translate3d(0, 90vh, 0);
+  -webkit-transform: translate3d(0, 90vh, 0);
+          transform: translate3d(0, 90vh, 0);
 }
 
 .tal-wrapper__content {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
 }
 
@@ -3147,7 +3760,8 @@ body {
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 -20px 0 0 #000000;
+  -webkit-box-shadow: 0 -20px 0 0 #000000;
+          box-shadow: 0 -20px 0 0 #000000;
 }
 
 .bottom-round {
@@ -3155,10 +3769,16 @@ body {
   left: 10px;
   bottom: 0;
   z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 10px;
-  justify-content: center;
-  align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .bottom-border-radius {
@@ -3166,7 +3786,9 @@ body {
   left: 0;
   top: auto;
   right: 0;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
   height: 10px;
   background-color: #000000;
   border-radius: 0px 0px 0px 0;
@@ -3180,13 +3802,15 @@ body {
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: 0 -20px 0 0 #000000;
+  -webkit-box-shadow: 0 -20px 0 0 #000000;
+          box-shadow: 0 -20px 0 0 #000000;
 }
 
 .scroll-content {
   border-left: 10px solid #000000;
   border-right: 20px solid #000000;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -3217,6 +3841,8 @@ body {
 
 .horizontal .pin-wrap,
 .horizontal .animation-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   z-index: 1;
@@ -3224,6 +3850,8 @@ body {
 }
 
 .horizontal-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
 }
@@ -3252,5 +3880,4 @@ body {
     overflow-y: auto !important;
   }
 }
-
 /*# sourceMappingURL=main.css.map */
