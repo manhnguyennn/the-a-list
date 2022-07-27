@@ -154,7 +154,7 @@ a {
           transition-delay: 0.4s;
 }
 
-.loading-screen-out {
+.loading-screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -180,72 +180,39 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.loading-screen-out.active {
+.loading-screen.active {
   opacity: 1;
   visibility: visible;
   z-index: 999999;
   bottom: 100vh;
 }
-
-.loading-screen-in {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  z-index: 0;
-  opacity: 0;
-  -webkit-transition: 0.5s ease;
-  -o-transition: 0.5s ease;
-  transition: 0.5s ease;
-  visibility: hidden;
-  background: #fff;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.loading-screen-in.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 999999;
-  bottom: 100vh;
-}
-.loading-screen-in .ld-logo {
+.loading-screen .ld-logo {
   position: relative;
   z-index: 2;
   width: 13.43vw;
   margin: 0 auto 18px;
 }
-.loading-screen-in .ld-logo svg {
+.loading-screen .ld-logo svg {
   width: 100%;
   display: block;
   height: auto;
 }
-.loading-screen-in .loading-content {
+.loading-screen .loading-content {
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
   opacity: 0;
   visibility: hidden;
 }
-.loading-screen-in .loading-content.active {
+.loading-screen .loading-content.active {
   opacity: 1;
   visibility: visible;
 }
-.loading-screen-in .ld-progress {
+.loading-screen .ld-progress {
   margin: 0 auto;
   width: 19.79vw;
 }
-.loading-screen-in .meter {
+.loading-screen .meter {
   position: relative;
   background: rgba(56, 56, 56, 0.12);
   border-radius: 81px;
@@ -253,7 +220,7 @@ a {
   overflow: hidden;
   margin-bottom: 12px;
 }
-.loading-screen-in .meter span {
+.loading-screen .meter span {
   -webkit-transition: 0.15s ease;
   -o-transition: 0.15s ease;
   transition: 0.15s ease;
@@ -265,7 +232,7 @@ a {
   background: #222222;
   height: 100%;
 }
-.loading-screen-in .count {
+.loading-screen .count {
   font-size: 0.8vw;
   line-height: 135%;
   font-family: SuisseIntl-Regular;
@@ -274,20 +241,16 @@ a {
 }
 
 @media screen and (max-width: 780px) {
-  .loading-screen-out {
+  .loading-screen {
     width: 100vw;
   }
-
-  .loading-screen-in {
-    width: 100vw;
-  }
-  .loading-screen-in .ld-logo {
+  .loading-screen .ld-logo {
     width: 50vw;
   }
-  .loading-screen-in .ld-progress {
+  .loading-screen .ld-progress {
     width: 80vw;
   }
-  .loading-screen-in .ld-progress .count {
+  .loading-screen .ld-progress .count {
     font-size: 12px;
   }
 }
